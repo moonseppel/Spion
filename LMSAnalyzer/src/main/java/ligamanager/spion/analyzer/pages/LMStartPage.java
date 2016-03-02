@@ -3,6 +3,7 @@ package ligamanager.spion.analyzer.pages;
 import java.util.Optional;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
 public class LMStartPage extends LMBasePage {
@@ -31,15 +32,20 @@ public class LMStartPage extends LMBasePage {
 		if(title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
 			ret = true;
 		}
-		
-		WebElement demoLoginButton = driver.findElement(By.xpath("//img[@src=\"_media/images/buttons/button_demologin.gif\"]"));
-		
-		if(demoLoginButton != null) {
-			ret = ret && true;
+
+		try {
+			WebElement demoLoginButton = driver.findElement(By.xpath("//img[@src=\"_media/images/buttons/button_demologin.gif\"]"));
+
+			if(demoLoginButton != null) {
+				ret = ret && true;
+			}
+
+			initElements();
+
+		} catch (NoSuchElementException ex) {
+			ret = false;
 		}
 		
-		initElements();
-
 		return ret;
 	}
 	

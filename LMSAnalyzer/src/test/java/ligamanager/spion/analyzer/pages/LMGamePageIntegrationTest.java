@@ -2,6 +2,7 @@ package ligamanager.spion.analyzer.pages;
 
 import ligamanager.spion.analyzer.TestData;
 import ligamanager.spion.analyzer.useCases.BasicActions;
+import ligamanager.spion.analyzer.util.GameResult;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -16,6 +17,8 @@ import static org.junit.Assert.*;
  */
 public class LMGamePageIntegrationTest {
 
+    private static int testedSeason = 122;
+
     @BeforeClass
     public static void setUp() throws Exception {
         BasicActions.loginAndChooseFirstTeam(TestData.USERNAME, TestData.PASSWORD);
@@ -25,24 +28,27 @@ public class LMGamePageIntegrationTest {
     public void testGetGameDataForNormalGame() throws Exception {
 
         int expectedGameId = 1;
-        LMGamePage subject = new LMGamePage(expectedGameId);
+        LMGamePage subject = new LMGamePage(expectedGameId, testedSeason);
 
         assertTrue(subject.navigateToPageAndCheck());
         assertEquals(expectedGameId, subject.getGameId());
         assertTrue(subject.getHomeTeamName() != null && subject.getHomeTeamName().length() > 3);
         assertTrue(subject.getAwayTeamName() != null && subject.getAwayTeamName().length() > 3);
         assertTrue(subject.getSeasonNumber() >= 122);
+        assertTrue(subject.getEndResult().getHome() >= 0);
+        assertTrue(subject.getEndResult().getAway() >= 0);
 
 //        assertEquals("Pauli Pirates", gamePage.getHomeTeamName());
 //        assertEquals("1. FC Magdeburg", gamePage.getAwayTeamName());
 //        assertEquals(122, subject.getSeasonNumber());
+        assertEquals(new GameResult(4,1), subject.getEndResult());
     }
 
     @Test
     public void testGetGameDataForGameWithExtraTime() throws Exception {
 
         int expectedGameId = 280152; //also 280156 should work
-        LMGamePage subject = new LMGamePage(expectedGameId);
+        LMGamePage subject = new LMGamePage(expectedGameId, testedSeason);
 
         assertTrue(subject.navigateToPageAndCheck());
         assertEquals(expectedGameId, subject.getGameId());
@@ -50,10 +56,10 @@ public class LMGamePageIntegrationTest {
         assertTrue(subject.getAwayTeamName() != null && subject.getAwayTeamName().length() > 3);
         assertTrue(subject.getSeasonNumber() >= 122);
 
+        assertEquals(new GameResult(0,1), subject.getEndResult());
     }
 
 
-// WebElement endResult;
 // GameValues<WebElement> results;
 // GameValues<WebElement> homeStrengthsBeginOfHalfs;
 // GameValues<WebElement> homeStrengthsAverageOfHalfs;

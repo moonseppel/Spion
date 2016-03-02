@@ -1,8 +1,11 @@
 package ligamanager.spion.analyzer.pages;
 
+import ligamanager.spion.analyzer.util.GameResult;
 import ligamanager.spion.analyzer.util.GameValues;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+
+import java.text.MessageFormat;
 
 /**
  * Ruft aus einem Spiel die folgenden Informationen ab:
@@ -25,12 +28,12 @@ public class LMGamePage extends LMBasePage {
 	private static String seasonNoStartIdentifier = "show_saison=";
 	private static String seasonNoEndIdentifier = "'";
 
-	private String pageUrl = "http://www.liga-manager.de/inc/spiel_info.php?id=";
+	private String pageUrl = "http://www.liga-manager.de/inc/spiel_info.php?id={0}&show_saison={1}";
 	private int gameId = -1;
+	private int seasonNo = -1;
 
 	private WebElement homeTeamName;
 	private WebElement awayTeamName;
-	private WebElement seasonNo;
 	private WebElement endResult;
 	private GameValues<WebElement> results;
 	private GameValues<WebElement> homeStrengthsBeginOfHalfs;
@@ -57,14 +60,19 @@ public class LMGamePage extends LMBasePage {
 	private WebElement awayZweikaempfeTotal;
 
 
-	public LMGamePage(int gameId) {
+	public LMGamePage(int gameId, int seasonNo) {
 		this.gameId = gameId;
+		this.seasonNo = seasonNo;
 	}
-	
+
 	public int getGameId() {
 		return gameId;
 	}
-	
+
+	public GameResult getEndResult() {
+		return new GameResult(4, 1);
+	}
+
 	@Override
 	public boolean navigateToPageAndCheck() {
 		
@@ -74,7 +82,10 @@ public class LMGamePage extends LMBasePage {
 
 		boolean ret = false;
 
-		driver.get(pageUrl + gameId);
+		String gameIdAsString = new Integer(gameId).toString();
+		String seasonNoAsString = new Integer(seasonNo).toString();
+		String formattedPageUrl = MessageFormat.format(pageUrl, gameIdAsString, seasonNoAsString);
+		driver.get(formattedPageUrl);
 		
 		ret = isOnCorrectPage();
 		
@@ -114,17 +125,13 @@ public class LMGamePage extends LMBasePage {
 	}
 
 	public int getSeasonNumber() {
-		int ret = -1;
-		String tmp = getSeansonNoStringFromWebElement();
-		ret = Integer.parseInt(tmp);
-		return ret;
+		return seasonNo;
 	}
 
 	private void initElements() {
 		homeTeamName = driver.findElement(By.xpath("//div[@class='mannschaft'][1]"));
 		awayTeamName = driver.findElement(By.xpath("//div[@class='mannschaft'][2]"));
 
-		seasonNo = driver.findElement(By.xpath("//*[@id=\"content_chat\"]/div[1]/table[1]/tbody/tr/td[1]/h3/a"));
 	}
 
 	private String extractTeamNameFromWebElementText(WebElement elem) {
@@ -146,15 +153,6 @@ public class LMGamePage extends LMBasePage {
 		ret = ret.substring(startIndex + 3, endIndex);
 		
 		return ret;
-	}
-
-	private String getSeansonNoStringFromWebElement() {
-		String href = seasonNo.getAttribute("href");
-		//javascript:open_window('spiel_aufstellung.php?id=1&show_saison=122','Fenster2','scrollbars=yes,width=1022,height=725');
-		int beginIndex = href.indexOf(seasonNoStartIdentifier) + seasonNoStartIdentifier.length();
-		int endIndex = href.indexOf(seasonNoEndIdentifier, beginIndex);
-		String seasonNoAsString = href.substring(beginIndex, endIndex);
-		return seasonNoAsString;
 	}
 
 }

@@ -22,7 +22,7 @@ public class Main {
 			System.out.println();
 		}
 		
-		LMGamePage gamePage = new LMGamePage(2328);
+		LMGamePage gamePage = new LMGamePage(2328, 121);
 		System.out.println("Game Page found: " + gamePage.navigateToPageAndCheck());
 		System.out.println("Game Id: " + gamePage.getGameId());
 		System.out.println("Home Team Name: " + gamePage.getHomeTeamName());
