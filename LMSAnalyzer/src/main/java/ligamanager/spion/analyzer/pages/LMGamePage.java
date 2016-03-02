@@ -93,7 +93,7 @@ public class LMGamePage extends LMBasePage {
 	}
 
 	@Override
-	public boolean isOnCorrectPage() {
+	protected boolean isOnCorrectPageBody() {
 		boolean ret = false;
 		
 		String title = driver.getTitle();

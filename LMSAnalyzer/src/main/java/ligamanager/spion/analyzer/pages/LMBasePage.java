@@ -1,8 +1,7 @@
 package ligamanager.spion.analyzer.pages;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import ligamanager.spion.analyzer.webdriver.DriverFactory;
 
@@ -12,6 +11,18 @@ public abstract class LMBasePage {
 	
 	abstract public boolean navigateToPageAndCheck();
 	
-	abstract public boolean isOnCorrectPage();
+	public boolean isOnCorrectPage() {
+		boolean ret = false;
+
+		try {
+			ret = isOnCorrectPageBody();
+		} catch (NoSuchElementException ex) {
+			ret = false;
+		}
+
+		return ret;
+	}
+
+	abstract protected boolean isOnCorrectPageBody();
 
 }
