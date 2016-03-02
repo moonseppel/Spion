@@ -22,16 +22,17 @@ import org.openqa.selenium.WebElement;
  **/
 public class LMGamePage extends LMBasePage {
 
+	private static String seasonNoStartIdentifier = "show_saison=";
+	private static String seasonNoEndIdentifier = "'";
+
 	private String pageUrl = "http://www.liga-manager.de/inc/spiel_info.php?id=";
 	private int gameId = -1;
 
 	private WebElement homeTeamName;
 	private WebElement awayTeamName;
 	private WebElement seasonNo;
-	private WebElement result45min;
-	private WebElement result90min;
-	private WebElement result120min;
-	private WebElement angriffeHomeHalf1;
+	private WebElement endResult;
+	private GameValues<WebElement> results;
 	private GameValues<WebElement> homeStrengthsBeginOfHalfs;
 	private GameValues<WebElement> homeStrengthsAverageOfHalfs;
 	private GameValues<WebElement> homeStrengthsEndOfHalfs;
@@ -54,8 +55,6 @@ public class LMGamePage extends LMBasePage {
 	private GameValues<WebElement> awayZweikaempfe;
 	private WebElement homeZweikaempfeTotal;
 	private WebElement awayZweikaempfeTotal;
-	private GameValues<WebElement> results;
-	private WebElement endResult;
 
 
 	public LMGamePage(int gameId) {
@@ -114,10 +113,18 @@ public class LMGamePage extends LMBasePage {
 		return ret;
 	}
 
+	public int getSeasonNumber() {
+		int ret = -1;
+		String tmp = getSeansonNoStringFromWebElement();
+		ret = Integer.parseInt(tmp);
+		return ret;
+	}
+
 	private void initElements() {
 		homeTeamName = driver.findElement(By.xpath("//div[@class='mannschaft'][1]"));
 		awayTeamName = driver.findElement(By.xpath("//div[@class='mannschaft'][2]"));
 
+		seasonNo = driver.findElement(By.xpath("//*[@id=\"content_chat\"]/div[1]/table[1]/tbody/tr/td[1]/h3/a"));
 	}
 
 	private String extractTeamNameFromWebElementText(WebElement elem) {
@@ -139,6 +146,15 @@ public class LMGamePage extends LMBasePage {
 		ret = ret.substring(startIndex + 3, endIndex);
 		
 		return ret;
+	}
+
+	private String getSeansonNoStringFromWebElement() {
+		String href = seasonNo.getAttribute("href");
+		//javascript:open_window('spiel_aufstellung.php?id=1&show_saison=122','Fenster2','scrollbars=yes,width=1022,height=725');
+		int beginIndex = href.indexOf(seasonNoStartIdentifier) + seasonNoStartIdentifier.length();
+		int endIndex = href.indexOf(seasonNoEndIdentifier, beginIndex);
+		String seasonNoAsString = href.substring(beginIndex, endIndex);
+		return seasonNoAsString;
 	}
 
 }

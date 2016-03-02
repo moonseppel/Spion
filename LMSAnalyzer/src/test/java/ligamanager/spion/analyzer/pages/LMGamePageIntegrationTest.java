@@ -23,16 +23,59 @@ public class LMGamePageIntegrationTest {
 
     @Test
     public void testGetGameDataForNormalGame() throws Exception {
+
         int expectedGameId = 1;
-        LMGamePage gamePage = new LMGamePage(expectedGameId);
+        LMGamePage subject = new LMGamePage(expectedGameId);
 
-        assertTrue(gamePage.navigateToPageAndCheck());
-        assertEquals(expectedGameId, gamePage.getGameId());
-        assertTrue(gamePage.getHomeTeamName() != null && gamePage.getHomeTeamName().length() > 3);
+        assertTrue(subject.navigateToPageAndCheck());
+        assertEquals(expectedGameId, subject.getGameId());
+        assertTrue(subject.getHomeTeamName() != null && subject.getHomeTeamName().length() > 3);
+        assertTrue(subject.getAwayTeamName() != null && subject.getAwayTeamName().length() > 3);
+        assertTrue(subject.getSeasonNumber() >= 122);
+
 //        assertEquals("Pauli Pirates", gamePage.getHomeTeamName());
-        assertTrue(gamePage.getAwayTeamName() != null && gamePage.getAwayTeamName().length() > 3);
 //        assertEquals("1. FC Magdeburg", gamePage.getAwayTeamName());
+//        assertEquals(122, subject.getSeasonNumber());
+    }
 
+    @Test
+    public void testGetGameDataForGameWithExtraTime() throws Exception {
+
+        int expectedGameId = 280152; //also 280156 should work
+        LMGamePage subject = new LMGamePage(expectedGameId);
+
+        assertTrue(subject.navigateToPageAndCheck());
+        assertEquals(expectedGameId, subject.getGameId());
+        assertTrue(subject.getHomeTeamName() != null && subject.getHomeTeamName().length() > 3);
+        assertTrue(subject.getAwayTeamName() != null && subject.getAwayTeamName().length() > 3);
+        assertTrue(subject.getSeasonNumber() >= 122);
 
     }
+
+
+// WebElement endResult;
+// GameValues<WebElement> results;
+// GameValues<WebElement> homeStrengthsBeginOfHalfs;
+// GameValues<WebElement> homeStrengthsAverageOfHalfs;
+// GameValues<WebElement> homeStrengthsEndOfHalfs;
+// GameValues<WebElement> awayStrengthsBeginOfHalfs;
+// GameValues<WebElement> awayStrengthsAverageOfHalfs;
+// GameValues<WebElement> awayStrengthsEndOfHalfs;
+// GameValues<WebElement> homeSystems;
+// GameValues<WebElement> awaySystems;
+// GameValues<WebElement> homeTactics;
+// GameValues<WebElement> awayTactocs;
+// GameValues<WebElement> homeAngriffe;
+// GameValues<WebElement> awayAngriffe;
+// GameValues<WebElement> homeChancen;
+// GameValues<WebElement> awayChancen;
+// GameValues<WebElement> homeBallPossession;
+// GameValues<WebElement> awayBallPossession;
+// WebElement homeBallPossessionTotal;
+// WebElement awayBallPossessionTotal;
+// GameValues<WebElement> homeZweikaempfe;
+// GameValues<WebElement> awayZweikaempfe;
+// WebElement homeZweikaempfeTotal;
+// WebElement awayZweikaempfeTotal;
+
 }
