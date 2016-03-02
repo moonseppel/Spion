@@ -1,10 +1,12 @@
-package webdriver;
+package ligamanager.spion.analyzer.webdriver;
 
 import java.util.Optional;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+
+//Check this: https://sonar.netpioneer.de/sonar/coding_rules#rule_key=squid:S2151
 public abstract class DriverFactory {
 	
 	private static Optional<WebDriver> instance = Optional.empty();

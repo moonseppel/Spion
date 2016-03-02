@@ -13,7 +13,8 @@ public class LMTeamChoicePage extends LMBasePage {
 
 	private String pageUrl = "http://www.liga-manager.de/index.php?menue=eigene_teams";
 	private String activeTeamPrefix = "- ";
-	
+	private String chooseTeamText = "Team wählen";
+
 	private Select teamChoiceDropdown;
 	
 	public boolean navigateToPageAndCheck() {
@@ -62,11 +63,15 @@ public class LMTeamChoicePage extends LMBasePage {
 		
 		for(WebElement team : teamChoiceDropdown.getOptions()) {
 			String teamName = team.getText();
-			
-			if(teamName.startsWith(activeTeamPrefix)) {
-				teamName = teamName.substring(activeTeamPrefix.length());
+
+			if(!teamName.contains(chooseTeamText)) {
+
+				if (teamName.startsWith(activeTeamPrefix)) {
+					teamName = teamName.substring(activeTeamPrefix.length()).trim();
+				}
+				ret.add(teamName);
+
 			}
-			ret.add(teamName);
 		}
 		
 		return ret;

@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import webdriver.DriverFactory;
+import ligamanager.spion.analyzer.webdriver.DriverFactory;
 
 public abstract class LMBasePage {
 
