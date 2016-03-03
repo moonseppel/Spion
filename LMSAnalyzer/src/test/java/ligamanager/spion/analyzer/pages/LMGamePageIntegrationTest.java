@@ -30,18 +30,12 @@ public class LMGamePageIntegrationTest {
         int expectedGameId = 1;
         LMGamePage subject = new LMGamePage(expectedGameId, testedSeason);
 
-        assertTrue(subject.navigateToPageAndCheck());
-        assertEquals(expectedGameId, subject.getGameId());
-        assertTrue(subject.getHomeTeamName() != null && subject.getHomeTeamName().length() > 3);
-        assertTrue(subject.getAwayTeamName() != null && subject.getAwayTeamName().length() > 3);
-        assertTrue(subject.getSeasonNumber() >= 122);
-        assertTrue(subject.getEndResult().getHome() >= 0);
-        assertTrue(subject.getEndResult().getAway() >= 0);
+        assertAlleGameValues(expectedGameId, subject);
 
 //        assertEquals("Pauli Pirates", gamePage.getHomeTeamName());
 //        assertEquals("1. FC Magdeburg", gamePage.getAwayTeamName());
 //        assertEquals(122, subject.getSeasonNumber());
-        assertEquals(new GameResult(4,1), subject.getEndResult());
+//        assertEquals(new GameResult(4,1), subject.getEndResult());
     }
 
     @Test
@@ -50,13 +44,32 @@ public class LMGamePageIntegrationTest {
         int expectedGameId = 280152; //also 280156 should work
         LMGamePage subject = new LMGamePage(expectedGameId, testedSeason);
 
+        assertAlleGameValues(expectedGameId, subject);
+
+//        assertEquals(new GameResult(0,1), subject.getEndResult());
+    }
+
+    @Test
+    public void testGetGameDataForGameWithEytraTimeAndPenaltyShooting() throws Exception {
+
+        int expectedGameId = 280155; //also 280156 should work
+        LMGamePage subject = new LMGamePage(expectedGameId, testedSeason);
+
+        assertAlleGameValues(expectedGameId, subject);
+
+        assertEquals(new GameResult(8,7), subject.getEndResult());
+    }
+
+    private void assertAlleGameValues(int expectedGameId, LMGamePage subject) {
+
         assertTrue(subject.navigateToPageAndCheck());
         assertEquals(expectedGameId, subject.getGameId());
         assertTrue(subject.getHomeTeamName() != null && subject.getHomeTeamName().length() > 3);
         assertTrue(subject.getAwayTeamName() != null && subject.getAwayTeamName().length() > 3);
         assertTrue(subject.getSeasonNumber() >= 122);
+        assertTrue(subject.getEndResult().getHome() >= 0);
+        assertTrue(subject.getEndResult().getAway() >= 0);
 
-        assertEquals(new GameResult(0,1), subject.getEndResult());
     }
 
 

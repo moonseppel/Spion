@@ -3,9 +3,12 @@ package ligamanager.spion.analyzer.pages;
 import ligamanager.spion.analyzer.util.GameResult;
 import ligamanager.spion.analyzer.util.GameValues;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
 import java.text.MessageFormat;
+import java.util.Optional;
+import java.util.StringTokenizer;
 
 /**
  * Ruft aus einem Spiel die folgenden Informationen ab:
@@ -70,7 +73,26 @@ public class LMGamePage extends LMBasePage {
 	}
 
 	public GameResult getEndResult() {
-		return new GameResult(4, 1);
+		int homeScore = -1;
+		int awayScore = -1;
+
+		String endResultCompleteString = endResult.getText();
+		int endOfResultIndex = endResultCompleteString.indexOf("(");
+		String endResultAsString = endResultCompleteString.substring(0, endOfResultIndex).trim();
+
+		StringTokenizer st = new StringTokenizer(endResultAsString, ":", false);
+
+		if(st.hasMoreTokens()) {
+			String homeScoreAsString = st.nextToken().trim();
+			homeScore = Integer.parseInt(homeScoreAsString);
+		}
+
+		if(st.hasMoreTokens()) {
+			String awayScoreAsString = st.nextToken().trim();
+			awayScore = Integer.parseInt(awayScoreAsString);
+		}
+
+		return new GameResult(homeScore, awayScore);
 	}
 
 	@Override
@@ -132,6 +154,35 @@ public class LMGamePage extends LMBasePage {
 		homeTeamName = driver.findElement(By.xpath("//div[@class='mannschaft'][1]"));
 		awayTeamName = driver.findElement(By.xpath("//div[@class='mannschaft'][2]"));
 
+		String xpathToErgenisText = "//*[@id=\"content_chat\"]/div[2]/table/tbody/tr[1]/td[1]/strong";
+		String xpathToEndResult = "//*[@id=\"content_chat\"]/div[2]/table/tbody/tr[1]/td[2]";
+		Optional<WebElement> possibleEndResultElement = findElementAndCheckForCorrectText(xpathToErgenisText, xpathToEndResult);
+
+		if(!possibleEndResultElement.isPresent()) {
+			System.out.println("Get end result: Result after regular time not found, checking with extra time.");
+			xpathToErgenisText = "//*[@id=\"content_chat\"]/div[2]/table/tbody/tr[2]/td[1]/strong";
+			xpathToEndResult = "//*[@id=\"content_chat\"]/div[2]/table/tbody/tr[2]/td[2]";
+			possibleEndResultElement = findElementAndCheckForCorrectText(xpathToErgenisText, xpathToEndResult);
+		}
+
+		endResult = possibleEndResultElement.get();
+
+	}
+
+	private Optional<WebElement> findElementAndCheckForCorrectText(String xpathToErgenisText, String xpathToEndResult) {
+		Optional<WebElement> ret = Optional.empty();
+
+		try {
+			WebElement ergebnisText = driver.findElement(By.xpath(xpathToErgenisText));
+			String text = ergebnisText.getText();
+			if (text.equals("Ergebnis")) {
+				ret = Optional.of(driver.findElement(By.xpath(xpathToEndResult)));
+			}
+		} catch (NoSuchElementException ex) {
+			ret = Optional.empty();
+		}
+
+		return ret;
 	}
 
 	private String extractTeamNameFromWebElementText(WebElement elem) {
