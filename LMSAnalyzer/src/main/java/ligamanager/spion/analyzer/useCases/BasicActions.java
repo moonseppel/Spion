@@ -24,4 +24,16 @@ public class BasicActions {
 		return ret;
 	}
 
+	public static boolean logout() {
+		boolean ret = false;
+
+		LMStartPage startPage = new LMStartPage();
+		startPage.navigateToPageAndCheck();
+		Optional<LMStartPage> loggedOutStartPage = startPage.logout();
+
+		ret = loggedOutStartPage.isPresent();
+
+		return ret;
+	}
+
 }

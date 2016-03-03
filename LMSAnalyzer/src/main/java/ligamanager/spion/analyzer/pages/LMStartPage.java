@@ -13,7 +13,8 @@ public class LMStartPage extends LMBasePage {
 	private WebElement userField;
 	private WebElement passwordField;
 	private WebElement loginButton;
-	
+	private WebElement logoutButton;
+
 	public boolean navigateToPageAndCheck() {
 		boolean ret = false;
 		
@@ -21,6 +22,44 @@ public class LMStartPage extends LMBasePage {
 		
 		ret = isOnCorrectPage();
 		
+		return ret;
+	}
+
+	public Optional<LMTeamChoicePage> login(String user, String password) {
+		Optional<LMTeamChoicePage> ret = Optional.empty();
+
+		if((userField == null) || (passwordField == null) || (loginButton == null)) {
+			return ret;
+		}
+
+		userField.sendKeys(user);
+		passwordField.sendKeys(password);
+		loginButton.click();
+
+		WebElement teamChoiceDropdown = driver.findElement(By.xpath("//select[@name=\"manager\"]"));
+
+		if(teamChoiceDropdown != null) {
+			LMTeamChoicePage teamChoicePage = new LMTeamChoicePage();
+			if (teamChoicePage.isOnCorrectPage()) {
+				ret = Optional.of(teamChoicePage);
+			}
+		}
+
+		return ret;
+	}
+
+	public Optional<LMStartPage> logout() {
+		Optional<LMStartPage> ret = Optional.empty();
+
+		if(logoutButton == null) {
+			return ret;
+		}
+
+		logoutButton.click();
+		ret = Optional.of(this);
+
+		initElements();
+
 		return ret;
 	}
 
@@ -34,9 +73,9 @@ public class LMStartPage extends LMBasePage {
 		}
 
 		try {
-			WebElement demoLoginButton = driver.findElement(By.xpath("//img[@src=\"_media/images/buttons/button_demologin.gif\"]"));
+			WebElement kostenlosSpielenButton = driver.findElement(By.xpath("//*[@id=\"content_land\"]/div[2]/div[2]/a/img"));
 
-			if(demoLoginButton != null) {
+			if(kostenlosSpielenButton != null) {
 				ret = ret && true;
 			}
 
@@ -49,31 +88,24 @@ public class LMStartPage extends LMBasePage {
 		return ret;
 	}
 	
-	public Optional<LMTeamChoicePage> login(String user, String password) {
-		Optional<LMTeamChoicePage> ret = Optional.empty();
-		
-		userField.sendKeys(user);
-		passwordField.sendKeys(password);
-		loginButton.click();
-		
-		WebElement teamChoiceDropdown = driver.findElement(By.xpath("//select[@name=\"manager\"]"));
-		
-		if(teamChoiceDropdown != null) {
-			LMTeamChoicePage teamChoicePage = new LMTeamChoicePage();
-			if (teamChoicePage.isOnCorrectPage()) {
-				ret = Optional.of(teamChoicePage);
-			}
-		}
-		
-		return ret;
-	}
-	
-	
 	private void initElements() {
+		try {
+			tryInitElementsWhenUserIsLoggedOut();
+
+		} catch (NoSuchElementException ex) {
+			tryInitElementsWhenUserIsLoggedIn();
+		}
+
+	}
+	private void tryInitElementsWhenUserIsLoggedOut() {
 		userField = driver.findElement(By.xpath("//input[@id=\"user\"]"));
 		passwordField = driver.findElement(By.xpath("//input[@id=\"pass\"]"));
 		loginButton = driver.findElement(By.xpath("//input[@name=\"Go\"]"));
-		
 	}
+
+	private void tryInitElementsWhenUserIsLoggedIn() {
+		logoutButton = driver.findElement((By.xpath("//*[@id=\"loginarea_left\"]/div[5]/a/img")));
+	}
+
 
 }

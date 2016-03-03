@@ -50,7 +50,7 @@ public class LMTeamChoicePage extends LMBasePage {
 	public boolean chooseFirstTeam() {
 		boolean ret = false;
 		
-		if(teamChoiceDropdown.getOptions().size() > 1) {
+		if(getAllTeams().size() > 0) {
 			teamChoiceDropdown.selectByIndex(1);
 			ret = true;
 		}
