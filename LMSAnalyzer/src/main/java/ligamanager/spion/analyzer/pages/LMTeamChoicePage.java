@@ -27,7 +27,7 @@ public class LMTeamChoicePage extends LMBasePage {
 		return ret;
 	}
 
-	protected boolean isOnCorrectPageBody() {
+	protected boolean isOnCorrectPageWithException() {
 		boolean ret = false;
 		
 		String title = driver.getTitle();

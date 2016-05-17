@@ -15,7 +15,7 @@ public abstract class LMBasePage {
 		boolean ret = false;
 
 		try {
-			ret = isOnCorrectPageBody();
+			ret = isOnCorrectPageWithException();
 		} catch (NoSuchElementException ex) {
 			ret = false;
 		}
@@ -23,6 +23,6 @@ public abstract class LMBasePage {
 		return ret;
 	}
 
-	abstract protected boolean isOnCorrectPageBody();
+	abstract protected boolean isOnCorrectPageWithException() throws NoSuchElementException;
 
 }

@@ -1,5 +1,7 @@
 package ligamanager.spion.analyzer.util;
 
+import java.util.StringTokenizer;
+
 /**
  * Created by jpralle on 02.03.2016.
  */
@@ -8,11 +10,15 @@ public class GameResult {
     protected int homeValue = -1;
     protected int awayValue = -1;
 
-    public GameResult() { }
+    public static final GameResult EMPTY = new GameResult(-1, -1);
 
     public GameResult(int homeValue, int awayValue) {
         this.homeValue = homeValue;
         this.awayValue = awayValue;
+    }
+
+    public GameResult(String resultWithColon) {
+        parseResultWithColon(resultWithColon);
     }
 
     public int getHome() {
@@ -21,6 +27,10 @@ public class GameResult {
 
     public int getAway() {
         return awayValue;
+    }
+
+    public boolean isEmpty() {
+        return this.equals(GameResult.EMPTY);
     }
 
     @Override
@@ -49,4 +59,19 @@ public class GameResult {
                 ", awayValue=" + awayValue +
                 '}';
     }
+
+    private void parseResultWithColon(String resultWithColon) {
+        StringTokenizer st = new StringTokenizer(resultWithColon, ":", false);
+
+        if(st.hasMoreTokens()) {
+            String homeScoreAsString = st.nextToken().trim();
+            homeValue = Integer.parseInt(homeScoreAsString);
+        }
+
+        if(st.hasMoreTokens()) {
+            String awayScoreAsString = st.nextToken().trim();
+            awayValue = Integer.parseInt(awayScoreAsString);
+        }
+    }
+
 }

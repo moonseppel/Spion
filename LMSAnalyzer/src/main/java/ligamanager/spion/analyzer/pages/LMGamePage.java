@@ -1,14 +1,17 @@
 package ligamanager.spion.analyzer.pages;
 
+import ligamanager.spion.analyzer.pages.partPages.gamePage.summarySection.SummarySectionGamePagePart;
+import ligamanager.spion.analyzer.pages.partPages.gamePage.summarySection.SummarySectionPartWithExtraTime;
+import ligamanager.spion.analyzer.pages.partPages.gamePage.summarySection.SummarySectionPartWithPenaltyShooting;
+import ligamanager.spion.analyzer.pages.partPages.gamePage.summarySection.SummarySectionPartForRegularTime;
+import ligamanager.spion.analyzer.pages.util.StringParsingHelper;
 import ligamanager.spion.analyzer.util.GameResult;
 import ligamanager.spion.analyzer.util.GameValues;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
 import java.text.MessageFormat;
-import java.util.Optional;
-import java.util.StringTokenizer;
 
 /**
  * Ruft aus einem Spiel die folgenden Informationen ab:
@@ -27,77 +30,65 @@ import java.util.StringTokenizer;
  *  - Zweikämpfe  HZ 1 und 2 und Verlängerung & Total
  **/
 public class LMGamePage extends LMBasePage {
+	private static final Logger LOGGER = Logger.getLogger(LMGamePage.class);
 
-	private static String seasonNoStartIdentifier = "show_saison=";
-	private static String seasonNoEndIdentifier = "'";
+	public static final String REGULAR_TIME_IDENTIFICATION_TEXT = "reguläre Spielzeit";
+	public static final String EXTRA_TIME_IDENTIFICATION_TEXT = "Verlängerung";
+	public static final String PENALTY_SHOOTING_IDENTIFICATIONTEXT = "Elfmeterschiessen";
+
+	private SummarySectionGamePagePart summaryPart = null;
 
 	private String pageUrl = "http://www.liga-manager.de/inc/spiel_info.php?id={0}&show_saison={1}";
 	private int gameId = -1;
-	private int seasonNo = -1;
+	private int seasonNumber = -1;
 
-	private WebElement homeTeamName;
-	private WebElement awayTeamName;
-	private WebElement endResult;
-	private GameValues<WebElement> results;
-	private GameValues<WebElement> homeStrengthsBeginOfHalfs;
-	private GameValues<WebElement> homeStrengthsAverageOfHalfs;
-	private GameValues<WebElement> homeStrengthsEndOfHalfs;
-	private GameValues<WebElement> awayStrengthsBeginOfHalfs;
-	private GameValues<WebElement> awayStrengthsAverageOfHalfs;
-	private GameValues<WebElement> awayStrengthsEndOfHalfs;
-	private GameValues<WebElement> homeSystems;
-	private GameValues<WebElement> awaySystems;
-	private GameValues<WebElement> homeTactics;
-	private GameValues<WebElement> awayTactocs;
-	private GameValues<WebElement> homeAngriffe;
-	private GameValues<WebElement> awayAngriffe;
-	private GameValues<WebElement> homeChancen;
-	private GameValues<WebElement> awayChancen;
-	private GameValues<WebElement> homeBallPossession;
-	private GameValues<WebElement> awayBallPossession;
-	private WebElement homeBallPossessionTotal;
-	private WebElement awayBallPossessionTotal;
-	private GameValues<WebElement> homeZweikaempfe;
-	private GameValues<WebElement> awayZweikaempfe;
-	private WebElement homeZweikaempfeTotal;
-	private WebElement awayZweikaempfeTotal;
+	private boolean hasExtraTime = false;
+	private boolean hasPenyltyShooting = false;
+
+	private String homeTeamName = null;
+	private String awayTeamName = null;
+	private GameResult endResult = null;
+	private GameValues<GameResult> results = null;
+//	private GameValues<GameFormation> homeFormations = null;
+//	private GameValues<GameFormation> awayFormations = null;
+//	private GameValues<???> homeTactics = null;
+//	private GameValues<???> awayTactics = null;
+//	private GameValues<GameResult> homeStrengthsBeginOfHalfs = null;
+//	private GameValues<GameResult> homeStrengthsAverageOfHalfs = null;
+//	private GameValues<GameResult> homeStrengthsEndOfHalfs = null;
+//	private GameValues<GameResult> awayStrengthsBeginOfHalfs = null;
+//	private GameValues<GameResult> awayStrengthsAverageOfHalfs = null;
+//	private GameValues<GameResult> awayStrengthsEndOfHalfs = null;
+//	private GameValues<GameResult> homeAngriffe = null;
+//	private GameValues<GameResult> awayAngriffe = null;
+//	private GameValues<GameResult> homeChancen = null;
+//	private GameValues<GameResult> awayChancen = null;
+//	private GameValues<GameResult> homeBallPossession = null;
+//	private GameValues<GameResult> awayBallPossession = null;
+//	private GameResult homeBallPossessionTotal = null;
+//	private GameResult awayBallPossessionTotal = null;
+//	private GameValues<GameResult> homeZweikaempfe = null;
+//	private GameValues<GameResult> awayZweikaempfe = null;
+//	private GameResult homeZweikaempfeTotal = null;
+//	private GameResult awayZweikaempfeTotal = null;
 
 
 	public LMGamePage(int gameId, int seasonNo) {
 		this.gameId = gameId;
-		this.seasonNo = seasonNo;
+		this.seasonNumber = seasonNo;
 	}
 
 	public int getGameId() {
 		return gameId;
 	}
 
-	public GameResult getEndResult() {
-		int homeScore = -1;
-		int awayScore = -1;
-
-		String endResultCompleteString = endResult.getText();
-		int endOfResultIndex = endResultCompleteString.indexOf("(");
-		String endResultAsString = endResultCompleteString.substring(0, endOfResultIndex).trim();
-
-		StringTokenizer st = new StringTokenizer(endResultAsString, ":", false);
-
-		if(st.hasMoreTokens()) {
-			String homeScoreAsString = st.nextToken().trim();
-			homeScore = Integer.parseInt(homeScoreAsString);
-		}
-
-		if(st.hasMoreTokens()) {
-			String awayScoreAsString = st.nextToken().trim();
-			awayScore = Integer.parseInt(awayScoreAsString);
-		}
-
-		return new GameResult(homeScore, awayScore);
+	public int getSeasonNumber() {
+		return seasonNumber;
 	}
 
 	@Override
 	public boolean navigateToPageAndCheck() {
-		
+
 		if(gameId < 0) {
 			return false;
 		}
@@ -105,105 +96,97 @@ public class LMGamePage extends LMBasePage {
 		boolean ret = false;
 
 		String gameIdAsString = new Integer(gameId).toString();
-		String seasonNoAsString = new Integer(seasonNo).toString();
+		String seasonNoAsString = new Integer(seasonNumber).toString();
 		String formattedPageUrl = MessageFormat.format(pageUrl, gameIdAsString, seasonNoAsString);
 		driver.get(formattedPageUrl);
-		
+
 		ret = isOnCorrectPage();
-		
+
+		checkForExtraTimeAndPenaltyShooting();
+
+		if(hasPenyltyShooting()) {
+			summaryPart = new SummarySectionPartWithPenaltyShooting(driver, this);
+
+		} else if(hasExtraTime()) {
+			summaryPart = new SummarySectionPartWithExtraTime(driver, this);
+
+		} else {
+			summaryPart = new SummarySectionPartForRegularTime(driver, this);
+		}
+
+
 		return ret;
 	}
 
 	@Override
-	protected boolean isOnCorrectPageBody() {
+	protected boolean isOnCorrectPageWithException() {
 		boolean ret = false;
-		
+
 		String title = driver.getTitle();
-		
+
 		if(title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
 			ret = true;
 		}
-		
+
 		WebElement spielberichtText = driver.findElement(By.xpath("//*[@id=\"magazin_chat\"]/div/div[1]/strong"));
 
 		if(spielberichtText != null && spielberichtText.getText().equalsIgnoreCase("Spielbericht")) {
 			ret = ret && true;
 		}
-		
-		initElements();
 
 		return ret;
 	}
-	
+
+	public boolean hasPenyltyShooting() {
+		return hasPenyltyShooting;
+	}
+
+	public boolean hasExtraTime() {
+		return hasExtraTime;
+	}
+
+	public GameResult getEndResult() {
+		if(endResult == null) {
+			endResult = summaryPart.getEndResult();
+		}
+		return endResult;
+	}
+
 	public String getHomeTeamName() {
-		
-		String ret = extractTeamNameFromWebElementText(homeTeamName).trim();
-		return ret;
+		if(homeTeamName == null) {
+			WebElement homeTeamNameElement = driver.findElement(By.xpath("//div[@class='mannschaft'][1]"));
+			homeTeamName = StringParsingHelper.extractTeamNameFromWebElementText(homeTeamNameElement).trim();
+		}
+		return homeTeamName;
 	}
 
 	public String getAwayTeamName() {
-		String ret = extractTeamNameFromWebElementText(awayTeamName).trim();
-		return ret;
+		if(awayTeamName == null) {
+			WebElement awayTeamNameElement = driver.findElement(By.xpath("//div[@class='mannschaft'][2]"));
+			awayTeamName = StringParsingHelper.extractTeamNameFromWebElementText(awayTeamNameElement).trim();
+		}
+		return awayTeamName;
 	}
 
-	public int getSeasonNumber() {
-		return seasonNo;
+	public GameValues<GameResult> getResults() {
+		if(results == null) {
+			results = summaryPart.getResults();
+		}
+		return results;
 	}
 
-	private void initElements() {
-		homeTeamName = driver.findElement(By.xpath("//div[@class='mannschaft'][1]"));
-		awayTeamName = driver.findElement(By.xpath("//div[@class='mannschaft'][2]"));
+//	public GameValues<GameFormation> getHomeFormations() {
+//		if(homeFormations == null) {
+//			homeFormations = ;
+//		}
+//		return homeFormations;
+//	}
 
-		String xpathToErgenisText = "//*[@id=\"content_chat\"]/div[2]/table/tbody/tr[1]/td[1]/strong";
-		String xpathToEndResult = "//*[@id=\"content_chat\"]/div[2]/table/tbody/tr[1]/td[2]";
-		Optional<WebElement> possibleEndResultElement = findElementAndCheckForCorrectText(xpathToErgenisText, xpathToEndResult);
+	private void checkForExtraTimeAndPenaltyShooting() {
+		WebElement firstRowOfSummarySection = driver.findElement(By.xpath("//*[@id=\"content_chat\"]/div[2]/table/tbody/tr[1]"));
 
-		if(!possibleEndResultElement.isPresent()) {
-			System.out.println("Get end result: Result after regular time not found, checking with extra time.");
-			xpathToErgenisText = "//*[@id=\"content_chat\"]/div[2]/table/tbody/tr[2]/td[1]/strong";
-			xpathToEndResult = "//*[@id=\"content_chat\"]/div[2]/table/tbody/tr[2]/td[2]";
-			possibleEndResultElement = findElementAndCheckForCorrectText(xpathToErgenisText, xpathToEndResult);
-		}
-
-		endResult = possibleEndResultElement.get();
-
-	}
-
-	private Optional<WebElement> findElementAndCheckForCorrectText(String xpathToErgenisText, String xpathToEndResult) {
-		Optional<WebElement> ret = Optional.empty();
-
-		try {
-			WebElement ergebnisText = driver.findElement(By.xpath(xpathToErgenisText));
-			String text = ergebnisText.getText();
-			if (text.equals("Ergebnis")) {
-				ret = Optional.of(driver.findElement(By.xpath(xpathToEndResult)));
-			}
-		} catch (NoSuchElementException ex) {
-			ret = Optional.empty();
-		}
-
-		return ret;
-	}
-
-	private String extractTeamNameFromWebElementText(WebElement elem) {
-		
-		String ret = elem.getText();
-		String startMarker = ".)";
-		String endMarker = "(i)";
-		
-		int startIndex = ret.indexOf(startMarker);
-		if(startIndex < 0) {
-			startIndex = 0;
-		}
-
-		int endIndex = ret.lastIndexOf(endMarker);
-		if(endIndex < 0) {
-			endIndex = ret.length() - 1;
-		}
-
-		ret = ret.substring(startIndex + 3, endIndex);
-		
-		return ret;
+		hasExtraTime       = firstRowOfSummarySection.getText().contains(REGULAR_TIME_IDENTIFICATION_TEXT);
+		hasPenyltyShooting = firstRowOfSummarySection.getText().contains(PENALTY_SHOOTING_IDENTIFICATIONTEXT);
 	}
 
 }
