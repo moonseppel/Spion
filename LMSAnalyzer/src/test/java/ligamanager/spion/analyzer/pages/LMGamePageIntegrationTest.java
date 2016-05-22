@@ -2,8 +2,7 @@ package ligamanager.spion.analyzer.pages;
 
 import ligamanager.spion.analyzer.TestData;
 import ligamanager.spion.analyzer.useCases.BasicActions;
-import ligamanager.spion.analyzer.util.GameResult;
-import ligamanager.spion.analyzer.util.GameValues;
+import ligamanager.spion.analyzer.util.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -13,8 +12,6 @@ import static org.junit.Assert.*;
  * Created by jpralle on 01.03.2016.
  */
 public class LMGamePageIntegrationTest {
-
-    private static int testedSeason = 122;
 
     @BeforeClass
     public static void setUp() throws Exception {
@@ -28,7 +25,7 @@ public class LMGamePageIntegrationTest {
     public void testGetGameDataForNormalGame() throws Exception {
 
         int expectedGameId = 1;
-        LMGamePage subject = new LMGamePage(expectedGameId, testedSeason);
+        LMGamePage subject = new LMGamePage(expectedGameId, 122);
 
         assertAllGameValues(expectedGameId, subject);
         assertFalse(subject.hasExtraTime());
@@ -38,6 +35,20 @@ public class LMGamePageIntegrationTest {
         assertEquals("1. FC Magdeburg", subject.getAwayTeamName());
         assertEquals(122, subject.getSeasonNumber());
         assertEquals(new GameResult(4,1), subject.getEndResult());
+
+        assertEquals(GameFormation.FORMATION_442_2, subject.getHomeFormations().firstHalf);
+        assertEquals(GameFormation.FORMATION_442_2, subject.getHomeFormations().secondHalf);
+        assertEquals(GameFormation.EMPTY, subject.getHomeFormations().extraTime);
+        assertEquals(GameFormation.FORMATION_442_3, subject.getAwayFormations().firstHalf);
+        assertEquals(GameFormation.FORMATION_442_3, subject.getAwayFormations().secondHalf);
+        assertEquals(GameFormation.EMPTY, subject.getAwayFormations().extraTime);
+
+        assertEquals(Tactic.VERY_OFFENSIVE, subject.getHomeTactics().firstHalf);
+        assertEquals(Tactic.VERY_OFFENSIVE, subject.getHomeTactics().secondHalf);
+        assertEquals(Tactic.EMPTY, subject.getHomeTactics().extraTime);
+        assertEquals(Tactic.VERY_OFFENSIVE, subject.getAwayTactics().firstHalf);
+        assertEquals(Tactic.VERY_OFFENSIVE, subject.getAwayTactics().secondHalf);
+        assertEquals(Tactic.EMPTY, subject.getAwayTactics().extraTime);
     }
 
     /**
@@ -47,7 +58,7 @@ public class LMGamePageIntegrationTest {
     public void testGetGameDataForGameWithExtraTime() throws Exception {
 
         int expectedGameId = 280152; //also 280156 should work
-        LMGamePage subject = new LMGamePage(expectedGameId, testedSeason);
+        LMGamePage subject = new LMGamePage(expectedGameId, 122);
 
         assertAllGameValues(expectedGameId, subject);
         assertTrue(subject.hasExtraTime());
@@ -57,6 +68,20 @@ public class LMGamePageIntegrationTest {
         assertEquals("SV Donaumoos", subject.getAwayTeamName());
         assertEquals(122, subject.getSeasonNumber());
         assertEquals(new GameResult(0,1), subject.getEndResult());
+
+        assertEquals(GameFormation.FORMATION_343_9, subject.getHomeFormations().firstHalf);
+        assertEquals(GameFormation.FORMATION_343_9, subject.getHomeFormations().secondHalf);
+        assertEquals(GameFormation.FORMATION_343_9, subject.getHomeFormations().extraTime);
+        assertEquals(GameFormation.FORMATION_442_3, subject.getAwayFormations().firstHalf);
+        assertEquals(GameFormation.FORMATION_442_3, subject.getAwayFormations().secondHalf);
+        assertEquals(GameFormation.FORMATION_442_3, subject.getAwayFormations().extraTime);
+
+        assertEquals(Tactic.VERY_OFFENSIVE, subject.getHomeTactics().firstHalf);
+        assertEquals(Tactic.VERY_OFFENSIVE, subject.getHomeTactics().secondHalf);
+        assertEquals(Tactic.VERY_OFFENSIVE, subject.getHomeTactics().extraTime);
+        assertEquals(Tactic.OFFENSIVE, subject.getAwayTactics().firstHalf);
+        assertEquals(Tactic.OFFENSIVE, subject.getAwayTactics().secondHalf);
+        assertEquals(Tactic.OFFENSIVE, subject.getAwayTactics().extraTime);
     }
 
     /**
@@ -66,7 +91,7 @@ public class LMGamePageIntegrationTest {
     public void testGetGameDataForGameWithExtraTimeAndPenaltyShooting() throws Exception {
 
         int expectedGameId = 280155; //also 280156 should work
-        LMGamePage subject = new LMGamePage(expectedGameId, testedSeason);
+        LMGamePage subject = new LMGamePage(expectedGameId, 122);
 
         assertAllGameValues(expectedGameId, subject);
         assertTrue(subject.hasExtraTime());
@@ -76,6 +101,53 @@ public class LMGamePageIntegrationTest {
         assertEquals("Der Club", subject.getAwayTeamName());
         assertEquals(122, subject.getSeasonNumber());
         assertEquals(new GameResult(8,7), subject.getEndResult());
+
+        assertEquals(GameFormation.FORMATION_442_1, subject.getHomeFormations().firstHalf);
+        assertEquals(GameFormation.FORMATION_442_1, subject.getHomeFormations().secondHalf);
+        assertEquals(GameFormation.FORMATION_442_1, subject.getHomeFormations().extraTime);
+        assertEquals(GameFormation.FORMATION_442_2, subject.getAwayFormations().firstHalf);
+        assertEquals(GameFormation.FORMATION_352_4, subject.getAwayFormations().secondHalf);
+        assertEquals(GameFormation.FORMATION_352_4, subject.getAwayFormations().extraTime);
+
+        assertEquals(Tactic.VERY_OFFENSIVE, subject.getHomeTactics().firstHalf);
+        assertEquals(Tactic.VERY_OFFENSIVE, subject.getHomeTactics().secondHalf);
+        assertEquals(Tactic.VERY_OFFENSIVE, subject.getHomeTactics().extraTime);
+        assertEquals(Tactic.OFFENSIVE, subject.getAwayTactics().firstHalf);
+        assertEquals(Tactic.OFFENSIVE, subject.getAwayTactics().secondHalf);
+        assertEquals(Tactic.OFFENSIVE, subject.getAwayTactics().extraTime);
+    }
+
+    /**
+     * Tested game: http://www.liga-manager.de/inc/spiel_info.php?id=34193&show_saison=124
+     */
+    @Test
+    public void testGetGameDataForGameWithChangingTactic() throws Exception {
+
+        int expectedGameId = 34193; //also 280156 should work
+        LMGamePage subject = new LMGamePage(expectedGameId, 124);
+
+        assertAllGameValues(expectedGameId, subject);
+        assertFalse(subject.hasExtraTime());
+        assertFalse(subject.hasPenyltyShooting());
+
+        assertEquals("Baile Átha Cliath Clampar", subject.getHomeTeamName());
+        assertEquals("Dublin City", subject.getAwayTeamName());
+        assertEquals(124, subject.getSeasonNumber());
+        assertEquals(new GameResult(1,3), subject.getEndResult());
+
+        assertEquals(GameFormation.FORMATION_352_5, subject.getHomeFormations().firstHalf);
+        assertEquals(GameFormation.FORMATION_352_5, subject.getHomeFormations().secondHalf);
+        assertEquals(GameFormation.EMPTY, subject.getHomeFormations().extraTime);
+        assertEquals(GameFormation.FORMATION_352_6, subject.getAwayFormations().firstHalf);
+        assertEquals(GameFormation.FORMATION_352_5, subject.getAwayFormations().secondHalf);
+        assertEquals(GameFormation.EMPTY, subject.getAwayFormations().extraTime);
+
+        assertEquals(Tactic.OFFENSIVE, subject.getHomeTactics().firstHalf);
+        assertEquals(Tactic.OFFENSIVE, subject.getHomeTactics().secondHalf);
+        assertEquals(Tactic.EMPTY, subject.getHomeTactics().extraTime);
+        assertEquals(Tactic.VERY_DEFENSIVE, subject.getAwayTactics().firstHalf);
+        assertEquals(Tactic.OFFENSIVE, subject.getAwayTactics().secondHalf);
+        assertEquals(Tactic.EMPTY, subject.getAwayTactics().extraTime);
     }
 
     private void assertAllGameValues(int expectedGameId, LMGamePage subject) {
@@ -90,11 +162,14 @@ public class LMGamePageIntegrationTest {
         assertTrue(subject.getEndResult().getHome() >= 0);
         assertTrue(subject.getEndResult().getAway() >= 0);
         assertTrue(compareAllBy(subject.hasExtraTime(), subject.hasPenyltyShooting(), lowestButSetResult, subject.getResults()));
-//        assertTrue(compareAllBy(subject.hasExtraTime(), subject.hasPenyltyShooting(), lowestButSetFormation, subject.getHomeFormations()));
-
+        assertTrue(areAllSet(subject.hasExtraTime(), subject.getHomeFormations()));
+        assertTrue(areAllSet(subject.hasExtraTime(), subject.getAwayFormations()));
+        assertTrue(areAllSet(subject.hasExtraTime(), subject.getHomeTactics()));
+        assertTrue(areAllSet(subject.hasExtraTime(), subject.getAwayTactics()));
+//        assertTrue(areAllSet(subject.hasExtraTime(), subject.get()));
     }
 
-    private boolean compareAllBy(boolean hasExtraTime, boolean hasPenaltyShooting, GameResult expected, GameValues<GameResult> actual) {
+    private boolean compareAllBy(boolean hasExtraTime, boolean hasPenaltyShooting, GameResult expected, GameValuesInclPenalties<GameResult> actual) {
         boolean ret = true;
 
         ret = ret && isGreaterOrEqual(expected, actual.firstHalf);
@@ -114,6 +189,20 @@ public class LMGamePageIntegrationTest {
         return ret;
     }
 
+    private <T extends Emptyable> boolean areAllSet(boolean hasExtraTime, GameValues<T> actual) {
+        boolean ret = true;
+
+        ret = ret && !actual.firstHalf.isEmpty();
+        ret = ret && !actual.secondHalf.isEmpty();
+        if(hasExtraTime) {
+            ret = ret && !actual.extraTime.isEmpty();
+        } else {
+            ret = ret &&  actual.extraTime.isEmpty();
+        }
+
+        return ret;
+    }
+
     private boolean isGreaterOrEqual(GameResult expected , GameResult actual) {
         boolean ret = true;
 
@@ -124,27 +213,22 @@ public class LMGamePageIntegrationTest {
     }
 
 
-// GameValues<WebElement> results;
-// GameValues<WebElement> homeStrengthsBeginOfHalfs;
-// GameValues<WebElement> homeStrengthsAverageOfHalfs;
-// GameValues<WebElement> homeStrengthsEndOfHalfs;
-// GameValues<WebElement> awayStrengthsBeginOfHalfs;
-// GameValues<WebElement> awayStrengthsAverageOfHalfs;
-// GameValues<WebElement> awayStrengthsEndOfHalfs;
-// GameValues<WebElement> homeSystems;
-// GameValues<WebElement> awaySystems;
-// GameValues<WebElement> homeTactics;
-// GameValues<WebElement> awayTactocs;
-// GameValues<WebElement> homeAngriffe;
-// GameValues<WebElement> awayAngriffe;
-// GameValues<WebElement> homeChancen;
-// GameValues<WebElement> awayChancen;
-// GameValues<WebElement> homeBallPossession;
-// GameValues<WebElement> awayBallPossession;
+// GameValuesInclPenalties<WebElement> homeStrengthsBeginOfHalfs;
+// GameValuesInclPenalties<WebElement> homeStrengthsAverageOfHalfs;
+// GameValuesInclPenalties<WebElement> homeStrengthsEndOfHalfs;
+// GameValuesInclPenalties<WebElement> awayStrengthsBeginOfHalfs;
+// GameValuesInclPenalties<WebElement> awayStrengthsAverageOfHalfs;
+// GameValuesInclPenalties<WebElement> awayStrengthsEndOfHalfs;
+// GameValuesInclPenalties<WebElement> homeAngriffe;
+// GameValuesInclPenalties<WebElement> awayAngriffe;
+// GameValuesInclPenalties<WebElement> homeChancen;
+// GameValuesInclPenalties<WebElement> awayChancen;
+// GameValuesInclPenalties<WebElement> homeBallPossession;
+// GameValuesInclPenalties<WebElement> awayBallPossession;
 // WebElement homeBallPossessionTotal;
 // WebElement awayBallPossessionTotal;
-// GameValues<WebElement> homeZweikaempfe;
-// GameValues<WebElement> awayZweikaempfe;
+// GameValuesInclPenalties<WebElement> homeZweikaempfe;
+// GameValuesInclPenalties<WebElement> awayZweikaempfe;
 // WebElement homeZweikaempfeTotal;
 // WebElement awayZweikaempfeTotal;
 

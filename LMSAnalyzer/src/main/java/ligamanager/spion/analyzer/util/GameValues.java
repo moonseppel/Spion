@@ -8,6 +8,5 @@ public class GameValues<T> {
     public T firstHalf;
     public T secondHalf;
     public T extraTime;
-    public T penalityShooting;
 
 }

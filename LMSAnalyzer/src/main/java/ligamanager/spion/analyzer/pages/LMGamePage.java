@@ -1,17 +1,19 @@
 package ligamanager.spion.analyzer.pages;
 
+import ligamanager.spion.analyzer.pages.partPages.gamePage.gameHalfs.*;
 import ligamanager.spion.analyzer.pages.partPages.gamePage.summarySection.SummarySectionGamePagePart;
 import ligamanager.spion.analyzer.pages.partPages.gamePage.summarySection.SummarySectionPartWithExtraTime;
 import ligamanager.spion.analyzer.pages.partPages.gamePage.summarySection.SummarySectionPartWithPenaltyShooting;
 import ligamanager.spion.analyzer.pages.partPages.gamePage.summarySection.SummarySectionPartForRegularTime;
 import ligamanager.spion.analyzer.pages.util.StringParsingHelper;
-import ligamanager.spion.analyzer.util.GameResult;
-import ligamanager.spion.analyzer.util.GameValues;
+import ligamanager.spion.analyzer.util.*;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.text.MessageFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Ruft aus einem Spiel die folgenden Informationen ab:
@@ -37,6 +39,7 @@ public class LMGamePage extends LMBasePage {
 	public static final String PENALTY_SHOOTING_IDENTIFICATIONTEXT = "Elfmeterschiessen";
 
 	private SummarySectionGamePagePart summaryPart = null;
+	private List<HalfGamePagePart> gameHalfParts = null;
 
 	private String pageUrl = "http://www.liga-manager.de/inc/spiel_info.php?id={0}&show_saison={1}";
 	private int gameId = -1;
@@ -48,17 +51,18 @@ public class LMGamePage extends LMBasePage {
 	private String homeTeamName = null;
 	private String awayTeamName = null;
 	private GameResult endResult = null;
-	private GameValues<GameResult> results = null;
-//	private GameValues<GameFormation> homeFormations = null;
-//	private GameValues<GameFormation> awayFormations = null;
-//	private GameValues<???> homeTactics = null;
-//	private GameValues<???> awayTactics = null;
-//	private GameValues<GameResult> homeStrengthsBeginOfHalfs = null;
-//	private GameValues<GameResult> homeStrengthsAverageOfHalfs = null;
-//	private GameValues<GameResult> homeStrengthsEndOfHalfs = null;
-//	private GameValues<GameResult> awayStrengthsBeginOfHalfs = null;
-//	private GameValues<GameResult> awayStrengthsAverageOfHalfs = null;
-//	private GameValues<GameResult> awayStrengthsEndOfHalfs = null;
+	private GameValuesInclPenalties<GameResult> results = null;
+	private GameValues<GameFormation> homeFormations = null;
+	private GameValues<GameFormation> awayFormations = null;
+	private GameValues<Tactic> homeTactics = null;
+	private GameValues<Tactic> awayTactics = null;
+	private GameValues<GameResult> homeStrengthsBeginOfHalfs = null;
+	private GameValues<GameResult> homeStrengthsAverageOfHalfs = null;
+	private GameValues<GameResult> homeStrengthsEndOfHalfs = null;
+	private GameValues<GameResult> awayStrengthsBeginOfHalfs = null;
+	private GameValues<GameResult> awayStrengthsAverageOfHalfs = null;
+	private GameValues<GameResult> awayStrengthsEndOfHalfs = null;
+
 //	private GameValues<GameResult> homeAngriffe = null;
 //	private GameValues<GameResult> awayAngriffe = null;
 //	private GameValues<GameResult> homeChancen = null;
@@ -104,14 +108,21 @@ public class LMGamePage extends LMBasePage {
 
 		checkForExtraTimeAndPenaltyShooting();
 
+		gameHalfParts = new ArrayList<HalfGamePagePart>();
+		gameHalfParts.add(new FirstHalfGamePagePart(driver));
+		gameHalfParts.add(new SecondHalfGamePagePart(driver));
+
 		if(hasPenyltyShooting()) {
 			summaryPart = new SummarySectionPartWithPenaltyShooting(driver, this);
+			gameHalfParts.add(new ExtraTimeGamePagePart(driver));
 
 		} else if(hasExtraTime()) {
 			summaryPart = new SummarySectionPartWithExtraTime(driver, this);
+			gameHalfParts.add(new ExtraTimeGamePagePart(driver));
 
 		} else {
 			summaryPart = new SummarySectionPartForRegularTime(driver, this);
+			gameHalfParts.add(new NoExtraTimeGamePart(driver));
 		}
 
 
@@ -168,19 +179,97 @@ public class LMGamePage extends LMBasePage {
 		return awayTeamName;
 	}
 
-	public GameValues<GameResult> getResults() {
+	public GameValuesInclPenalties<GameResult> getResults() {
 		if(results == null) {
 			results = summaryPart.getResults();
 		}
 		return results;
 	}
 
-//	public GameValues<GameFormation> getHomeFormations() {
-//		if(homeFormations == null) {
-//			homeFormations = ;
-//		}
-//		return homeFormations;
-//	}
+	public GameValues<GameFormation> getHomeFormations() {
+		if(homeFormations == null) {
+			parseValuesFromGameHalfs();
+		}
+		return homeFormations;
+	}
+
+	public GameValues<GameFormation> getAwayFormations() {
+		if(awayFormations == null) {
+			parseValuesFromGameHalfs();
+		}
+		return awayFormations;
+	}
+
+	public GameValues<Tactic> getHomeTactics() {
+		if(homeTactics == null) {
+			parseValuesFromGameHalfs();
+		}
+		return homeTactics;
+	}
+
+	public GameValues<Tactic> getAwayTactics() {
+		if(awayTactics == null) {
+			parseValuesFromGameHalfs();
+		}
+		return awayTactics;
+	}
+
+	public GameValues<GameResult> getAwayStrengthsEndOfHalfs() {
+		if(awayStrengthsEndOfHalfs == null) {
+			parseValuesFromGameHalfs();
+		}
+		return awayStrengthsEndOfHalfs;
+	}
+
+	public GameValues<GameResult> getHomeStrengthsBeginOfHalfs() {
+		if(homeStrengthsBeginOfHalfs == null) {
+			parseValuesFromGameHalfs();
+		}
+		return homeStrengthsBeginOfHalfs;
+	}
+
+	public GameValues<GameResult> getHomeStrengthsAverageOfHalfs() {
+		if(homeStrengthsAverageOfHalfs == null) {
+			parseValuesFromGameHalfs();
+		}
+		return homeStrengthsAverageOfHalfs;
+	}
+
+	public GameValues<GameResult> getHomeStrengthsEndOfHalfs() {
+		if(homeStrengthsEndOfHalfs == null) {
+			parseValuesFromGameHalfs();
+		}
+		return homeStrengthsEndOfHalfs;
+	}
+
+	public GameValues<GameResult> getAwayStrengthsBeginOfHalfs() {
+		if(awayStrengthsBeginOfHalfs == null) {
+			parseValuesFromGameHalfs();
+		}
+		return awayStrengthsBeginOfHalfs;
+	}
+
+	public GameValues<GameResult> getAwayStrengthsAverageOfHalfs() {
+		if(awayStrengthsAverageOfHalfs == null) {
+			parseValuesFromGameHalfs();
+		}
+		return awayStrengthsAverageOfHalfs;
+	}
+
+	private void parseValuesFromGameHalfs() {
+		homeFormations = new GameValues<GameFormation>();
+		awayFormations = new GameValues<GameFormation>();
+		homeTactics = new GameValues<Tactic>();
+		awayTactics = new GameValues<Tactic>();
+
+		for (HalfGamePagePart halfGamePart : gameHalfParts) {
+			halfGamePart.parseValues();
+			halfGamePart.saveHomeFormationTo(homeFormations);
+			halfGamePart.saveAwayFormationTo(awayFormations);
+			halfGamePart.saveHomeTacticTo(homeTactics);
+			halfGamePart.saveAwayTacticTo(awayTactics);
+		}
+	}
 
 	private void checkForExtraTimeAndPenaltyShooting() {
 		WebElement firstRowOfSummarySection = driver.findElement(By.xpath("//*[@id=\"content_chat\"]/div[2]/table/tbody/tr[1]"));

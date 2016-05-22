@@ -3,7 +3,7 @@ package ligamanager.spion.analyzer.pages.partPages.gamePage.summarySection;
 import ligamanager.spion.analyzer.pages.LMGamePage;
 import ligamanager.spion.analyzer.pages.util.StringParsingHelper;
 import ligamanager.spion.analyzer.util.GameResult;
-import ligamanager.spion.analyzer.util.GameValues;
+import ligamanager.spion.analyzer.util.GameValuesInclPenalties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,8 +25,8 @@ public class SummarySectionPartForRegularTime extends SummarySectionGamePagePart
     }
 
     @Override
-    public GameValues<GameResult> getResults() {
-        GameValues<GameResult> ret = new GameValues<GameResult>();
+    public GameValuesInclPenalties<GameResult> getResults() {
+        GameValuesInclPenalties<GameResult> ret = new GameValuesInclPenalties<GameResult>();
 
         String xpathToEndResult = ".//tr[1]/td[2]";
         WebElement resultElement = summaryBox.findElement(By.xpath(xpathToEndResult));
