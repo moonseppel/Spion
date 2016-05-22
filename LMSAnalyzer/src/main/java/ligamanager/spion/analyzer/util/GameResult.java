@@ -5,7 +5,7 @@ import java.util.StringTokenizer;
 /**
  * Created by jpralle on 02.03.2016.
  */
-public class GameResult {
+public class GameResult implements Emptyable {
 
     protected int homeValue = -1;
     protected int awayValue = -1;

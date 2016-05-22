@@ -261,6 +261,12 @@ public class LMGamePage extends LMBasePage {
 		awayFormations = new GameValues<GameFormation>();
 		homeTactics = new GameValues<Tactic>();
 		awayTactics = new GameValues<Tactic>();
+		homeStrengthsBeginOfHalfs = new GameValues<GameResult>();
+		homeStrengthsAverageOfHalfs = new GameValues<GameResult>();
+		homeStrengthsEndOfHalfs = new GameValues<GameResult>();
+		awayStrengthsBeginOfHalfs = new GameValues<GameResult>();
+		awayStrengthsAverageOfHalfs = new GameValues<GameResult>();
+		awayStrengthsEndOfHalfs = new GameValues<GameResult>();
 
 		for (HalfGamePagePart halfGamePart : gameHalfParts) {
 			halfGamePart.parseValues();
@@ -268,6 +274,7 @@ public class LMGamePage extends LMBasePage {
 			halfGamePart.saveAwayFormationTo(awayFormations);
 			halfGamePart.saveHomeTacticTo(homeTactics);
 			halfGamePart.saveAwayTacticTo(awayTactics);
+			//hier gehts weiter
 		}
 	}
 

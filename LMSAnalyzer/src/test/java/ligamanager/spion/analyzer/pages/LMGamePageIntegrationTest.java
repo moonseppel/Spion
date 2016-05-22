@@ -166,7 +166,12 @@ public class LMGamePageIntegrationTest {
         assertTrue(areAllSet(subject.hasExtraTime(), subject.getAwayFormations()));
         assertTrue(areAllSet(subject.hasExtraTime(), subject.getHomeTactics()));
         assertTrue(areAllSet(subject.hasExtraTime(), subject.getAwayTactics()));
-//        assertTrue(areAllSet(subject.hasExtraTime(), subject.get()));
+        assertTrue(areAllSet(subject.hasExtraTime(), subject.getHomeStrengthsBeginOfHalfs()));
+        assertTrue(areAllSet(subject.hasExtraTime(), subject.getHomeStrengthsEndOfHalfs()));
+        assertTrue(areAllSet(subject.hasExtraTime(), subject.getHomeStrengthsAverageOfHalfs()));
+        assertTrue(areAllSet(subject.hasExtraTime(), subject.getAwayStrengthsBeginOfHalfs()));
+        assertTrue(areAllSet(subject.hasExtraTime(), subject.getAwayStrengthsEndOfHalfs()));
+        assertTrue(areAllSet(subject.hasExtraTime(), subject.getAwayStrengthsAverageOfHalfs()));
     }
 
     private boolean compareAllBy(boolean hasExtraTime, boolean hasPenaltyShooting, GameResult expected, GameValuesInclPenalties<GameResult> actual) {
