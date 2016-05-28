@@ -1,6 +1,7 @@
 package ligamanager.spion.analyzer.pages.partPages.gamePage.gameHalfs;
 
 import ligamanager.spion.analyzer.util.GameFormation;
+import ligamanager.spion.analyzer.util.GameResult;
 import ligamanager.spion.analyzer.util.GameValues;
 import ligamanager.spion.analyzer.util.Tactic;
 import org.openqa.selenium.By;
@@ -20,20 +21,19 @@ public class ExtraTimeGamePagePart extends HalfGamePagePart {
 
     @Override
     public void parseValues() {
-        String xpathToHomeFormation = ".//td[2]/strong/font";
-        String xpathToAwayFormation = ".//td[5]/strong/font";
 
-//        parseFormation(xpathToHomeFormation, xpathToAwayFormation);
+        String xpathToAwayStrengths = ".//td[4]/font/strong/div";
+        parseStrengths(xpathToAwayStrengths, true);
     }
 
     @Override
     public void saveHomeFormationTo(GameValues<GameFormation> homeFormationsForSaving) {
-//        homeFormationsForSaving.extraTime = halfsHomeFormation;
+        //this is the same value as in the second half and set there
     }
 
     @Override
     public void saveAwayFormationTo(GameValues<GameFormation> awayFormationsForSaving) {
-//        awayFormationsForSaving.extraTime = halfsAwayFormation;
+        //this is the same value as in the second half and set there
     }
 
     @Override
@@ -44,5 +44,20 @@ public class ExtraTimeGamePagePart extends HalfGamePagePart {
     @Override
     public void saveAwayTacticTo(GameValues<Tactic> awayTacticsForSaving) {
         //this is the same value as in the second half and set there
+    }
+
+    @Override
+    public void saveStrengthsBeginOfHalfTo(GameValues<GameResult> strengthsBeginOfHalfs) {
+        strengthsBeginOfHalfs.extraTime = halfsStrengthsBeginOfHalf;
+    }
+
+    @Override
+    public void saveStrengthsEndOfHalfTo(GameValues<GameResult> strengthsEndOfHalfs) {
+        strengthsEndOfHalfs.extraTime = halfsStrengthsEndOfHalf;
+    }
+
+    @Override
+    public void saveStrengthsAvergageOfHalfTo(GameValues<GameResult> strengthsAverageOfHalfs) {
+        strengthsAverageOfHalfs.extraTime = halfsStrengthsAverageOfHalf;
     }
 }

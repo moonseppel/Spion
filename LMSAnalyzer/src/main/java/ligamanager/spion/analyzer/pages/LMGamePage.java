@@ -45,6 +45,8 @@ public class LMGamePage extends LMBasePage {
 	private int gameId = -1;
 	private int seasonNumber = -1;
 
+	private boolean showsHomeBonus = false;
+
 	private boolean hasExtraTime = false;
 	private boolean hasPenyltyShooting = false;
 
@@ -56,12 +58,9 @@ public class LMGamePage extends LMBasePage {
 	private GameValues<GameFormation> awayFormations = null;
 	private GameValues<Tactic> homeTactics = null;
 	private GameValues<Tactic> awayTactics = null;
-	private GameValues<GameResult> homeStrengthsBeginOfHalfs = null;
-	private GameValues<GameResult> homeStrengthsAverageOfHalfs = null;
-	private GameValues<GameResult> homeStrengthsEndOfHalfs = null;
-	private GameValues<GameResult> awayStrengthsBeginOfHalfs = null;
-	private GameValues<GameResult> awayStrengthsAverageOfHalfs = null;
-	private GameValues<GameResult> awayStrengthsEndOfHalfs = null;
+	private GameValues<GameResult> strengthsBeginOfHalfs = null;
+	private GameValues<GameResult> strengthsAverageOfHalfs = null;
+	private GameValues<GameResult> strengthsEndOfHalfs = null;
 
 //	private GameValues<GameResult> homeAngriffe = null;
 //	private GameValues<GameResult> awayAngriffe = null;
@@ -90,6 +89,10 @@ public class LMGamePage extends LMBasePage {
 		return seasonNumber;
 	}
 
+	public boolean showsHomeBonus() {
+		return showsHomeBonus;
+	}
+
 	@Override
 	public boolean navigateToPageAndCheck() {
 
@@ -105,6 +108,9 @@ public class LMGamePage extends LMBasePage {
 		driver.get(formattedPageUrl);
 
 		ret = isOnCorrectPage();
+
+		//the variant with home bonus will be the usaually used, as the strength values are normally more interesting
+		switchHomeBonus();
 
 		checkForExtraTimeAndPenaltyShooting();
 
@@ -129,23 +135,13 @@ public class LMGamePage extends LMBasePage {
 		return ret;
 	}
 
-	@Override
-	protected boolean isOnCorrectPageWithException() {
-		boolean ret = false;
+	private void switchHomeBonus() {
 
-		String title = driver.getTitle();
+		String xpathToHomeBonusSwitchLink = "//*[@id=\"content_chat\"]/div[1]/table[1]/tbody/tr/td[2]/a";
+		WebElement switchHomeBonusLink = driver.findElement(By.xpath(xpathToHomeBonusSwitchLink));
+		switchHomeBonusLink.click();
 
-		if(title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
-			ret = true;
-		}
-
-		WebElement spielberichtText = driver.findElement(By.xpath("//*[@id=\"magazin_chat\"]/div/div[1]/strong"));
-
-		if(spielberichtText != null && spielberichtText.getText().equalsIgnoreCase("Spielbericht")) {
-			ret = ret && true;
-		}
-
-		return ret;
+		showsHomeBonus = !showsHomeBonus;
 	}
 
 	public boolean hasPenyltyShooting() {
@@ -214,46 +210,44 @@ public class LMGamePage extends LMBasePage {
 		return awayTactics;
 	}
 
-	public GameValues<GameResult> getAwayStrengthsEndOfHalfs() {
-		if(awayStrengthsEndOfHalfs == null) {
+	public GameValues<GameResult> getStrengthsBeginOfHalfs() {
+		if(strengthsBeginOfHalfs == null) {
 			parseValuesFromGameHalfs();
 		}
-		return awayStrengthsEndOfHalfs;
+		return strengthsBeginOfHalfs;
 	}
 
-	public GameValues<GameResult> getHomeStrengthsBeginOfHalfs() {
-		if(homeStrengthsBeginOfHalfs == null) {
+	public GameValues<GameResult> getStrengthsAverageOfHalfs() {
+		if(strengthsAverageOfHalfs == null) {
 			parseValuesFromGameHalfs();
 		}
-		return homeStrengthsBeginOfHalfs;
+		return strengthsAverageOfHalfs;
 	}
 
-	public GameValues<GameResult> getHomeStrengthsAverageOfHalfs() {
-		if(homeStrengthsAverageOfHalfs == null) {
+	public GameValues<GameResult> getStrengthsEndOfHalfs() {
+		if(strengthsEndOfHalfs == null) {
 			parseValuesFromGameHalfs();
 		}
-		return homeStrengthsAverageOfHalfs;
+		return strengthsEndOfHalfs;
 	}
 
-	public GameValues<GameResult> getHomeStrengthsEndOfHalfs() {
-		if(homeStrengthsEndOfHalfs == null) {
-			parseValuesFromGameHalfs();
-		}
-		return homeStrengthsEndOfHalfs;
-	}
+	@Override
+	protected boolean isOnCorrectPageWithException() {
+		boolean ret = false;
 
-	public GameValues<GameResult> getAwayStrengthsBeginOfHalfs() {
-		if(awayStrengthsBeginOfHalfs == null) {
-			parseValuesFromGameHalfs();
-		}
-		return awayStrengthsBeginOfHalfs;
-	}
+		String title = driver.getTitle();
 
-	public GameValues<GameResult> getAwayStrengthsAverageOfHalfs() {
-		if(awayStrengthsAverageOfHalfs == null) {
-			parseValuesFromGameHalfs();
+		if(title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
+			ret = true;
 		}
-		return awayStrengthsAverageOfHalfs;
+
+		WebElement spielberichtText = driver.findElement(By.xpath("//*[@id=\"magazin_chat\"]/div/div[1]/strong"));
+
+		if(spielberichtText != null && spielberichtText.getText().equalsIgnoreCase("Spielbericht")) {
+			ret = ret && true;
+		}
+
+		return ret;
 	}
 
 	private void parseValuesFromGameHalfs() {
@@ -261,12 +255,9 @@ public class LMGamePage extends LMBasePage {
 		awayFormations = new GameValues<GameFormation>();
 		homeTactics = new GameValues<Tactic>();
 		awayTactics = new GameValues<Tactic>();
-		homeStrengthsBeginOfHalfs = new GameValues<GameResult>();
-		homeStrengthsAverageOfHalfs = new GameValues<GameResult>();
-		homeStrengthsEndOfHalfs = new GameValues<GameResult>();
-		awayStrengthsBeginOfHalfs = new GameValues<GameResult>();
-		awayStrengthsAverageOfHalfs = new GameValues<GameResult>();
-		awayStrengthsEndOfHalfs = new GameValues<GameResult>();
+		strengthsBeginOfHalfs = new GameValues<GameResult>();
+		strengthsAverageOfHalfs = new GameValues<GameResult>();
+		strengthsEndOfHalfs = new GameValues<GameResult>();
 
 		for (HalfGamePagePart halfGamePart : gameHalfParts) {
 			halfGamePart.parseValues();
@@ -274,7 +265,9 @@ public class LMGamePage extends LMBasePage {
 			halfGamePart.saveAwayFormationTo(awayFormations);
 			halfGamePart.saveHomeTacticTo(homeTactics);
 			halfGamePart.saveAwayTacticTo(awayTactics);
-			//hier gehts weiter
+			halfGamePart.saveStrengthsBeginOfHalfTo(strengthsBeginOfHalfs);
+			halfGamePart.saveStrengthsEndOfHalfTo(strengthsEndOfHalfs);
+			halfGamePart.saveStrengthsAvergageOfHalfTo(strengthsAverageOfHalfs);
 		}
 	}
 

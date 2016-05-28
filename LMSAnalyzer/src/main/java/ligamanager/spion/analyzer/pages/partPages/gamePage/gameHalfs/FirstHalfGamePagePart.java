@@ -1,11 +1,14 @@
 package ligamanager.spion.analyzer.pages.partPages.gamePage.gameHalfs;
 
 import ligamanager.spion.analyzer.util.GameFormation;
+import ligamanager.spion.analyzer.util.GameResult;
 import ligamanager.spion.analyzer.util.GameValues;
 import ligamanager.spion.analyzer.util.Tactic;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import java.util.StringTokenizer;
 
 /**
  * Created by jpralle on 14.05.2016.
@@ -20,10 +23,9 @@ public class FirstHalfGamePagePart extends HalfGamePagePart {
 
     @Override
     public void parseValues() {
-        String xpathToHomeFormationAndTactic = ".//td[2]/font";
-        String xpathToAwayFormationAndTactic = ".//td[5]/font";
 
-        parseFormation(xpathToHomeFormationAndTactic, xpathToAwayFormationAndTactic);
+        parseFormationAndTactic();
+        parseStrengths();
     }
 
     @Override
@@ -44,5 +46,20 @@ public class FirstHalfGamePagePart extends HalfGamePagePart {
     @Override
     public void saveAwayTacticTo(GameValues<Tactic> awayTacticsForSaving) {
         awayTacticsForSaving.firstHalf = halfsAwayTactic;
+    }
+
+    @Override
+    public void saveStrengthsBeginOfHalfTo(GameValues<GameResult> strengthsBeginOfHalfs) {
+        strengthsBeginOfHalfs.firstHalf = halfsStrengthsBeginOfHalf;
+    }
+
+    @Override
+    public void saveStrengthsEndOfHalfTo(GameValues<GameResult> strengthsEndOfHalfs) {
+        strengthsEndOfHalfs.firstHalf = halfsStrengthsEndOfHalf;
+    }
+
+    @Override
+    public void saveStrengthsAvergageOfHalfTo(GameValues<GameResult> strengthsAverageOfHalfs) {
+        strengthsAverageOfHalfs.firstHalf = halfsStrengthsAverageOfHalf;
     }
 }

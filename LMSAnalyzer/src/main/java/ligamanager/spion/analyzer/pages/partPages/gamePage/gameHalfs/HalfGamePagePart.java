@@ -1,9 +1,6 @@
 package ligamanager.spion.analyzer.pages.partPages.gamePage.gameHalfs;
 
-import ligamanager.spion.analyzer.util.GameFormation;
-import ligamanager.spion.analyzer.util.GameValues;
-import ligamanager.spion.analyzer.util.GameValuesInclPenalties;
-import ligamanager.spion.analyzer.util.Tactic;
+import ligamanager.spion.analyzer.util.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,6 +21,11 @@ public abstract class HalfGamePagePart {
     protected Tactic halfsHomeTactic = null;
     protected Tactic halfsAwayTactic = null;
 
+    protected GameResult halfsStrengthsBeginOfHalf;
+    protected GameResult halfsStrengthsEndOfHalf;
+    protected GameResult halfsStrengthsAverageOfHalf;
+
+
     public HalfGamePagePart(WebDriver driver, String xpathToHalfsElement) {
         this.driver = driver;
         if(xpathToHalfsElement != null) {
@@ -39,7 +41,14 @@ public abstract class HalfGamePagePart {
     public abstract void saveHomeTacticTo(GameValues<Tactic> homeTacticsForSaving);
     public abstract void saveAwayTacticTo(GameValues<Tactic> awayTacticsForSaving);
 
-    protected void parseFormation(String xpathToHomeFormationAndTactic, String xpathToAwayFormationAndTactic) {
+    public abstract void saveStrengthsBeginOfHalfTo(GameValues<GameResult> homeStrengthsBeginOfHalfs);
+    public abstract void saveStrengthsEndOfHalfTo(GameValues<GameResult> homeStrengthsEndOfHalfs);
+    public abstract void saveStrengthsAvergageOfHalfTo(GameValues<GameResult> homeStrengthsAverageOfHalfs);
+
+    protected void parseFormationAndTactic() {
+
+        String xpathToHomeFormationAndTactic = ".//td[2]/font";
+        String xpathToAwayFormationAndTactic = ".//td[5]/font";
 
         WebElement homeFormationElement = halfsWebElement.findElement(By.xpath(xpathToHomeFormationAndTactic));
         String homeFormationAndTactic = homeFormationElement.getText();
@@ -61,6 +70,49 @@ public abstract class HalfGamePagePart {
 
         halfsAwayFormation = GameFormation.getFormationFrom(awayFormationId);
         halfsAwayTactic = Tactic.getTacticFrom(awayTacticName);
+    }
+
+    protected void parseStrengths() {
+        String xpathToAwayStrengths = ".//td[4]/font/div[2]";
+        parseStrengths(xpathToAwayStrengths, false);
+    }
+
+    protected void parseStrengths(String xpathToAwayStrengths, boolean isExtraTime) {
+        String xpathToHomeStrengths = ".//td[3]/font/div[2]"; //use strength with home bonus
+
+        WebElement homeStrengthsElement = halfsWebElement.findElement(By.xpath(xpathToHomeStrengths));
+        String homeStrengthsText = homeStrengthsElement.getText();
+        StringTokenizer tokenizer = new StringTokenizer(homeStrengthsText, "\n");
+        String homeAverageStrength = tokenizer.nextToken().replace("Ø", "").trim();
+        String homeBeginStrength = tokenizer.nextToken().trim();
+        if(isExtraTime) {
+            tokenizer.nextToken();
+        }
+        String homeEndStrength = tokenizer.nextToken().trim();
+
+        WebElement awayStrengthsElement = halfsWebElement.findElement(By.xpath(xpathToAwayStrengths));
+        String awayStrengthsText = awayStrengthsElement.getText();
+        tokenizer = new StringTokenizer(awayStrengthsText, "\n");
+        String awayAverageStrength = tokenizer.nextToken().replace("Ø", "").trim();
+        String awayBeginStrength = tokenizer.nextToken().trim();
+        if(isExtraTime) {
+            tokenizer.nextToken();
+        }
+        String awayEndStrength = tokenizer.nextToken().trim();
+
+        halfsStrengthsBeginOfHalf = new GameResult(getIntFromDoubleString(homeBeginStrength), getIntFromDoubleString(awayBeginStrength));
+        halfsStrengthsEndOfHalf = new GameResult(getIntFromDoubleString(homeEndStrength), getIntFromDoubleString(awayEndStrength));
+        halfsStrengthsAverageOfHalf = new GameResult(getIntFromDoubleString(homeAverageStrength), getIntFromDoubleString(awayAverageStrength));
+    }
+
+    private int getIntFromDoubleString(String doubleString) {
+        long ret = -1;
+
+        String tmp = doubleString.replace(".", "").replace(",", ".");
+        double d = Double.valueOf(tmp);
+        ret = Math.round(d);
+
+        return (int)ret;
     }
 
 }

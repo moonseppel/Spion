@@ -49,6 +49,9 @@ public class LMGamePageIntegrationTest {
         assertEquals(Tactic.VERY_OFFENSIVE, subject.getAwayTactics().firstHalf);
         assertEquals(Tactic.VERY_OFFENSIVE, subject.getAwayTactics().secondHalf);
         assertEquals(Tactic.EMPTY, subject.getAwayTactics().extraTime);
+
+        assertEquals(new GameResult(1124,1093), subject.getStrengthsAverageOfHalfs().firstHalf);
+        assertEquals(new GameResult(1078,1053), subject.getStrengthsAverageOfHalfs().secondHalf);
     }
 
     /**
@@ -82,6 +85,18 @@ public class LMGamePageIntegrationTest {
         assertEquals(Tactic.OFFENSIVE, subject.getAwayTactics().firstHalf);
         assertEquals(Tactic.OFFENSIVE, subject.getAwayTactics().secondHalf);
         assertEquals(Tactic.OFFENSIVE, subject.getAwayTactics().extraTime);
+
+        assertEquals(new GameResult(1115,1071), subject.getStrengthsAverageOfHalfs().firstHalf);
+        assertEquals(new GameResult(1083,1039), subject.getStrengthsAverageOfHalfs().secondHalf);
+        assertEquals(new GameResult(1020,986), subject.getStrengthsAverageOfHalfs().extraTime);
+
+        assertEquals(new GameResult(1122,1079), subject.getStrengthsBeginOfHalfs().firstHalf);
+        assertEquals(new GameResult(1102,1064), subject.getStrengthsBeginOfHalfs().secondHalf);
+        assertEquals(new GameResult(1054,1004), subject.getStrengthsBeginOfHalfs().extraTime);
+
+        assertEquals(new GameResult(1101,1054), subject.getStrengthsEndOfHalfs().firstHalf);
+        assertEquals(new GameResult(1054,1004), subject.getStrengthsEndOfHalfs().secondHalf);
+        assertEquals(new GameResult(917,953), subject.getStrengthsEndOfHalfs().extraTime);
     }
 
     /**
@@ -115,6 +130,10 @@ public class LMGamePageIntegrationTest {
         assertEquals(Tactic.OFFENSIVE, subject.getAwayTactics().firstHalf);
         assertEquals(Tactic.OFFENSIVE, subject.getAwayTactics().secondHalf);
         assertEquals(Tactic.OFFENSIVE, subject.getAwayTactics().extraTime);
+
+        assertEquals(new GameResult(1099,1086), subject.getStrengthsAverageOfHalfs().firstHalf);
+        assertEquals(new GameResult(1094,1096), subject.getStrengthsAverageOfHalfs().secondHalf);
+        assertEquals(new GameResult(1074,1099), subject.getStrengthsAverageOfHalfs().extraTime);
     }
 
     /**
@@ -166,12 +185,9 @@ public class LMGamePageIntegrationTest {
         assertTrue(areAllSet(subject.hasExtraTime(), subject.getAwayFormations()));
         assertTrue(areAllSet(subject.hasExtraTime(), subject.getHomeTactics()));
         assertTrue(areAllSet(subject.hasExtraTime(), subject.getAwayTactics()));
-        assertTrue(areAllSet(subject.hasExtraTime(), subject.getHomeStrengthsBeginOfHalfs()));
-        assertTrue(areAllSet(subject.hasExtraTime(), subject.getHomeStrengthsEndOfHalfs()));
-        assertTrue(areAllSet(subject.hasExtraTime(), subject.getHomeStrengthsAverageOfHalfs()));
-        assertTrue(areAllSet(subject.hasExtraTime(), subject.getAwayStrengthsBeginOfHalfs()));
-        assertTrue(areAllSet(subject.hasExtraTime(), subject.getAwayStrengthsEndOfHalfs()));
-        assertTrue(areAllSet(subject.hasExtraTime(), subject.getAwayStrengthsAverageOfHalfs()));
+        assertTrue(areAllSet(subject.hasExtraTime(), subject.getStrengthsBeginOfHalfs()));
+        assertTrue(areAllSet(subject.hasExtraTime(), subject.getStrengthsEndOfHalfs()));
+        assertTrue(areAllSet(subject.hasExtraTime(), subject.getStrengthsAverageOfHalfs()));
     }
 
     private boolean compareAllBy(boolean hasExtraTime, boolean hasPenaltyShooting, GameResult expected, GameValuesInclPenalties<GameResult> actual) {

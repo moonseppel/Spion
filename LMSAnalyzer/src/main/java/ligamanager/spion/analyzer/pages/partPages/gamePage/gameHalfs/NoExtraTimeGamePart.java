@@ -1,6 +1,7 @@
 package ligamanager.spion.analyzer.pages.partPages.gamePage.gameHalfs;
 
 import ligamanager.spion.analyzer.util.GameFormation;
+import ligamanager.spion.analyzer.util.GameResult;
 import ligamanager.spion.analyzer.util.GameValues;
 import ligamanager.spion.analyzer.util.Tactic;
 import org.openqa.selenium.WebDriver;
@@ -42,5 +43,20 @@ public class NoExtraTimeGamePart extends HalfGamePagePart {
     @Override
     public void saveAwayTacticTo(GameValues<Tactic> awayTacticsForSaving) {
         awayTacticsForSaving.extraTime = Tactic.EMPTY;
+    }
+
+    @Override
+    public void saveStrengthsBeginOfHalfTo(GameValues<GameResult> strengthsBeginOfHalfs) {
+        strengthsBeginOfHalfs.extraTime = GameResult.EMPTY;
+    }
+
+    @Override
+    public void saveStrengthsEndOfHalfTo(GameValues<GameResult> strengthsEndOfHalfs) {
+        strengthsEndOfHalfs.extraTime = GameResult.EMPTY;
+    }
+
+    @Override
+    public void saveStrengthsAvergageOfHalfTo(GameValues<GameResult> strengthsAverageOfHalfs) {
+        strengthsAverageOfHalfs.extraTime = GameResult.EMPTY;
     }
 }
