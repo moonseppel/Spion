@@ -1,14 +1,8 @@
 package ligamanager.spion.learningTests.hibernate;
 
-import com.fasterxml.classmate.AnnotationConfiguration;
 import org.apache.log4j.Logger;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.cfg.Environment;
-import org.hibernate.tool.hbm2ddl.SchemaExport;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -21,6 +15,11 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 /**
+ * Current tutorial point: http://www.tutorialspoint.com/hibernate/hibernate_query_language.htm
+ *
+ * Hibernate type mapping: http://www.tutorialspoint.com/hibernate/hibernate_mapping_types.htm
+ * Hibernate Session class: http://www.tutorialspoint.com/hibernate/hibernate_sessions.htm
+ *
  * Created by jpralle on 28.05.2016.
  */
 public class TransactionTests {
@@ -41,7 +40,7 @@ public class TransactionTests {
             //something else when summer time ends.
             config.setProperty("hibernate.connection.url",
                     "jdbc:mysql://www.cloneworks.de/d0223db7?useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=EST");
-            factory = config.buildSessionFactory();
+            factory = config.addAnnotatedClass(Employee.class).buildSessionFactory();
             crud = new EmployeeCRUD(factory);
 
         } catch (Throwable ex) {

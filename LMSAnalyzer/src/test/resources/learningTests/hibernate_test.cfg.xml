@@ -22,7 +22,7 @@
         </property>
 
         <!-- List of XML mapping files -->
-        <mapping resource="learningTests/Employee.hbm.xml"/>
+        <!--<mapping resource="learningTests/Employee.hbm.xml"/>-->
 
     </session-factory>
 </hibernate-configuration>
