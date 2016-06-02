@@ -10,18 +10,21 @@ public class LmGameHibernateBean {
     private int gameId = -1;
     private int seasonNumber = -1;
 
-    private boolean showsHomeBonus = false;
-
     private boolean hasExtraTime = false;
     private boolean hasPenaltyShooting = false;
 
     private String homeTeamName = null;
     private String awayTeamName = null;
-    private GameResult endResult = null;
-    private GameResult resultFirstHalf = null;
-    private GameResult resultSecondHalf = null;
-    private GameResult resultExtraTime = null;
-    private GameResult resultPenaltyShooting = null;
+    private int endResultHome = -1;
+    private int endResultAway = -1;
+    private int resultFirstHalfHome = -1;
+    private int resultFirstHalfAway = -1;
+    private int resultSecondHalfHome = -1;
+    private int resultSecondHalfAway = -1;
+    private int resultExtraTimeHome = -1;
+    private int resultExtraTimeAway = -1;
+    private int resultPenaltyShootingHome = -1;
+    private int resultPenaltyShootingAway = -1;
     private GameFormation homeFormationFirstHalf = null;
     private GameFormation homeFormationSecondHalf = null;
     private GameFormation homeFormationExtraTime = null;
@@ -34,14 +37,23 @@ public class LmGameHibernateBean {
     private Tactic awayTacticFirstHalf = null;
     private Tactic awayTacticSecondHalf = null;
     private Tactic awayTacticExtraTime = null;
-    private GameResult strengthBeginOfFirstHalf = null;
-    private GameResult strengthBeginOfSecondHalf = null;
-    private GameResult strengthBeginOfExtraTime = null;
-    private GameResult strengthAverageOfFirstHalf = null;
-    private GameResult strengthAverageOfSecondHalf = null;
-    private GameResult strengthAverageOfExtraTime = null;
-    private GameResult strengthEndOfFirstHalf = null;
-    private GameResult strengthEndOfSecondHalf = null;
-    private GameResult strengthEndOfExtraTime = null;
+    private int strengthBeginOfFirstHalfHome = -1;
+    private int strengthBeginOfFirstHalfAway = -1;
+    private int strengthBeginOfSecondHalfHome = -1;
+    private int strengthBeginOfSecondHalfAway = -1;
+    private int strengthBeginOfExtraTimeHome = -1;
+    private int strengthBeginOfExtraTimeAway = -1;
+    private int strengthAverageOfFirstHalfHome = -1;
+    private int strengthAverageOfFirstHalfAway = -1;
+    private int strengthAverageOfSecondHalfHome = -1;
+    private int strengthAverageOfSecondHalfAway = -1;
+    private int strengthAverageOfExtraTimeHome = -1;
+    private int strengthAverageOfExtraTimeAway = -1;
+    private int strengthEndOfFirstHalfHome = -1;
+    private int strengthEndOfFirstHalfAway = -1;
+    private int strengthEndOfSecondHalfHome = -1;
+    private int strengthEndOfSecondHalfAway = -1;
+    private int strengthEndOfExtraTimeHome = -1;
+    private int strengthEndOfExtraTimeAway = -1;
 
 }
