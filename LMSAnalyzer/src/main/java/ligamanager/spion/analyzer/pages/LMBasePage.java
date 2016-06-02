@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 import ligamanager.spion.analyzer.webdriver.DriverFactory;
 
-public abstract class LMBasePage {
+public abstract class LmBasePage {
 
 	protected static WebDriver driver = DriverFactory.getInstance();
 	

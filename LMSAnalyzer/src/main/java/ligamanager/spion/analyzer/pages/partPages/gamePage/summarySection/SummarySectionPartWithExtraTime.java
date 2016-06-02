@@ -1,6 +1,6 @@
 package ligamanager.spion.analyzer.pages.partPages.gamePage.summarySection;
 
-import ligamanager.spion.analyzer.pages.LMGamePage;
+import ligamanager.spion.analyzer.pages.LmGamePage;
 import ligamanager.spion.analyzer.pages.util.StringParsingHelper;
 import ligamanager.spion.analyzer.util.GameResult;
 import ligamanager.spion.analyzer.util.GameValuesInclPenalties;
@@ -13,7 +13,7 @@ import org.openqa.selenium.WebElement;
  */
 public class SummarySectionPartWithExtraTime extends SummarySectionGamePagePart {
 
-    public SummarySectionPartWithExtraTime(WebDriver driver, LMGamePage fullPage) {
+    public SummarySectionPartWithExtraTime(WebDriver driver, LmGamePage fullPage) {
         super(driver, fullPage);
     }
 
@@ -39,9 +39,9 @@ public class SummarySectionPartWithExtraTime extends SummarySectionGamePagePart 
         WebElement regularTimeResultElement = summaryBox.findElement(By.xpath(xpathToRegularTimeResult));
         String fullregularTimeResultString = regularTimeResultElement.getText();
 
-        int resultStartIndex = fullregularTimeResultString.indexOf(LMGamePage.REGULAR_TIME_IDENTIFICATION_TEXT);
+        int resultStartIndex = fullregularTimeResultString.indexOf(LmGamePage.REGULAR_TIME_IDENTIFICATION_TEXT);
         String regularTimeResultString = fullregularTimeResultString.substring(
-                                                resultStartIndex + LMGamePage.REGULAR_TIME_IDENTIFICATION_TEXT.length() + 1);
+                                                resultStartIndex + LmGamePage.REGULAR_TIME_IDENTIFICATION_TEXT.length() + 1);
 
         ret.secondHalf = new GameResult(regularTimeResultString);
 

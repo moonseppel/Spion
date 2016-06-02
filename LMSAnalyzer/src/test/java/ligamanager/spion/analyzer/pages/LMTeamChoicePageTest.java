@@ -1,8 +1,6 @@
 package ligamanager.spion.analyzer.pages;
 
 import ligamanager.spion.analyzer.TestData;
-import ligamanager.spion.analyzer.useCases.BasicActions;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -19,9 +17,9 @@ public class LMTeamChoicePageTest {
 
     @BeforeClass
     public static void setUp() throws Exception {
-        LMStartPage startPage = new LMStartPage();
+        LmStartPage startPage = new LmStartPage();
 
-        Optional<LMTeamChoicePage> teamChoicePage = Optional.empty();
+        Optional<LmTeamChoicePage> teamChoicePage = Optional.empty();
         if(startPage.navigateToPageAndCheck()) {
             teamChoicePage = startPage.login(TestData.USERNAME, TestData.PASSWORD);
         }
@@ -31,7 +29,7 @@ public class LMTeamChoicePageTest {
     public void testGetAllTeams() throws Exception {
         List<String> teamNames = new ArrayList<String>();
 
-        LMTeamChoicePage subject = new LMTeamChoicePage();
+        LmTeamChoicePage subject = new LmTeamChoicePage();
 
         if(subject.navigateToPageAndCheck()) {
             teamNames = subject.getAllTeams();
@@ -44,7 +42,7 @@ public class LMTeamChoicePageTest {
     public void testSelectTeam() throws Exception {
         boolean foundTeam = false;
 
-        LMTeamChoicePage subject = new LMTeamChoicePage();
+        LmTeamChoicePage subject = new LmTeamChoicePage();
 
         if(subject.navigateToPageAndCheck()) {
             List<String> teamNames = subject.getAllTeams();

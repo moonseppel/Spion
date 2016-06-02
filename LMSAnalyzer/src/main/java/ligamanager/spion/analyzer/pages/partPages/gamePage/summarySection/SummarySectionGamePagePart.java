@@ -1,6 +1,6 @@
 package ligamanager.spion.analyzer.pages.partPages.gamePage.summarySection;
 
-import ligamanager.spion.analyzer.pages.LMGamePage;
+import ligamanager.spion.analyzer.pages.LmGamePage;
 import ligamanager.spion.analyzer.util.GameResult;
 import ligamanager.spion.analyzer.util.GameValuesInclPenalties;
 import org.openqa.selenium.By;
@@ -15,11 +15,11 @@ public abstract class SummarySectionGamePagePart {
     private static final String xpathToSummaryBox = "//*[@id=\"content_chat\"]/div[2]/table/tbody";
 
     protected WebDriver driver = null;
-    protected LMGamePage fullPage = null;
+    protected LmGamePage fullPage = null;
 
     protected WebElement summaryBox = null;
 
-    public SummarySectionGamePagePart(WebDriver driver, LMGamePage fullPage) {
+    public SummarySectionGamePagePart(WebDriver driver, LmGamePage fullPage) {
         this.driver = driver;
         this.fullPage = fullPage;
 

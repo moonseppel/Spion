@@ -2,17 +2,17 @@ package ligamanager.spion.analyzer.useCases;
 
 import java.util.Optional;
 
-import ligamanager.spion.analyzer.pages.LMStartPage;
-import ligamanager.spion.analyzer.pages.LMTeamChoicePage;
+import ligamanager.spion.analyzer.pages.LmStartPage;
+import ligamanager.spion.analyzer.pages.LmTeamChoicePage;
 
 public class BasicActions {
 	
 	public static boolean loginAndChooseFirstTeam(String user, String password) {
 		
 		boolean ret = false;
-		LMStartPage startPage = new LMStartPage();
+		LmStartPage startPage = new LmStartPage();
 		
-		Optional<LMTeamChoicePage> teamChoicePage = Optional.empty();
+		Optional<LmTeamChoicePage> teamChoicePage = Optional.empty();
 		if(startPage.navigateToPageAndCheck()) {
 			teamChoicePage = startPage.login(user, password);
 		}
@@ -27,9 +27,9 @@ public class BasicActions {
 	public static boolean logout() {
 		boolean ret = false;
 
-		LMStartPage startPage = new LMStartPage();
+		LmStartPage startPage = new LmStartPage();
 		startPage.navigateToPageAndCheck();
-		Optional<LMStartPage> loggedOutStartPage = startPage.logout();
+		Optional<LmStartPage> loggedOutStartPage = startPage.logout();
 
 		ret = loggedOutStartPage.isPresent();
 

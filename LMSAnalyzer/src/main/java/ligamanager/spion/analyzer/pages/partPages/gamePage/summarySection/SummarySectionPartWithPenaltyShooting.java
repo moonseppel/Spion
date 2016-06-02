@@ -1,6 +1,6 @@
 package ligamanager.spion.analyzer.pages.partPages.gamePage.summarySection;
 
-import ligamanager.spion.analyzer.pages.LMGamePage;
+import ligamanager.spion.analyzer.pages.LmGamePage;
 import ligamanager.spion.analyzer.pages.util.StringParsingHelper;
 import ligamanager.spion.analyzer.util.GameResult;
 import ligamanager.spion.analyzer.util.GameValuesInclPenalties;
@@ -15,7 +15,7 @@ import java.util.StringTokenizer;
  */
 public class SummarySectionPartWithPenaltyShooting extends SummarySectionGamePagePart {
 
-    public SummarySectionPartWithPenaltyShooting(WebDriver driver, LMGamePage fullPage) {
+    public SummarySectionPartWithPenaltyShooting(WebDriver driver, LmGamePage fullPage) {
         super(driver, fullPage);
     }
 

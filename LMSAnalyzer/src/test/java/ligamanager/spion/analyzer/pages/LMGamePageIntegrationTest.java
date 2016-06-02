@@ -25,7 +25,7 @@ public class LMGamePageIntegrationTest {
     public void testGetGameDataForNormalGame() throws Exception {
 
         int expectedGameId = 1;
-        LMGamePage subject = new LMGamePage(expectedGameId, 122);
+        LmGamePage subject = new LmGamePage(expectedGameId, 122);
 
         assertAllGameValues(expectedGameId, subject);
         assertFalse(subject.hasExtraTime());
@@ -61,7 +61,7 @@ public class LMGamePageIntegrationTest {
     public void testGetGameDataForGameWithExtraTime() throws Exception {
 
         int expectedGameId = 280152; //also 280156 should work
-        LMGamePage subject = new LMGamePage(expectedGameId, 122);
+        LmGamePage subject = new LmGamePage(expectedGameId, 122);
 
         assertAllGameValues(expectedGameId, subject);
         assertTrue(subject.hasExtraTime());
@@ -106,7 +106,7 @@ public class LMGamePageIntegrationTest {
     public void testGetGameDataForGameWithExtraTimeAndPenaltyShooting() throws Exception {
 
         int expectedGameId = 280155; //also 280156 should work
-        LMGamePage subject = new LMGamePage(expectedGameId, 122);
+        LmGamePage subject = new LmGamePage(expectedGameId, 122);
 
         assertAllGameValues(expectedGameId, subject);
         assertTrue(subject.hasExtraTime());
@@ -143,7 +143,7 @@ public class LMGamePageIntegrationTest {
     public void testGetGameDataForGameWithChangingTactic() throws Exception {
 
         int expectedGameId = 34193; //also 280156 should work
-        LMGamePage subject = new LMGamePage(expectedGameId, 124);
+        LmGamePage subject = new LmGamePage(expectedGameId, 124);
 
         assertAllGameValues(expectedGameId, subject);
         assertFalse(subject.hasExtraTime());
@@ -169,7 +169,7 @@ public class LMGamePageIntegrationTest {
         assertEquals(Tactic.EMPTY, subject.getAwayTactics().extraTime);
     }
 
-    private void assertAllGameValues(int expectedGameId, LMGamePage subject) {
+    private void assertAllGameValues(int expectedGameId, LmGamePage subject) {
 
         GameResult lowestButSetResult = new GameResult(0, 0);
 

@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
-public class LMStartPage extends LMBasePage {
+public class LmStartPage extends LmBasePage {
 
 	private String pageUrl = "http://www.liga-manager.de/index.php";
 	
@@ -25,8 +25,8 @@ public class LMStartPage extends LMBasePage {
 		return ret;
 	}
 
-	public Optional<LMTeamChoicePage> login(String user, String password) {
-		Optional<LMTeamChoicePage> ret = Optional.empty();
+	public Optional<LmTeamChoicePage> login(String user, String password) {
+		Optional<LmTeamChoicePage> ret = Optional.empty();
 
 		if((userField == null) || (passwordField == null) || (loginButton == null)) {
 			return ret;
@@ -39,7 +39,7 @@ public class LMStartPage extends LMBasePage {
 		WebElement teamChoiceDropdown = driver.findElement(By.xpath("//select[@name=\"manager\"]"));
 
 		if(teamChoiceDropdown != null) {
-			LMTeamChoicePage teamChoicePage = new LMTeamChoicePage();
+			LmTeamChoicePage teamChoicePage = new LmTeamChoicePage();
 			if (teamChoicePage.isOnCorrectPage()) {
 				ret = Optional.of(teamChoicePage);
 			}
@@ -48,8 +48,8 @@ public class LMStartPage extends LMBasePage {
 		return ret;
 	}
 
-	public Optional<LMStartPage> logout() {
-		Optional<LMStartPage> ret = Optional.empty();
+	public Optional<LmStartPage> logout() {
+		Optional<LmStartPage> ret = Optional.empty();
 
 		if(logoutButton == null) {
 			return ret;

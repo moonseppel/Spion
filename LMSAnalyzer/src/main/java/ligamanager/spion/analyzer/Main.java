@@ -2,9 +2,8 @@ package ligamanager.spion.analyzer;
 
 import java.util.List;
 
-import ligamanager.spion.analyzer.pages.LMGamePage;
-import ligamanager.spion.analyzer.pages.LMStartPage;
-import ligamanager.spion.analyzer.pages.LMTeamChoicePage;
+import ligamanager.spion.analyzer.pages.LmGamePage;
+import ligamanager.spion.analyzer.pages.LmTeamChoicePage;
 import ligamanager.spion.analyzer.useCases.BasicActions;
 
 public class Main {
@@ -12,7 +11,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		System.out.println("Login and team selection sucessfull: " + BasicActions.loginAndChooseFirstTeam("someone", "password"));
-		LMTeamChoicePage teamChoicePage = new LMTeamChoicePage();
+		LmTeamChoicePage teamChoicePage = new LmTeamChoicePage();
 		if(teamChoicePage.navigateToPageAndCheck()) {
 			List<String> teamNames = teamChoicePage.getAllTeams();
 			System.out.print("Teams: ");
@@ -22,7 +21,7 @@ public class Main {
 			System.out.println();
 		}
 		
-		LMGamePage gamePage = new LMGamePage(2328, 121);
+		LmGamePage gamePage = new LmGamePage(2328, 121);
 		System.out.println("Game Page found: " + gamePage.navigateToPageAndCheck());
 		System.out.println("Game Id: " + gamePage.getGameId());
 		System.out.println("Home Team Name: " + gamePage.getHomeTeamName());

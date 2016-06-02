@@ -1,6 +1,6 @@
 package ligamanager.spion.analyzer.pages.partPages.gamePage.summarySection;
 
-import ligamanager.spion.analyzer.pages.LMGamePage;
+import ligamanager.spion.analyzer.pages.LmGamePage;
 import ligamanager.spion.analyzer.pages.util.StringParsingHelper;
 import ligamanager.spion.analyzer.util.GameResult;
 import ligamanager.spion.analyzer.util.GameValuesInclPenalties;
@@ -13,7 +13,7 @@ import org.openqa.selenium.WebElement;
  */
 public class SummarySectionPartForRegularTime extends SummarySectionGamePagePart {
 
-    public SummarySectionPartForRegularTime(WebDriver driver, LMGamePage fullPage) {
+    public SummarySectionPartForRegularTime(WebDriver driver, LmGamePage fullPage) {
         super(driver, fullPage);
     }
 

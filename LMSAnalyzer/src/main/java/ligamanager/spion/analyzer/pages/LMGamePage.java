@@ -31,8 +31,8 @@ import java.util.List;
  *  - Ballbesitz HZ 1 und 2 und Verlängerung & Total
  *  - Zweikämpfe  HZ 1 und 2 und Verlängerung & Total
  **/
-public class LMGamePage extends LMBasePage {
-	private static final Logger LOGGER = Logger.getLogger(LMGamePage.class);
+public class LmGamePage extends LmBasePage {
+	private static final Logger LOGGER = Logger.getLogger(LmGamePage.class);
 
 	public static final String REGULAR_TIME_IDENTIFICATION_TEXT = "reguläre Spielzeit";
 	public static final String EXTRA_TIME_IDENTIFICATION_TEXT = "Verlängerung";
@@ -48,7 +48,7 @@ public class LMGamePage extends LMBasePage {
 	private boolean showsHomeBonus = false;
 
 	private boolean hasExtraTime = false;
-	private boolean hasPenyltyShooting = false;
+	private boolean hasPenaltyShooting = false;
 
 	private String homeTeamName = null;
 	private String awayTeamName = null;
@@ -76,7 +76,7 @@ public class LMGamePage extends LMBasePage {
 //	private GameResult awayZweikaempfeTotal = null;
 
 
-	public LMGamePage(int gameId, int seasonNo) {
+	public LmGamePage(int gameId, int seasonNo) {
 		this.gameId = gameId;
 		this.seasonNumber = seasonNo;
 	}
@@ -145,7 +145,7 @@ public class LMGamePage extends LMBasePage {
 	}
 
 	public boolean hasPenyltyShooting() {
-		return hasPenyltyShooting;
+		return hasPenaltyShooting;
 	}
 
 	public boolean hasExtraTime() {
@@ -275,7 +275,7 @@ public class LMGamePage extends LMBasePage {
 		WebElement firstRowOfSummarySection = driver.findElement(By.xpath("//*[@id=\"content_chat\"]/div[2]/table/tbody/tr[1]"));
 
 		hasExtraTime       = firstRowOfSummarySection.getText().contains(REGULAR_TIME_IDENTIFICATION_TEXT);
-		hasPenyltyShooting = firstRowOfSummarySection.getText().contains(PENALTY_SHOOTING_IDENTIFICATIONTEXT);
+		hasPenaltyShooting = firstRowOfSummarySection.getText().contains(PENALTY_SHOOTING_IDENTIFICATIONTEXT);
 	}
 
 }

@@ -1,15 +1,13 @@
 package ligamanager.spion.analyzer.pages;
 
-import java.time.temporal.TemporalAmount;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
-public class LMTeamChoicePage extends LMBasePage {
+public class LmTeamChoicePage extends LmBasePage {
 
 	private String pageUrl = "http://www.liga-manager.de/index.php?menue=eigene_teams";
 	private String activeTeamPrefix = "- ";
