@@ -19,6 +19,7 @@ import static org.junit.Assert.fail;
  *
  * Hibernate type mapping: http://www.tutorialspoint.com/hibernate/hibernate_mapping_types.htm
  * Hibernate Session class: http://www.tutorialspoint.com/hibernate/hibernate_sessions.htm
+ * Hibernate Query Language: http://www.tutorialspoint.com/hibernate/hibernate_query_language.htm
  *
  * Created by jpralle on 28.05.2016.
  */
