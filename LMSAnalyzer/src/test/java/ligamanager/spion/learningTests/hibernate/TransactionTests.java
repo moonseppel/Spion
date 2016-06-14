@@ -7,7 +7,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.io.File;
-import java.util.Iterator;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -35,7 +34,7 @@ public class TransactionTests {
         try {
 
             ClassLoader classLoader = TransactionTests.class.getClassLoader();
-            File cfgXml = new File(classLoader.getResource("learningTests/hibernate_test.cfg.xml").getFile());
+            File cfgXml = new File(classLoader.getResource("hibernate_test.cfg.xml").getFile());
             Configuration config = new Configuration().configure(cfgXml.getAbsoluteFile());
             //maybe the timezone hast to be changed at some point, as "EST" is just SUMMER time and will be switched to
             //something else when summer time ends.

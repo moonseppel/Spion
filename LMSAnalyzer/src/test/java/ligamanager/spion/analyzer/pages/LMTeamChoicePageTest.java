@@ -20,9 +20,9 @@ public class LMTeamChoicePageTest {
         LmStartPage startPage = new LmStartPage();
 
         Optional<LmTeamChoicePage> teamChoicePage = Optional.empty();
-        if(startPage.navigateToPageAndCheck()) {
-            teamChoicePage = startPage.login(TestData.USERNAME, TestData.PASSWORD);
-        }
+        startPage.navigateToPageAndCheck();
+        teamChoicePage = startPage.login(TestData.USERNAME, TestData.PASSWORD);
+
     }
 
     @Test
@@ -31,9 +31,8 @@ public class LMTeamChoicePageTest {
 
         LmTeamChoicePage subject = new LmTeamChoicePage();
 
-        if(subject.navigateToPageAndCheck()) {
-            teamNames = subject.getAllTeams();
-        }
+        subject.navigateToPageAndCheck();
+        teamNames = subject.getAllTeams();
 
         assertEquals(3, teamNames.size());
     }
@@ -44,10 +43,9 @@ public class LMTeamChoicePageTest {
 
         LmTeamChoicePage subject = new LmTeamChoicePage();
 
-        if(subject.navigateToPageAndCheck()) {
-            List<String> teamNames = subject.getAllTeams();
-            foundTeam = subject.selectTeam(teamNames.size()-1);
-        }
+        subject.navigateToPageAndCheck();
+        List<String> teamNames = subject.getAllTeams();
+        foundTeam = subject.selectTeam(teamNames.size()-1);
 
         assertTrue(foundTeam);
 

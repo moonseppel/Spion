@@ -1,14 +1,21 @@
 package ligamanager.spion.analyzer.util;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by jpralle on 17.05.2016.
  */
+@Entity
+@Table(name = "GAME_FORMATIONS")
 public class GameFormation implements Emptyable {
 
     public static final GameFormation EMPTY = new GameFormation("[no formation]", "[no formation description]");
+
     public static final GameFormation FORMATION_343_1 = new GameFormation("3-4-3 (1)", "(LV-Loff-RV) (LM-OM-DM-RM) (LS-MS-RS)");
     public static final GameFormation FORMATION_343_2 = new GameFormation("3-4-3 (2)", "(LV-Loff-RV) (LM-LOM-ROM-RM) (LS-MS-RS)");
     public static final GameFormation FORMATION_343_3 = new GameFormation("3-4-3 (3)", "(LV-Loff-RV) (LM-LDM-RDM-RM) (LS-MS-RS)");
@@ -42,12 +49,15 @@ public class GameFormation implements Emptyable {
     public static final GameFormation FORMATION_541_5 = new GameFormation("5-4-1 (5)", "(LV-LIV-Ldef-RIV-RV) (LM-LDM-RDM-RM) (MS)");
     public static final GameFormation FORMATION_541_6 = new GameFormation("5-4-1 (6)", "(LV-LIV-Ldef-RIV-RV) (LM-OM-DM-RM) (MS)");
 
-    public static final List<GameFormation> ALL_FORMATIONS = getAllFormations();
+    public static final List<GameFormation> ALL = getAll();
 
+    @Id
+    @Column(name = "GAME_FORMATION_ID")
     private final String id;
+    @Column(name = "GAME_FORMATION_DETAIL")
     private final String detail;
 
-    private static List<GameFormation> getAllFormations() {
+    private static List<GameFormation> getAll() {
         List<GameFormation> ret = new ArrayList<GameFormation>();
         ret.add(FORMATION_343_1);
         ret.add(FORMATION_343_2);
@@ -89,7 +99,7 @@ public class GameFormation implements Emptyable {
         GameFormation ret = GameFormation.EMPTY;
 
         for (GameFormation formation :
-                ALL_FORMATIONS) {
+                ALL) {
             if (formation.getId().equals(formationId)) {
                 ret = formation;
                 break;
@@ -97,6 +107,11 @@ public class GameFormation implements Emptyable {
         }
 
         return ret;
+    }
+
+    private GameFormation() {
+        this.id = EMPTY.getId();
+        this.detail = EMPTY.getDetail();
     }
 
     private GameFormation(String id, String detail) {

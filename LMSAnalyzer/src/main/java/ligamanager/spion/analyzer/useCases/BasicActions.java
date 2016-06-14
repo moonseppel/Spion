@@ -2,8 +2,10 @@ package ligamanager.spion.analyzer.useCases;
 
 import java.util.Optional;
 
+import ligamanager.spion.analyzer.util.LmIllegalGameException;
 import ligamanager.spion.analyzer.pages.LmStartPage;
 import ligamanager.spion.analyzer.pages.LmTeamChoicePage;
+import ligamanager.spion.analyzer.util.LmIllegalPageException;
 
 public class BasicActions {
 	
@@ -13,12 +15,17 @@ public class BasicActions {
 		LmStartPage startPage = new LmStartPage();
 		
 		Optional<LmTeamChoicePage> teamChoicePage = Optional.empty();
-		if(startPage.navigateToPageAndCheck()) {
+
+		try {
+			startPage.navigateToPageAndCheck();
 			teamChoicePage = startPage.login(user, password);
-		}
-		
-		if(teamChoicePage.isPresent()) {
-			ret = teamChoicePage.get().chooseFirstTeam();
+
+			if (teamChoicePage.isPresent()) {
+				ret = teamChoicePage.get().chooseFirstTeam();
+			}
+
+		} catch (LmIllegalPageException ex) {
+			ret = false;
 		}
 		
 		return ret;
@@ -27,11 +34,16 @@ public class BasicActions {
 	public static boolean logout() {
 		boolean ret = false;
 
-		LmStartPage startPage = new LmStartPage();
-		startPage.navigateToPageAndCheck();
-		Optional<LmStartPage> loggedOutStartPage = startPage.logout();
+		try {
+			LmStartPage startPage = new LmStartPage();
+			startPage.navigateToPageAndCheck();
+			Optional<LmStartPage> loggedOutStartPage = startPage.logout();
 
-		ret = loggedOutStartPage.isPresent();
+			ret = loggedOutStartPage.isPresent();
+
+		} catch (LmIllegalPageException ex) {
+			ret = false;
+		}
 
 		return ret;
 	}

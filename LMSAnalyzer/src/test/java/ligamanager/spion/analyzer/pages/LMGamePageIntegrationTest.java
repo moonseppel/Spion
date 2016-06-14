@@ -15,7 +15,7 @@ public class LMGamePageIntegrationTest {
 
     @BeforeClass
     public static void setUp() throws Exception {
-        BasicActions.loginAndChooseFirstTeam(TestData.USERNAME, TestData.PASSWORD);
+        assertTrue(BasicActions.loginAndChooseFirstTeam(TestData.USERNAME, TestData.PASSWORD));
     }
 
     /**
@@ -26,6 +26,7 @@ public class LMGamePageIntegrationTest {
 
         int expectedGameId = 1;
         LmGamePage subject = new LmGamePage(expectedGameId, 122);
+        subject.navigateToPageAndCheck();
 
         assertAllGameValues(expectedGameId, subject);
         assertFalse(subject.hasExtraTime());
@@ -60,8 +61,9 @@ public class LMGamePageIntegrationTest {
     @Test
     public void testGetGameDataForGameWithExtraTime() throws Exception {
 
-        int expectedGameId = 280152; //also 280156 should work
+        int expectedGameId = 280152;
         LmGamePage subject = new LmGamePage(expectedGameId, 122);
+        subject.navigateToPageAndCheck();
 
         assertAllGameValues(expectedGameId, subject);
         assertTrue(subject.hasExtraTime());
@@ -105,8 +107,9 @@ public class LMGamePageIntegrationTest {
     @Test
     public void testGetGameDataForGameWithExtraTimeAndPenaltyShooting() throws Exception {
 
-        int expectedGameId = 280155; //also 280156 should work
+        int expectedGameId = 280155;
         LmGamePage subject = new LmGamePage(expectedGameId, 122);
+        subject.navigateToPageAndCheck();
 
         assertAllGameValues(expectedGameId, subject);
         assertTrue(subject.hasExtraTime());
@@ -142,8 +145,9 @@ public class LMGamePageIntegrationTest {
     @Test
     public void testGetGameDataForGameWithChangingTactic() throws Exception {
 
-        int expectedGameId = 34193; //also 280156 should work
+        int expectedGameId = 34193;
         LmGamePage subject = new LmGamePage(expectedGameId, 124);
+        subject.navigateToPageAndCheck();
 
         assertAllGameValues(expectedGameId, subject);
         assertFalse(subject.hasExtraTime());
@@ -169,11 +173,50 @@ public class LMGamePageIntegrationTest {
         assertEquals(Tactic.EMPTY, subject.getAwayTactics().extraTime);
     }
 
+    /**
+     * Tested game: http://www.liga-manager.de/inc/spiel_info.php?id=204602&show_saison=124
+     */
+    @Test
+    public void testAmateurGame() throws LmIllegalPageException {
+
+        int expectedGameId = 204602;
+        LmGamePage subject = new LmGamePage(expectedGameId, 124);
+
+        try {
+        subject.navigateToPageAndCheck();
+
+        } catch (LmIllegalGameException ex) {
+
+            assertEquals(204602, ex.getGameId());
+            assertEquals(124, ex.getSeasonNumber());
+            assertEquals(IllegalGameType.AmateuerGame, ex.getGameType());
+        }
+    }
+
+    /**
+     * Tested game: http://www.liga-manager.de/inc/spiel_info.php?id=1000000&show_saison=124
+     */
+    @Test
+    public void testNotExistingGame() throws LmIllegalPageException {
+
+        int expectedGameId = 1000000;
+        LmGamePage subject = new LmGamePage(expectedGameId, 124);
+
+        try {
+            subject.navigateToPageAndCheck();
+
+        } catch (LmIllegalGameException ex) {
+
+            assertEquals(1000000, ex.getGameId());
+            assertEquals(124, ex.getSeasonNumber());
+            assertEquals(IllegalGameType.NoGame, ex.getGameType());
+        }
+    }
+
     private void assertAllGameValues(int expectedGameId, LmGamePage subject) {
 
         GameResult lowestButSetResult = new GameResult(0, 0);
 
-        assertTrue(subject.navigateToPageAndCheck());
         assertEquals(expectedGameId, subject.getGameId());
         assertTrue(subject.getHomeTeamName() != null && subject.getHomeTeamName().length() > 3);
         assertTrue(subject.getAwayTeamName() != null && subject.getAwayTeamName().length() > 3);

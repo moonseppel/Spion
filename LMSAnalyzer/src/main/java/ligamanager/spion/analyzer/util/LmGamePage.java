@@ -1,19 +1,21 @@
-package ligamanager.spion.analyzer.pages;
+package ligamanager.spion.analyzer.util;
 
+import ligamanager.spion.analyzer.pages.LmBasePage;
 import ligamanager.spion.analyzer.pages.partPages.gamePage.gameHalfs.*;
 import ligamanager.spion.analyzer.pages.partPages.gamePage.summarySection.SummarySectionGamePagePart;
 import ligamanager.spion.analyzer.pages.partPages.gamePage.summarySection.SummarySectionPartWithExtraTime;
 import ligamanager.spion.analyzer.pages.partPages.gamePage.summarySection.SummarySectionPartWithPenaltyShooting;
 import ligamanager.spion.analyzer.pages.partPages.gamePage.summarySection.SummarySectionPartForRegularTime;
 import ligamanager.spion.analyzer.pages.util.StringParsingHelper;
-import ligamanager.spion.analyzer.util.*;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringTokenizer;
 
 /**
  * Ruft aus einem Spiel die folgenden Informationen ab:
@@ -94,22 +96,20 @@ public class LmGamePage extends LmBasePage {
 	}
 
 	@Override
-	public boolean navigateToPageAndCheck() {
+	public void navigateToPageAndCheck() throws LmIllegalPageException {
 
 		if(gameId < 0) {
-			return false;
+			throw new LmIllegalPageException(driver.getCurrentUrl());
 		}
-
-		boolean ret = false;
 
 		String gameIdAsString = new Integer(gameId).toString();
 		String seasonNoAsString = new Integer(seasonNumber).toString();
 		String formattedPageUrl = MessageFormat.format(pageUrl, gameIdAsString, seasonNoAsString);
 		driver.get(formattedPageUrl);
 
-		ret = isOnCorrectPage();
+		isOnCorrectPage();
 
-		//the variant with home bonus will be the usaually used, as the strength values are normally more interesting
+		//the variant with home bonus will be the usaually used, as those strength values are normally more interesting
 		switchHomeBonus();
 
 		checkForExtraTimeAndPenaltyShooting();
@@ -131,8 +131,6 @@ public class LmGamePage extends LmBasePage {
 			gameHalfParts.add(new NoExtraTimeGamePart(driver));
 		}
 
-
-		return ret;
 	}
 
 	private void switchHomeBonus() {
@@ -232,22 +230,55 @@ public class LmGamePage extends LmBasePage {
 	}
 
 	@Override
-	protected boolean isOnCorrectPageWithException() {
-		boolean ret = false;
+	protected void isOnCorrectPageWithException() throws LmIllegalPageException {
 
 		String title = driver.getTitle();
 
-		if(title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
-			ret = true;
+		if(!title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
+			throw new LmIllegalPageException(driver.getCurrentUrl());
 		}
 
-		WebElement spielberichtText = driver.findElement(By.xpath("//*[@id=\"magazin_chat\"]/div/div[1]/strong"));
 
-		if(spielberichtText != null && spielberichtText.getText().equalsIgnoreCase("Spielbericht")) {
-			ret = ret && true;
+		WebElement firstHalfFormationAndTacticsElement;
+		try {
+			firstHalfFormationAndTacticsElement = driver.findElement(By.xpath("//*[@id=\"content_chat\"]/div[1]/table[2]/tbody/tr[1]/td[2]/font"));
+		} catch (NoSuchElementException ex) {
+			firstHalfFormationAndTacticsElement = driver.findElement(By.xpath("//*[@id=\"bericht_staerke_hb_h_1\"]/strong"));
 		}
 
-		return ret;
+		if(firstHalfFormationAndTacticsElement != null) {
+			String firstHalfFormationAndTacticsText = firstHalfFormationAndTacticsElement.getText();
+
+			int linesInText = 0;
+			String lastLine = null;
+			StringTokenizer tokenizer = new StringTokenizer(firstHalfFormationAndTacticsText, "\\n\\r\\f");
+			while(tokenizer.hasMoreTokens()) {
+				lastLine = tokenizer.nextToken();
+				linesInText++;
+			}
+
+			if(linesInText < 3) {
+
+				LmIllegalGameException ex;
+				String msg = "Illegal game found.";
+				IllegalGameType gameType = IllegalGameType.UnknownGameType;
+
+				if(linesInText == 1) {
+					if (lastLine.trim().length() < 1) {
+						//No game, nor formation and tactic
+						gameType = IllegalGameType.NoGame;
+					} else {
+						//Amateuer games only list the formation
+						gameType = IllegalGameType.AmateuerGame;
+					}
+				}
+
+				ex = new LmIllegalGameException(msg, gameId, seasonNumber, gameType);
+
+				throw ex;
+			}
+
+		}
 	}
 
 	private void parseValuesFromGameHalfs() {

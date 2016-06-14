@@ -1,5 +1,7 @@
 package ligamanager.spion.analyzer.pages;
 
+import ligamanager.spion.analyzer.util.LmIllegalGameException;
+import ligamanager.spion.analyzer.util.LmIllegalPageException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
@@ -9,20 +11,17 @@ public abstract class LmBasePage {
 
 	protected static WebDriver driver = DriverFactory.getInstance();
 	
-	abstract public boolean navigateToPageAndCheck();
+	abstract public void navigateToPageAndCheck() throws LmIllegalPageException;
 	
-	public boolean isOnCorrectPage() {
-		boolean ret = false;
+	public void isOnCorrectPage() throws LmIllegalPageException {
 
 		try {
-			ret = isOnCorrectPageWithException();
+			isOnCorrectPageWithException();
 		} catch (NoSuchElementException ex) {
-			ret = false;
+			throw new LmIllegalPageException(driver.getCurrentUrl());
 		}
-
-		return ret;
 	}
 
-	abstract protected boolean isOnCorrectPageWithException() throws NoSuchElementException;
+	abstract protected void isOnCorrectPageWithException() throws NoSuchElementException, LmIllegalPageException;
 
 }

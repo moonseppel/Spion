@@ -1,25 +1,37 @@
 package ligamanager.spion.analyzer.util;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by jpralle on 17.05.2016.
  */
+@Entity
+@Table(name = "TACTICS")
 public class Tactic implements Emptyable {
 
-    public static final Tactic EMPTY = new Tactic("[no tactic]");
-    public static final Tactic VERY_OFFENSIVE = new Tactic("sehr offensiv");
-    public static final Tactic OFFENSIVE = new Tactic("offensiv");
-    public static final Tactic NORMAL = new Tactic("normal");
-    public static final Tactic DEFENSIVE = new Tactic("defensiv");
-    public static final Tactic VERY_DEFENSIVE = new Tactic("sehr defensiv");
+    public static final Tactic EMPTY = new Tactic(Integer.MIN_VALUE, "[no tactic]");
 
-    public static final List<Tactic> ALL_FORMATIONS = getAllFormations();
+    public static final Tactic VERY_OFFENSIVE = new Tactic(2, "sehr offensiv");
+    public static final Tactic OFFENSIVE = new Tactic(1, "offensiv");
+    public static final Tactic NORMAL = new Tactic(0, "normal");
+    public static final Tactic DEFENSIVE = new Tactic(-1, "defensiv");
+    public static final Tactic VERY_DEFENSIVE = new Tactic(-2, "sehr defensiv");
 
+    public static final List<Tactic> ALL = getAll();
+
+    @Id
+    @Column(name = "TACTIC_ID")
+    private final int id;
+
+    @Column(name = "TACTIC_NAME")
     private final String name;
 
-    private static List<Tactic> getAllFormations() {
+    private static List<Tactic> getAll() {
         List<Tactic> ret = new ArrayList<Tactic>();
         ret.add(VERY_OFFENSIVE);
         ret.add(OFFENSIVE);
@@ -34,7 +46,7 @@ public class Tactic implements Emptyable {
         Tactic ret = Tactic.EMPTY;
 
         for (Tactic formation :
-                ALL_FORMATIONS) {
+                ALL) {
             if (formation.getName().equalsIgnoreCase(name)) {
                 ret = formation;
                 break;
@@ -44,7 +56,13 @@ public class Tactic implements Emptyable {
         return ret;
     }
 
-    private Tactic(String name) {
+    private Tactic() {
+        this.id = EMPTY.id;
+        this.name = EMPTY.getName();
+    }
+
+    private Tactic(int id, String name) {
+        this.id = id;
         this.name = name;
     }
 

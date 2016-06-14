@@ -1,6 +1,6 @@
 package ligamanager.spion.analyzer.pages.partPages.gamePage.summarySection;
 
-import ligamanager.spion.analyzer.pages.LmGamePage;
+import ligamanager.spion.analyzer.util.LmGamePage;
 import ligamanager.spion.analyzer.util.GameResult;
 import ligamanager.spion.analyzer.util.GameValuesInclPenalties;
 import org.openqa.selenium.By;

@@ -2,6 +2,8 @@ package ligamanager.spion.analyzer.pages;
 
 import java.util.Optional;
 
+import ligamanager.spion.analyzer.util.LmIllegalGameException;
+import ligamanager.spion.analyzer.util.LmIllegalPageException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -15,14 +17,10 @@ public class LmStartPage extends LmBasePage {
 	private WebElement loginButton;
 	private WebElement logoutButton;
 
-	public boolean navigateToPageAndCheck() {
-		boolean ret = false;
-		
+	public void navigateToPageAndCheck() throws LmIllegalPageException {
+
 		driver.get(pageUrl);
-		
-		ret = isOnCorrectPage();
-		
-		return ret;
+		isOnCorrectPage();
 	}
 
 	public Optional<LmTeamChoicePage> login(String user, String password) {
@@ -40,8 +38,13 @@ public class LmStartPage extends LmBasePage {
 
 		if(teamChoiceDropdown != null) {
 			LmTeamChoicePage teamChoicePage = new LmTeamChoicePage();
-			if (teamChoicePage.isOnCorrectPage()) {
+
+			try {
+				teamChoicePage.isOnCorrectPage();
 				ret = Optional.of(teamChoicePage);
+
+			} catch (LmIllegalPageException e) {
+				ret = Optional.empty();
 			}
 		}
 
@@ -63,29 +66,22 @@ public class LmStartPage extends LmBasePage {
 		return ret;
 	}
 
-	protected boolean isOnCorrectPageWithException() {
-		boolean ret = false;
-		
+	protected void isOnCorrectPageWithException() throws LmIllegalPageException {
+
 		String title = driver.getTitle();
 		
-		if(title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
-			ret = true;
+		if(!title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
+			throw new LmIllegalPageException(driver.getCurrentUrl());
 		}
 
-		try {
-			WebElement kostenlosSpielenButton = driver.findElement(By.xpath("//*[@id=\"content_land\"]/div[2]/div[2]/a/img"));
+		WebElement kostenlosSpielenButton = driver.findElement(By.xpath("//*[@id=\"content_land\"]/div[2]/div[2]/a/img"));
 
-			if(kostenlosSpielenButton != null) {
-				ret = ret && true;
-			}
-
-			initElements();
-
-		} catch (NoSuchElementException ex) {
-			ret = false;
+		if(kostenlosSpielenButton == null) {
+			throw new LmIllegalPageException(driver.getCurrentUrl());
 		}
-		
-		return ret;
+
+		initElements();
+
 	}
 	
 	private void initElements() {

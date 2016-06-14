@@ -3,6 +3,8 @@ package ligamanager.spion.analyzer.pages;
 import java.util.ArrayList;
 import java.util.List;
 
+import ligamanager.spion.analyzer.util.LmIllegalGameException;
+import ligamanager.spion.analyzer.util.LmIllegalPageException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -15,34 +17,27 @@ public class LmTeamChoicePage extends LmBasePage {
 
 	private Select teamChoiceDropdown;
 	
-	public boolean navigateToPageAndCheck() {
-		boolean ret = false;
-		
+	public void navigateToPageAndCheck() throws LmIllegalPageException {
+
 		driver.get(pageUrl);
-		
-		ret = isOnCorrectPage();
-		
-		return ret;
+		isOnCorrectPage();
 	}
 
-	protected boolean isOnCorrectPageWithException() {
-		boolean ret = false;
-		
+	protected void isOnCorrectPageWithException() throws LmIllegalPageException {
+
 		String title = driver.getTitle();
 		
-		if(title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
-			ret = true;
+		if(!title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
+			throw new LmIllegalPageException(driver.getCurrentUrl());
 		}
 		
 		WebElement teamChoiceDropdown = driver.findElement(By.xpath("//select[@name=\"manager\"]"));
 		
 		if(teamChoiceDropdown == null) {
-			ret = ret && true;
+			throw new LmIllegalPageException(driver.getCurrentUrl());
 		}
 		
 		initElements();
-
-		return ret;
 	}
 	
 	public boolean chooseFirstTeam() {
