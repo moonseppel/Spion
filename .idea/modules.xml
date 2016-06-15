@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/LMSParent/LMSParent.iml" filepath="$PROJECT_DIR$/LMSParent/LMSParent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LMSpion/LMSpion.iml" filepath="$PROJECT_DIR$/LMSpion/LMSpion.iml" />
       <module fileurl="file://$PROJECT_DIR$/LMSAnalyzer/ligamanager.spion.analyzer (1).iml" filepath="$PROJECT_DIR$/LMSAnalyzer/ligamanager.spion.analyzer (1).iml" />
     </modules>
   </component>

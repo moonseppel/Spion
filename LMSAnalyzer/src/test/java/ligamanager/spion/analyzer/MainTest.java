@@ -111,21 +111,21 @@ public class MainTest {
         }
     }
 
-//    /**
-//     * This test is just to find the highest used game number of LM, no actual test
-//     */
-//    @Test
+    /**
+     * This test is just to find the highest used game number of LM, no actual test
+     */
+    @Test
 //    @Ignore
-//    public void testMain2() {
-//        initHibernateForTest();
-//        String season = "122-124";
-//        int maxGameNumber = 10000;
-//        int gameOffset = 300005;
-//        String[] args = {season, String.valueOf(maxGameNumber), "moonseppel", "***REMOVED***"};
-//        int actual = Main.innerMainWithOffset(args, gameOffset);
-//
-//        assertThat(actual, is(0));
-//    }
+    public void testMain2() {
+        initHibernateForTest();
+        String season = "123-124";
+        int maxGameNumber = 2000;
+        int gameOffset = 300000;
+        String[] args = {season, String.valueOf(maxGameNumber), "moonseppel", "***REMOVED***"};
+        int actual = Main.innerMainWithOffset(args, gameOffset);
+
+        assertThat(actual, is(0));
+    }
 
     public static void initHibernateForTest() {
         try {
