@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.File;
@@ -100,13 +101,31 @@ public class MainTest {
         int season = 122;
         int maxGameNumber = 10;
         String[] args = {String.valueOf(season), String.valueOf(maxGameNumber), "moonseppel", "***REMOVED***"};
-        Main.main(args);
+        int actual = Main.innerMain(args);
+
+        assertThat(actual, is(0));
 
         for(int currentGame = 1; currentGame <= maxGameNumber; currentGame++) {
             LmGameHibernateBean gameBean = LmGameHibernateBean.read(currentGame, season);
             gameBean.delete();
         }
     }
+
+//    /**
+//     * This test is just to find the highest used game number of LM, no actual test
+//     */
+//    @Test
+//    @Ignore
+//    public void testMain2() {
+//        initHibernateForTest();
+//        String season = "122-124";
+//        int maxGameNumber = 10000;
+//        int gameOffset = 300005;
+//        String[] args = {season, String.valueOf(maxGameNumber), "moonseppel", "***REMOVED***"};
+//        int actual = Main.innerMainWithOffset(args, gameOffset);
+//
+//        assertThat(actual, is(0));
+//    }
 
     public static void initHibernateForTest() {
         try {

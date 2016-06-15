@@ -83,7 +83,8 @@ public abstract class HalfGamePagePart {
         WebElement homeStrengthsElement = halfsWebElement.findElement(By.xpath(xpathToHomeStrengths));
         String homeStrengthsText = homeStrengthsElement.getText();
         StringTokenizer tokenizer = new StringTokenizer(homeStrengthsText, "\n");
-        String homeAverageStrength = tokenizer.nextToken().replace("Ø", "").trim();
+        String homeAverageStrength = tokenizer.nextToken();//.replace("Ø", "").trim();
+        homeAverageStrength = homeAverageStrength.substring(1).trim();
         String homeBeginStrength = tokenizer.nextToken().trim();
         if(isExtraTime) {
             tokenizer.nextToken();
@@ -93,7 +94,8 @@ public abstract class HalfGamePagePart {
         WebElement awayStrengthsElement = halfsWebElement.findElement(By.xpath(xpathToAwayStrengths));
         String awayStrengthsText = awayStrengthsElement.getText();
         tokenizer = new StringTokenizer(awayStrengthsText, "\n");
-        String awayAverageStrength = tokenizer.nextToken().replace("Ø", "").trim();
+        String awayAverageStrength = tokenizer.nextToken();//.replace("Ø", "").trim();
+        awayAverageStrength = awayAverageStrength.substring(1).trim();
         String awayBeginStrength = tokenizer.nextToken().trim();
         if(isExtraTime) {
             tokenizer.nextToken();

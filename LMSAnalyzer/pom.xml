@@ -3,6 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.cloneworks</groupId>
 	<artifactId>ligamanager.spion.analyzer</artifactId>
+	<packaging>pom</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>LM Spion Analyzer</name>
 	<description>Der LM Spion bietet Toolunterstützung für liga-manager.de. Der analyszer dient dazu Informationen im lokalen Batch-Betrieb von dieser Website abzurufen und in der Datenbank für den LM Spion zu speichern.</description>
@@ -67,6 +68,13 @@
 			</plugin>
 
 		</plugins>
+
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+
 	</build>
 
 </project>

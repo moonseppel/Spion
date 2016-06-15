@@ -18,7 +18,7 @@ public abstract class LmBasePage {
 		try {
 			isOnCorrectPageWithException();
 		} catch (NoSuchElementException ex) {
-			throw new LmIllegalPageException(driver.getCurrentUrl());
+			throw new LmIllegalPageException("Error while checking page: " + driver.getCurrentUrl());
 		}
 	}
 

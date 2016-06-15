@@ -68,6 +68,8 @@ public class LmGameHibernateBeanTest {
         LmGameHibernateBean actual = LmGameHibernateBean.read(gameId, seasonNumber);
         subjectAndExpected.delete();
 
+        assertThat(BasicActions.logout(), is(true));
+
         assertThat(ids.getSeasonNumber(), is(seasonNumber));
         assertThat(ids.getGameId(), is(gameId));
         assertThat(actual, is(subjectAndExpected));
@@ -101,6 +103,7 @@ public class LmGameHibernateBeanTest {
         } finally {
             session.close();
         }
+
 
     }
 

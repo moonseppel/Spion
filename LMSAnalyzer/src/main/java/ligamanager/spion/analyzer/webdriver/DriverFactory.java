@@ -1,6 +1,7 @@
 package ligamanager.spion.analyzer.webdriver;
 
 import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -32,6 +33,7 @@ public abstract class DriverFactory {
 		LOGGER.info("Using Chrome web driver from \"C:\\Users\\jpralle\\MyApps\\chromedriver_win32\\chromedriver.exe\".");
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\jpralle\\MyApps\\chromedriver_win32\\chromedriver.exe");
 		WebDriver ret = new ChromeDriver();
+		ret.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		addShutdownHook();
 		

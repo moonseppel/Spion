@@ -22,12 +22,21 @@ public class Main {
 	public static int maxGameNumber = -1;
 
 	public static void main(String[] args) {
+		int result = innerMain(args);
+		System.exit(result);
+	}
+
+	public static int innerMain(String[] args) {
+		return innerMainWithOffset(args, 0);
+	}
+
+	public static int innerMainWithOffset(String[] args, int gameOffset) {
 
 		if(args.length == 1 && args[0].equalsIgnoreCase("initDB")) {
 			LOGGER.info("Initilizing database...");
 			initilizeDb();
 			LOGGER.info("Initilizing database finished");
-			return;
+			return -1;
 		}
 
 		if(!parseParameters(args) && args.length == 4) {
@@ -41,19 +50,19 @@ public class Main {
 			System.out.println("[numberOfGames] is the number of games to retrieve for each season, always starting with game 1.");
 			System.out.println("\"initdb\" initilizes a fresh db for runnign this application.");
 			System.out.println("");
-			return;
+			return -1;
 		}
 
 		if(!BasicActions.loginAndChooseFirstTeam(args[2], args[3])) {
 			System.out.println("Error during login.");
-			return;
+			return -1;
 		}
 
 		for(int currentSeason = firstSeason; currentSeason <= lastSeason; currentSeason++) {
-			for(int currentGame = 1; currentGame <= maxGameNumber; currentGame++) {
+			for(int currentGame = gameOffset+1; currentGame-gameOffset <= maxGameNumber; currentGame++) {
 
 				LmGamePage gamePage = new LmGamePage(currentGame, currentSeason);
-				String msg = "Reading season \"" + currentSeason + "\", game \"" + currentGame + "\". ";
+				String msg = "S: \"" + currentSeason + "\", G: \"" + currentGame + "\". ";
 
 				try {
 					gamePage.navigateToPageAndCheck();
@@ -62,15 +71,24 @@ public class Main {
 					msg += "Success.";
 
 				} catch(LmIllegalGameException ex) {
-					msg += "=== FAILURE ==== Illega game fo type \"" + ex.getGameType() + "\". Message: " + ex.getMessage();
+					LOGGER.warn(msg);
+					msg += "=== FAILURE ==== Game type \"" + ex.getGameType() + "\". Message: " + ex.getMessage();
 				} catch(LmIllegalPageException ex) {
-					msg += "=== FAILURE ==== General failure. Message: " + ex.getMessage();
+					LOGGER.warn(msg);
+					msg += "=== FAILURE ==== " + ex.getMessage();
+				} catch(Exception ex) {
+					msg += "=== FAILURE ==== General error. Message: " + ex.getMessage();
+					LOGGER.info(msg);
+					msg = null;
+					retry(currentGame, currentSeason);
 				}
 
-				LOGGER.info(msg);
 			}
 		}
+		
+		BasicActions.logout();
 
+		return 0;
 	}
 
 	public static boolean parseParameters(String args[]) {
@@ -122,6 +140,27 @@ public class Main {
 		return ret;
 	}
 
+	private static void retry(int currentGame, int currentSeason) {
+
+		LmGamePage gamePage = new LmGamePage(currentGame, currentSeason);
+		String msg = "S: \"" + currentSeason + "\", G: \"" + currentGame + "\". ";
+
+		try {
+			gamePage.navigateToPageAndCheck();
+			LmGameHibernateBean gameBean = new LmGameHibernateBean(gamePage);
+			gameBean.save();
+			msg += "Success.";
+
+		} catch(LmIllegalGameException ex) {
+			msg += "=== FAILURE ==== Game type \"" + ex.getGameType() + "\". Message: " + ex.getMessage();
+		} catch(LmIllegalPageException ex) {
+			msg += "=== FAILURE ==== " + ex.getMessage();
+		} catch(Exception ex) {
+			msg += "=== FAILURE ==== General error. Message: " + ex.getMessage();
+		}
+
+		LOGGER.warn(msg);
+	}
 
 	private static void initilizeDb() {
 

@@ -28,13 +28,13 @@ public class LmTeamChoicePage extends LmBasePage {
 		String title = driver.getTitle();
 		
 		if(!title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
-			throw new LmIllegalPageException(driver.getCurrentUrl());
+			throw new LmIllegalPageException("Error while checking page: " + driver.getCurrentUrl());
 		}
 		
 		WebElement teamChoiceDropdown = driver.findElement(By.xpath("//select[@name=\"manager\"]"));
 		
 		if(teamChoiceDropdown == null) {
-			throw new LmIllegalPageException(driver.getCurrentUrl());
+			throw new LmIllegalPageException("Error while checking page: " + driver.getCurrentUrl());
 		}
 		
 		initElements();

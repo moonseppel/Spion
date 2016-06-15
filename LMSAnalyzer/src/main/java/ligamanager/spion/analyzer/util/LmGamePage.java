@@ -99,7 +99,7 @@ public class LmGamePage extends LmBasePage {
 	public void navigateToPageAndCheck() throws LmIllegalPageException {
 
 		if(gameId < 0) {
-			throw new LmIllegalPageException(driver.getCurrentUrl());
+			throw new LmIllegalPageException("Error while checking page: " + driver.getCurrentUrl());
 		}
 
 		String gameIdAsString = new Integer(gameId).toString();
@@ -235,7 +235,7 @@ public class LmGamePage extends LmBasePage {
 		String title = driver.getTitle();
 
 		if(!title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
-			throw new LmIllegalPageException(driver.getCurrentUrl());
+			throw new LmIllegalPageException("Error while checking page: " + driver.getCurrentUrl());
 		}
 
 

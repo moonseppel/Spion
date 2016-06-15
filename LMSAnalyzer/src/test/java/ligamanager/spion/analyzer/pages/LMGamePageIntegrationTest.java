@@ -3,9 +3,11 @@ package ligamanager.spion.analyzer.pages;
 import ligamanager.spion.analyzer.TestData;
 import ligamanager.spion.analyzer.useCases.BasicActions;
 import ligamanager.spion.analyzer.util.*;
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 /**
@@ -16,6 +18,11 @@ public class LMGamePageIntegrationTest {
     @BeforeClass
     public static void setUp() throws Exception {
         assertTrue(BasicActions.loginAndChooseFirstTeam(TestData.USERNAME, TestData.PASSWORD));
+    }
+
+    @AfterClass
+    public static void teardown() {
+        assertThat(BasicActions.logout(), is(true));
     }
 
     /**

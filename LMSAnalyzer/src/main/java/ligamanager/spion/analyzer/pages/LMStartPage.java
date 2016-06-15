@@ -71,13 +71,13 @@ public class LmStartPage extends LmBasePage {
 		String title = driver.getTitle();
 		
 		if(!title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
-			throw new LmIllegalPageException(driver.getCurrentUrl());
+			throw new LmIllegalPageException("Error while checking page: " + driver.getCurrentUrl());
 		}
 
 		WebElement kostenlosSpielenButton = driver.findElement(By.xpath("//*[@id=\"content_land\"]/div[2]/div[2]/a/img"));
 
 		if(kostenlosSpielenButton == null) {
-			throw new LmIllegalPageException(driver.getCurrentUrl());
+			throw new LmIllegalPageException("Error while checking page: " + driver.getCurrentUrl());
 		}
 
 		initElements();
