@@ -11,7 +11,7 @@
     </appender>
 
     <logger name="ligamanager.spion.analyzer" additivity="false">
-        <level value="DEBUG" />
+        <level value="INFO" />
         <appender-ref ref="console"/>
     </logger>
 
