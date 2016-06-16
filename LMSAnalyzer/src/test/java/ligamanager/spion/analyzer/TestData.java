@@ -6,5 +6,18 @@ package ligamanager.spion.analyzer;
 public abstract class TestData {
 
     public static String USERNAME = "moonseppel";
-    public static String PASSWORD = "***REMOVED***";
+    public static String PASSWORD = getPassword();
+
+    private static String innerPassword = null;
+
+    private static String getPassword() {
+
+        if(innerPassword == null) {
+            System.out.println("======> Please enter moonseppel's LM password:");
+            innerPassword = System.console().readLine();
+        }
+
+
+        return innerPassword;
+    }
 }
