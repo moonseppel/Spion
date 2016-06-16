@@ -1,4 +1,5 @@
-LMSAnalyzer/target/
+*/target/
+.idea
 
 # Created by https://www.gitignore.io/api/intellij
 
