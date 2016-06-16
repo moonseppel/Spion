@@ -121,7 +121,7 @@ public class MainTest {
         String season = "123-124";
         int maxGameNumber = 2000;
         int gameOffset = 300000;
-        String[] args = {season, String.valueOf(maxGameNumber), "moonseppel", "***REMOVED***"};
+        String[] args = {season, String.valueOf(maxGameNumber), "user", "password"};
         int actual = Main.innerMainWithOffset(args, gameOffset);
 
         assertThat(actual, is(0));
