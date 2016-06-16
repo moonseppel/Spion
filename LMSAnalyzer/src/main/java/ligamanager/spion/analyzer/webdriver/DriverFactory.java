@@ -15,7 +15,8 @@ public abstract class DriverFactory {
 	private static final Logger LOGGER = Logger.getLogger(DriverFactory.class);
 
 	private static Optional<WebDriver> instance = Optional.empty();
-	
+	private static boolean setSystemProperty = true;
+
 	public static WebDriver getInstance() {
 		if(!instance.isPresent()) {
 			createInstance();
@@ -23,8 +24,12 @@ public abstract class DriverFactory {
 		return instance.get();
 	}
 
+	public static void setSystemProperty(boolean doSet) {
+		setSystemProperty = doSet;
+	}
+
 	private static synchronized void createInstance() {
-		
+
 		if((instance == null) || !instance.isPresent()) {
 			instance = Optional.of(getDriver());
 		}
@@ -32,8 +37,11 @@ public abstract class DriverFactory {
 
 	private static WebDriver getDriver() {
 
-		LOGGER.info("Using Chrome web driver from \"C:\\Users\\jpralle\\MyApps\\chromedriver_win32\\chromedriver.exe\".");
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\jpralle\\MyApps\\chromedriver_win32\\chromedriver.exe");
+		if(setSystemProperty) {
+			LOGGER.info("Using Chrome web driver from \"C:\\Users\\jpralle\\MyApps\\chromedriver_win32\\chromedriver.exe\".");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\jpralle\\MyApps\\chromedriver_win32\\chromedriver.exe");
+		}
+
 		WebDriver ret = new ChromeDriver();
 //		HtmlUnitDriver ret = new HtmlUnitDriver();
 //		ret.setJavascriptEnabled(true);

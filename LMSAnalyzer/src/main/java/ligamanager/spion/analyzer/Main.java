@@ -7,6 +7,7 @@ import ligamanager.spion.analyzer.hibernate.LmGameHibernateBean;
 import ligamanager.spion.analyzer.hibernate.SessionFactoryFactory;
 import ligamanager.spion.analyzer.util.*;
 import ligamanager.spion.analyzer.useCases.BasicActions;
+import ligamanager.spion.analyzer.webdriver.DriverFactory;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -39,7 +40,7 @@ public class Main {
 			return -1;
 		}
 
-		if(!parseParameters(args) && args.length == 4) {
+		if(!parseParameters(args) && args.length >= 4 && args.length <= 5) {
 
 			System.out.println("Error parsing parameters.");
 			System.out.println();
@@ -51,6 +52,10 @@ public class Main {
 			System.out.println("\"initdb\" initilizes a fresh db for runnign this application.");
 			System.out.println("");
 			return -1;
+		}
+
+		if(args.length == 5 && args[5] == "0") {
+			DriverFactory.setSystemProperty(false);
 		}
 
 		if(!BasicActions.loginAndChooseFirstTeam(args[2], args[3])) {
