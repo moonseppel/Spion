@@ -4,7 +4,7 @@
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="hibernate_test.cfg.xml" />
+          <unit-entry name="hibernate_test.cfg.xml" value="865146cd-e953-4056-a529-06d1537ff942" />
           <unit-entry name="learningTests:hibernate_test.cfg.xml" />
         </datasource-map>
         <naming-strategy-map />

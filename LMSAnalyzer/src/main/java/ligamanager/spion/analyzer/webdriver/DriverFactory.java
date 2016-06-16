@@ -3,9 +3,11 @@ package ligamanager.spion.analyzer.webdriver;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
+import com.gargoylesoftware.htmlunit.BrowserVersion;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 
 //Check this: https://sonar.netpioneer.de/sonar/coding_rules#rule_key=squid:S2151
@@ -33,6 +35,8 @@ public abstract class DriverFactory {
 		LOGGER.info("Using Chrome web driver from \"C:\\Users\\jpralle\\MyApps\\chromedriver_win32\\chromedriver.exe\".");
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\jpralle\\MyApps\\chromedriver_win32\\chromedriver.exe");
 		WebDriver ret = new ChromeDriver();
+//		HtmlUnitDriver ret = new HtmlUnitDriver();
+//		ret.setJavascriptEnabled(true);
 		ret.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		addShutdownHook();

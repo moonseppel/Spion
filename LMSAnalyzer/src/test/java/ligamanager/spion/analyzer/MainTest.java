@@ -115,7 +115,7 @@ public class MainTest {
      * This test is just to find the highest used game number of LM, no actual test
      */
     @Test
-//    @Ignore
+    @Ignore
     public void testMain2() {
         initHibernateForTest();
         String season = "123-124";
