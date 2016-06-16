@@ -22,16 +22,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="ligamanager.spion.analyzer (1)" />
-        <module name="LMSParent" />
-        <module name="LMSpion" />
+        <module name="ligamanager.spion.analyzer" />
+        <module name="ligamanager.spion.frontend" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ligamanager.spion.analyzer (1)" target="1.5" />
-      <module name="ligamanager.spion.analyzer (2)" target="1.5" />
-      <module name="LMSParent" target="1.5" />
-      <module name="LMSpion" target="1.5" />
+      <module name="ligamanager.spion.analyzer" target="1.8" />
+      <module name="ligamanager.spion.frontend" target="1.8" />
+      <module name="ligamanager.spion.parent" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
