@@ -1,5 +1,6 @@
 package ligamanager.spion.analyzer.hibernate;
 
+import ligamanager.spion.analyzer.pages.LmGamePage;
 import ligamanager.spion.analyzer.util.*;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;

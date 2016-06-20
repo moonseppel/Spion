@@ -3,7 +3,7 @@ package ligamanager.spion.analyzer.hibernate;
 import ligamanager.spion.analyzer.TestData;
 import ligamanager.spion.analyzer.useCases.BasicActions;
 import ligamanager.spion.analyzer.util.GameFormation;
-import ligamanager.spion.analyzer.util.LmGamePage;
+import ligamanager.spion.analyzer.pages.LmGamePage;
 import ligamanager.spion.analyzer.util.LmIllegalPageException;
 import ligamanager.spion.analyzer.util.Tactic;
 import org.apache.log4j.Logger;

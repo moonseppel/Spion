@@ -4,6 +4,8 @@ import ligamanager.spion.analyzer.hibernate.LmGameHibernateBean;
 import ligamanager.spion.analyzer.hibernate.SessionFactoryFactory;
 import ligamanager.spion.analyzer.util.GameFormation;
 import ligamanager.spion.analyzer.util.Tactic;
+import ligamanager.spion.analyzer.webdriver.DriverFactory;
+import ligamanager.spion.analyzer.webdriver.WebDriverType;
 import org.apache.log4j.Logger;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -100,7 +102,7 @@ public class MainTest {
         initHibernateForTest();
         int season = 122;
         int maxGameNumber = 10;
-        String[] args = {String.valueOf(season), String.valueOf(maxGameNumber), "moonseppel", "***REMOVED***"};
+        String[] args = {String.valueOf(season), String.valueOf(maxGameNumber), TestData.USERNAME, TestData.PASSWORD};
         int actual = Main.innerMain(args);
 
         assertThat(actual, is(0));
@@ -109,6 +111,23 @@ public class MainTest {
             LmGameHibernateBean gameBean = LmGameHibernateBean.read(currentGame, season);
             gameBean.delete();
         }
+    }
+
+    @Test
+    public void testMainwithWrongSystemProperty() {
+        initHibernateForTest();
+        //this works only with google chrome
+        DriverFactory.type = WebDriverType.Chrome;
+        int season = 122;
+        int maxGameNumber = 10;
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\default\\MyApps\\chromedriver_win32\\chromedriver.exe");
+        String[] args = {String.valueOf(season), String.valueOf(maxGameNumber), TestData.USERNAME, TestData.PASSWORD};
+        int actual = Main.innerMain(args);
+
+        System.clearProperty("webdriver.chrome.driver");
+
+        assertThat(actual, is(-1));
+
     }
 
     /**

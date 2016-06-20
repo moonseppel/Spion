@@ -19,7 +19,7 @@ public class LmStartPage extends LmBasePage {
 
 	public void navigateToPageAndCheck() throws LmIllegalPageException {
 
-		driver.get(pageUrl);
+		getDriver().get(pageUrl);
 		isOnCorrectPage();
 	}
 
@@ -34,7 +34,7 @@ public class LmStartPage extends LmBasePage {
 		passwordField.sendKeys(password);
 		loginButton.click();
 
-		WebElement teamChoiceDropdown = driver.findElement(By.xpath("//select[@name=\"manager\"]"));
+		WebElement teamChoiceDropdown = getDriver().findElement(By.xpath("//select[@name=\"manager\"]"));
 
 		if(teamChoiceDropdown != null) {
 			LmTeamChoicePage teamChoicePage = new LmTeamChoicePage();
@@ -68,16 +68,16 @@ public class LmStartPage extends LmBasePage {
 
 	protected void isOnCorrectPageWithException() throws LmIllegalPageException {
 
-		String title = driver.getTitle();
+		String title = getDriver().getTitle();
 		
 		if(!title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
-			throw new LmIllegalPageException("Error while checking page: " + driver.getCurrentUrl());
+			throw new LmIllegalPageException("Error while checking page: " + getDriver().getCurrentUrl());
 		}
 
-		WebElement kostenlosSpielenButton = driver.findElement(By.xpath("//*[@id=\"content_land\"]/div[2]/div[2]/a/img"));
+		WebElement kostenlosSpielenButton = getDriver().findElement(By.xpath("//*[@id=\"content_land\"]/div[2]/div[2]/a/img"));
 
 		if(kostenlosSpielenButton == null) {
-			throw new LmIllegalPageException("Error while checking page: " + driver.getCurrentUrl());
+			throw new LmIllegalPageException("Error while checking page: " + getDriver().getCurrentUrl());
 		}
 
 		initElements();
@@ -94,13 +94,13 @@ public class LmStartPage extends LmBasePage {
 
 	}
 	private void tryInitElementsWhenUserIsLoggedOut() {
-		userField = driver.findElement(By.xpath("//input[@id=\"user\"]"));
-		passwordField = driver.findElement(By.xpath("//input[@id=\"pass\"]"));
-		loginButton = driver.findElement(By.xpath("//input[@name=\"Go\"]"));
+		userField = getDriver().findElement(By.xpath("//input[@id=\"user\"]"));
+		passwordField = getDriver().findElement(By.xpath("//input[@id=\"pass\"]"));
+		loginButton = getDriver().findElement(By.xpath("//input[@name=\"Go\"]"));
 	}
 
 	private void tryInitElementsWhenUserIsLoggedIn() {
-		logoutButton = driver.findElement((By.xpath("//*[@id=\"loginarea_left\"]/div[5]/a/img")));
+		logoutButton = getDriver().findElement((By.xpath("//*[@id=\"loginarea_left\"]/div[5]/a/img")));
 	}
 
 

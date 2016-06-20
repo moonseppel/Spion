@@ -9,7 +9,9 @@ import ligamanager.spion.analyzer.webdriver.DriverFactory;
 
 public abstract class LmBasePage {
 
-	protected static WebDriver driver = DriverFactory.getInstance();
+	protected static WebDriver getDriver() {
+		return DriverFactory.getInstance();
+	}
 	
 	abstract public void navigateToPageAndCheck() throws LmIllegalPageException;
 	
@@ -18,7 +20,7 @@ public abstract class LmBasePage {
 		try {
 			isOnCorrectPageWithException();
 		} catch (NoSuchElementException ex) {
-			throw new LmIllegalPageException("Error while checking page: " + driver.getCurrentUrl());
+			throw new LmIllegalPageException("Error while checking page: " + getDriver().getCurrentUrl());
 		}
 	}
 

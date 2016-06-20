@@ -2,7 +2,6 @@ package ligamanager.spion.analyzer.useCases;
 
 import java.util.Optional;
 
-import ligamanager.spion.analyzer.util.LmIllegalGameException;
 import ligamanager.spion.analyzer.pages.LmStartPage;
 import ligamanager.spion.analyzer.pages.LmTeamChoicePage;
 import ligamanager.spion.analyzer.util.LmIllegalPageException;
