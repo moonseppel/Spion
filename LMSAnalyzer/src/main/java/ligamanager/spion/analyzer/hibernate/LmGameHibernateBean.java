@@ -177,7 +177,9 @@ public class LmGameHibernateBean {
             query.setParameter("game_id", gameId);
             query.setParameter("season_number",seasonNumber);
 
-            ret = (LmGameHibernateBean) query.list().get(0);
+            if(query.list().size() > 0) {
+                ret = (LmGameHibernateBean) query.list().get(0);
+            }
 
             tx.commit();
 

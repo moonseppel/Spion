@@ -15,15 +15,15 @@
         <appender-ref ref="console"/>
     </logger>
 
-    <!--<logger name="org.hibernate.SQL" additivity="false">-->
-        <!--<level value="DEBUG" />-->
-        <!--<appender-ref ref="console"/>-->
-    <!--</logger>-->
+    <logger name="org.hibernate.SQL" additivity="false">
+        <level value="DEBUG" />
+        <appender-ref ref="console"/>
+    </logger>
 
-    <!--<logger name="org.hibernate.type" additivity="false">-->
-        <!--<level value="TRACE" />-->
-        <!--<appender-ref ref="console"/>-->
-    <!--</logger>-->
+    <logger name="org.hibernate.type" additivity="false">
+        <level value="TRACE" />
+        <appender-ref ref="console"/>
+    </logger>
 
     <root>
         <level value="WARN" />

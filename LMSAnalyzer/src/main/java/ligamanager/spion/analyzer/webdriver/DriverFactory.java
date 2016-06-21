@@ -46,7 +46,7 @@ public abstract class DriverFactory {
 		WebDriver ret = null;
 
 		if(type == null) {
-			type = WebDriverType.PhantomJS_headless;
+			type = WebDriverType.Chrome;
 		}
 
 		switch (type) {

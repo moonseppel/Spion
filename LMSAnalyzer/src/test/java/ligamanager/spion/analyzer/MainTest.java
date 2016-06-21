@@ -29,7 +29,8 @@ public class MainTest {
     public void setUpTests() {
         Main.firstSeason = -1;
         Main.lastSeason = -1;
-        Main.maxGameNumber = -1;
+        Main.firstGameNumber = -1;
+        Main.lastGameNumber = -1;
     }
 
     @Test
@@ -45,7 +46,8 @@ public class MainTest {
         assertThat(succesful, is(true));
         assertThat(Main.firstSeason, is(122));
         assertThat(Main.lastSeason, is(122));
-        assertThat(Main.maxGameNumber, is(0));
+        assertThat(Main.firstGameNumber, is(1));
+        assertThat(Main.lastGameNumber, is(0));
 
     }
 
@@ -61,7 +63,8 @@ public class MainTest {
         assertThat(succesful, is(true));
         assertThat(Main.firstSeason, is(122));
         assertThat(Main.lastSeason, is(126));
-        assertThat(Main.maxGameNumber, is(1));
+        assertThat(Main.firstGameNumber, is(1));
+        assertThat(Main.lastGameNumber, is(1));
 
     }
 
@@ -77,12 +80,13 @@ public class MainTest {
         assertThat(succesful, is(false));
         assertThat(Main.firstSeason, is(122));
         assertThat(Main.lastSeason, is(-1));
-        assertThat(Main.maxGameNumber, is(1));
+        assertThat(Main.firstGameNumber, is(1));
+        assertThat(Main.lastGameNumber, is(1));
 
     }
 
     @Test
-    public void testParseParametersIllegal2() {
+    public void testParseParametersillegal2() {
 
         String seasons = "122-126";
         String maxGameNumber = "no";
@@ -93,7 +97,25 @@ public class MainTest {
         assertThat(succesful, is(false));
         assertThat(Main.firstSeason, is(122));
         assertThat(Main.lastSeason, is(126));
-        assertThat(Main.maxGameNumber, is(-1));
+        assertThat(Main.firstGameNumber, is(1));
+        assertThat(Main.lastGameNumber, is(-1));
+
+    }
+
+    @Test
+    public void testParseParametersWithGameRange() {
+
+        String seasons = "122-126";
+        String maxGameNumber = "12-3556";
+        String[] args = {seasons, maxGameNumber};
+
+        boolean succesful = Main.parseParameters(args);
+
+        assertThat(succesful, is(true));
+        assertThat(Main.firstSeason, is(122));
+        assertThat(Main.lastSeason, is(126));
+        assertThat(Main.firstGameNumber, is(12));
+        assertThat(Main.lastGameNumber, is(3556));
 
     }
 
@@ -120,7 +142,7 @@ public class MainTest {
         DriverFactory.type = WebDriverType.Chrome;
         int season = 122;
         int maxGameNumber = 10;
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\default\\MyApps\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\blabla\\something\\chromedriver_win32\\chromedriver.exe");
         String[] args = {String.valueOf(season), String.valueOf(maxGameNumber), TestData.USERNAME, TestData.PASSWORD};
         int actual = Main.innerMain(args);
 
@@ -130,20 +152,26 @@ public class MainTest {
 
     }
 
-    /**
-     * This test is just to find the highest used game number of LM, no actual test
-     */
     @Test
-    @Ignore
-    public void testMain2() {
+    public void testMainWithRange() {
         initHibernateForTest();
-        String season = "123-124";
-        int maxGameNumber = 2000;
-        int gameOffset = 300000;
-        String[] args = {season, String.valueOf(maxGameNumber), "user", "password"};
-        int actual = Main.innerMainWithOffset(args, gameOffset);
+        int firstSeason = 123;
+        int lastSeason = 124;
+        String season = firstSeason + "-" + lastSeason;
+        int firstGame = 1;
+        int lastGame = 2;
+        String gameRange = firstGame + "-" + lastGame;
+        String[] args = {season, gameRange, TestData.USERNAME, TestData.PASSWORD};
+        int actual = Main.innerMainWithExceptions(args);
 
         assertThat(actual, is(0));
+
+        for(int currentSeason = firstSeason; currentSeason <= lastSeason; currentSeason++) {
+            for (int currentGame = firstGame; currentGame <= lastGame; currentGame++) {
+                LmGameHibernateBean gameBean = LmGameHibernateBean.read(currentGame, currentSeason);
+                gameBean.delete();
+            }
+        }
     }
 
     public static void initHibernateForTest() {

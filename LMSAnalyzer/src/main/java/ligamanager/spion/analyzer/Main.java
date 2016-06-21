@@ -20,7 +20,8 @@ public class Main {
 
 	public static int firstSeason = -1;
 	public static int lastSeason = -1;
-	public static int maxGameNumber = -1;
+	public static int firstGameNumber = -1;
+	public static int lastGameNumber = -1;
 
 	public static void main(String[] args) {
 		int result = innerMain(args);
@@ -30,7 +31,7 @@ public class Main {
 	public static int innerMain(String[] args) {
 		try {
 
-			return innerMainWithOffset(args, 0);
+			return innerMainWithExceptions(args);
 
 		} catch (Throwable t) {
 			LOGGER.error("Application execution failed. Message: " + t.getMessage(), t);
@@ -38,7 +39,7 @@ public class Main {
 		}
 	}
 
-	public static int innerMainWithOffset(String[] args, int gameOffset) {
+	public static int innerMainWithExceptions(String[] args) {
 
 		if(args.length == 1 && args[0].equalsIgnoreCase("initDB")) {
 			LOGGER.info("Initilizing database...");
@@ -67,7 +68,7 @@ public class Main {
 		}
 
 		for(int currentSeason = firstSeason; currentSeason <= lastSeason; currentSeason++) {
-			for(int currentGame = gameOffset+1; currentGame-gameOffset <= maxGameNumber; currentGame++) {
+			for(int currentGame = firstGameNumber; currentGame <= lastGameNumber; currentGame++) {
 
 				LmGamePage gamePage = new LmGamePage(currentGame, currentSeason);
 				String msg = "S: \"" + currentSeason + "\", G: \"" + currentGame + "\". ";
@@ -77,17 +78,22 @@ public class Main {
 					LmGameHibernateBean gameBean = new LmGameHibernateBean(gamePage);
 					gameBean.save();
 					msg += "Success.";
+					LOGGER.info(msg);
 
 				} catch(LmIllegalGameException ex) {
-					LOGGER.warn(msg);
 					msg += "=== FAILURE ==== Game type \"" + ex.getGameType() + "\". Message: " + ex.getMessage();
-				} catch(LmIllegalPageException ex) {
 					LOGGER.warn(msg);
+				} catch(LmIllegalPageException ex) {
 					msg += "=== FAILURE ==== " + ex.getMessage();
+					LOGGER.warn(msg);
 				} catch(Exception ex) {
-					msg += "=== FAILURE ==== General error. Message: " + ex.getMessage();
-					LOGGER.info(msg);
-					msg = null;
+					msg += "Retrying. Message: " + ex.getMessage();
+					//LOGGER.info(msg);
+					try {
+						Thread.sleep(5000);
+					} catch (InterruptedException e) {
+						LOGGER.debug("Waiting of thread failed.");
+					}
 					retry(currentGame, currentSeason);
 				}
 
@@ -133,9 +139,30 @@ public class Main {
 				LOGGER.info("Parsed season number.");
 			}
 
-			maxGameNumber = Integer.parseInt(args[1]);
-			ret = ret && true;
-			LOGGER.info("Parsed maximum game number.");
+			if (args[1].contains("-")) {
+				StringTokenizer tokenizer = new StringTokenizer(args[1], "-");
+
+				ret = ret && true;
+				if(tokenizer.hasMoreTokens()) {
+					firstGameNumber = Integer.parseInt(tokenizer.nextToken());
+					if(tokenizer.hasMoreTokens()) {
+						lastGameNumber = Integer.parseInt(tokenizer.nextToken());
+					} else {
+						ret = false;
+					}
+				} else {
+					ret = false;
+				}
+
+				ret = ret && true;
+				LOGGER.info("Parsed game range.");
+
+			} else {
+				firstGameNumber = 1;
+				lastGameNumber = Integer.parseInt(args[1]);
+				ret = ret && true;
+				LOGGER.info("Parsed maximum game number.");
+			}
 
 		} catch (NumberFormatException ex) {
 			LOGGER.error("Can't Parse input parameters. Message: " + ex.getMessage());
@@ -151,23 +178,26 @@ public class Main {
 	private static void retry(int currentGame, int currentSeason) {
 
 		LmGamePage gamePage = new LmGamePage(currentGame, currentSeason);
-		String msg = "S: \"" + currentSeason + "\", G: \"" + currentGame + "\". ";
+		String msg = "S: \"" + currentSeason + "\", G: \"" + currentGame + "\" Retry. ";
 
 		try {
 			gamePage.navigateToPageAndCheck();
 			LmGameHibernateBean gameBean = new LmGameHibernateBean(gamePage);
 			gameBean.save();
 			msg += "Success.";
+			LOGGER.info(msg);
 
 		} catch(LmIllegalGameException ex) {
 			msg += "=== FAILURE ==== Game type \"" + ex.getGameType() + "\". Message: " + ex.getMessage();
+			LOGGER.warn(msg);
 		} catch(LmIllegalPageException ex) {
 			msg += "=== FAILURE ==== " + ex.getMessage();
+			LOGGER.warn(msg);
 		} catch(Exception ex) {
 			msg += "=== FAILURE ==== General error. Message: " + ex.getMessage();
+			LOGGER.warn(msg);
 		}
 
-		LOGGER.warn(msg);
 	}
 
 	private static void initilizeDb() {
