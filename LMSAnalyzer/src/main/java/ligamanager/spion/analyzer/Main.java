@@ -49,8 +49,8 @@ public class Main {
 				return -1;
 			}
 
-			GameReader reader = new GameReader();
-			return reader.readGames(params.get());
+			GameReader reader = new GameReader(params.get());
+			return reader.readGames();
 
 		} catch (Throwable t) {
 			LOGGER.error("Application execution failed. Message: " + t.getMessage(), t);

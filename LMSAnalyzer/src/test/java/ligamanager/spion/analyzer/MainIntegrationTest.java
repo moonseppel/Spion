@@ -78,7 +78,7 @@ public class MainIntegrationTest {
         params.firstGameNumber = 1;
         params.lastGameNumber = 2;
         fillFromTestData(params);
-        int actual = new GameReader().readGames(params);
+        int actual = new GameReader(params).readGames();
 
         assertThat(actual, is(0));
 

@@ -18,9 +18,15 @@ public class GameReader {
 	private static final Logger LOGGER = Logger.getLogger(GameReader.class);
 
 	private int lastLoginDay;
-	private int maxRecusionDepth = 3;
+	private int maxRecusionDepth = 4;
 
-	public int readGames(GameReaderParameters params) {
+	private GameReaderParameters params;
+
+	public GameReader(GameReaderParameters params) {
+		this.params = params;
+	}
+
+	public int readGames() {
 
 		if(BasicActions.loginAndChooseFirstTeam(params.user, params.password)) {
 
@@ -38,7 +44,7 @@ public class GameReader {
 
 				waitIfAuswertung();
 				if(isJustAfterMidnight() && lastLoginNotToday()) {
-					relogin(params);
+					relogin();
 				}
 
 				readAndSaveSingleGame(currentSeason, currentGame);
@@ -52,14 +58,12 @@ public class GameReader {
 
 	private void readAndSaveSingleGame(int currentSeason, int currentGame) {
 
-		LmGamePage gamePage = new LmGamePage(currentGame, currentSeason);
-		String msg = "S: \"" + currentSeason + "\", G: \"" + currentGame + "\". ";
+		String growableLogMessage = "S: \"" + currentSeason + "\", G: \"" + currentGame + "\". ";
 
-
-		if(readRecursive(currentGame, currentSeason, 0, msg)) {
-			LOGGER.info(msg);
+		if(readRecursive(currentGame, currentSeason, 0, growableLogMessage)) {
+			LOGGER.info(growableLogMessage);
 		} else {
-			LOGGER.warn(msg);
+			LOGGER.warn(growableLogMessage);
 		}
 	}
 
@@ -71,8 +75,14 @@ public class GameReader {
 			ret = false;
 		} else {
 			ret = tryRead(currentGame, currentSeason, growableLogMessage);
+
 			if(!ret) {
-				readRecursive(currentGame, currentSeason, currentRecusionDepth++, growableLogMessage);
+				waitSeconds(10);
+				if(currentRecusionDepth == 2) {
+					relogin();
+				}
+
+				readRecursive(currentGame, currentSeason, currentRecusionDepth+1, growableLogMessage);
 			}
 		}
 
@@ -105,7 +115,7 @@ public class GameReader {
 		return ret;
 	}
 
-	private void relogin(GameReaderParameters params) {
+	private void relogin() {
 		BasicActions.logout();
 		BasicActions.loginAndChooseFirstTeam(params.user, params.password);
 		lastLoginDay = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);

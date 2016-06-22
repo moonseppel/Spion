@@ -1,5 +1,6 @@
 package ligamanager.spion.analyzer.webdriver;
 
+import java.io.File;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
@@ -8,6 +9,7 @@ import org.apache.commons.lang.SystemUtils;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
@@ -65,6 +67,18 @@ public abstract class DriverFactory {
 				break;
 		}
 
+		ret.get("http://www.google.de");
+		String originalHandle = ret.getWindowHandle();
+
+		for(String handle : ret.getWindowHandles()) {
+			if (!handle.equals(originalHandle)) {
+				ret.switchTo().window(handle);
+				ret.close();
+			}
+		}
+
+		ret.switchTo().window(originalHandle);
+
 		addShutdownHook();
 		
 		return ret;
@@ -84,7 +98,11 @@ public abstract class DriverFactory {
             LOGGER.info("Using Chrome web driver from \"C:\\Users\\jpralle\\MyApps\\chromedriver_win32\\chromedriver.exe\".");
             System.setProperty("webdriver.chrome.driver", "C:\\Users\\jpralle\\MyApps\\chromedriver_win32\\chromedriver.exe");
         }
-		ret = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		File adblockCrx = new File("AdBlock_2_59.crx");
+		options.addExtensions(adblockCrx);
+		ret = new ChromeDriver(options);
+
 		return ret;
 	}
 
