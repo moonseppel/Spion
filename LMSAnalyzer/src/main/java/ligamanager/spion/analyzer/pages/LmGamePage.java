@@ -98,8 +98,12 @@ public class LmGamePage extends LmBasePage {
 	@Override
 	public void navigateToPageAndCheck() throws LmIllegalPageException {
 
+		if(seasonNumber < 0) {
+			throw new LmIllegalPageException("Illegal season number \"" + seasonNumber + "\".");
+		}
+
 		if(gameId < 0) {
-			throw new LmIllegalPageException("Error while checking page: " + getDriver().getCurrentUrl());
+			throw new LmIllegalPageException("Illegal game id \"" + gameId + "\".");
 		}
 
 		String gameIdAsString = new Integer(gameId).toString();
@@ -232,12 +236,7 @@ public class LmGamePage extends LmBasePage {
 	@Override
 	protected void isOnCorrectPageWithException() throws LmIllegalPageException {
 
-		String title = getDriver().getTitle();
-
-		if(!title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
-			throw new LmIllegalPageException("Error while checking page: " + getDriver().getCurrentUrl());
-		}
-
+		checkTitle();
 
 		WebElement firstHalfFormationAndTacticsElement;
 		try {

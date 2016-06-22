@@ -12,7 +12,7 @@ public abstract class LmBasePage {
 	protected static WebDriver getDriver() {
 		return DriverFactory.getInstance();
 	}
-	
+
 	abstract public void navigateToPageAndCheck() throws LmIllegalPageException;
 	
 	public void isOnCorrectPage() throws LmIllegalPageException {
@@ -20,10 +20,18 @@ public abstract class LmBasePage {
 		try {
 			isOnCorrectPageWithException();
 		} catch (NoSuchElementException ex) {
-			throw new LmIllegalPageException("Error while checking page: " + getDriver().getCurrentUrl());
+			throw new LmIllegalPageException("Element not found on: " + getDriver().getCurrentUrl(), ex);
 		}
 	}
 
 	abstract protected void isOnCorrectPageWithException() throws NoSuchElementException, LmIllegalPageException;
+
+	protected static void checkTitle() throws LmIllegalPageException {
+
+		String title = getDriver().getTitle();
+		if(!title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
+			throw new LmIllegalPageException("No or incorrect title found: " + getDriver().getCurrentUrl());
+		}
+	}
 
 }

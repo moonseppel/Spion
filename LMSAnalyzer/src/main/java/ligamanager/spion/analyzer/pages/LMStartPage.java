@@ -2,7 +2,6 @@ package ligamanager.spion.analyzer.pages;
 
 import java.util.Optional;
 
-import ligamanager.spion.analyzer.util.LmIllegalGameException;
 import ligamanager.spion.analyzer.util.LmIllegalPageException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -68,22 +67,18 @@ public class LmStartPage extends LmBasePage {
 
 	protected void isOnCorrectPageWithException() throws LmIllegalPageException {
 
-		String title = getDriver().getTitle();
-		
-		if(!title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
-			throw new LmIllegalPageException("Error while checking page: " + getDriver().getCurrentUrl());
-		}
+		checkTitle();
 
 		WebElement kostenlosSpielenButton = getDriver().findElement(By.xpath("//*[@id=\"content_land\"]/div[2]/div[2]/a/img"));
 
 		if(kostenlosSpielenButton == null) {
-			throw new LmIllegalPageException("Error while checking page: " + getDriver().getCurrentUrl());
+			throw new LmIllegalPageException("No \"kostenlos spielen\" button found: " + getDriver().getCurrentUrl());
 		}
 
 		initElements();
 
 	}
-	
+
 	private void initElements() {
 		try {
 			tryInitElementsWhenUserIsLoggedOut();

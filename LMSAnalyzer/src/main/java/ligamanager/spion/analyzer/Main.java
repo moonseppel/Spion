@@ -1,27 +1,21 @@
 package ligamanager.spion.analyzer;
 
+import java.util.Optional;
+import java.util.Set;
 import java.util.StringTokenizer;
 
-import ligamanager.spion.analyzer.hibernate.GameIds;
-import ligamanager.spion.analyzer.hibernate.LmGameHibernateBean;
-import ligamanager.spion.analyzer.hibernate.SessionFactoryFactory;
-import ligamanager.spion.analyzer.pages.LmGamePage;
-import ligamanager.spion.analyzer.util.*;
-import ligamanager.spion.analyzer.useCases.BasicActions;
+import ligamanager.spion.analyzer.hibernate.DbInitializer;
+import org.apache.commons.lang3.Range;
+import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.log4j.Logger;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
 import org.openqa.selenium.NoSuchElementException;
+
+import javax.persistence.criteria.CriteriaBuilder;
 
 public class Main {
 
 	private static final Logger LOGGER = Logger.getLogger(Main.class);
-
-	public static int firstSeason = -1;
-	public static int lastSeason = -1;
-	public static int firstGameNumber = -1;
-	public static int lastGameNumber = -1;
 
 	public static void main(String[] args) {
 		int result = innerMain(args);
@@ -31,7 +25,32 @@ public class Main {
 	public static int innerMain(String[] args) {
 		try {
 
-			return innerMainWithExceptions(args);
+
+			for (int i = 0; i < args.length; i++) {
+				String arg = args[i];
+				LOGGER.debug("Input parameter no. " + i + ": " + arg);
+			}
+
+			if(parametersAreIncomplete(args)) {
+				System.out.println("Number Parameters must be 1 oder 4.");
+				printUsage();
+				return -1;
+			}
+
+			if(isInitDB(args)) {
+				DbInitializer.initialize();
+				return -1;
+			}
+
+			Optional<GameReaderParameters> params = readParameters(args);
+			if(!params.isPresent()) {
+				System.out.println("Unable to parse parameters.");
+				printUsage();
+				return -1;
+			}
+
+			GameReader reader = new GameReader();
+			return reader.readGames(params.get());
 
 		} catch (Throwable t) {
 			LOGGER.error("Application execution failed. Message: " + t.getMessage(), t);
@@ -39,196 +58,98 @@ public class Main {
 		}
 	}
 
-	public static int innerMainWithExceptions(String[] args) {
+	private static Optional<GameReaderParameters> readParameters(String[] args) {
+		GameReaderParameters ret = new GameReaderParameters();
+		int firstSeason = -1;
+		int lastSeason = -1;
+		int firstGame = -1;
+		int lastGame = -1;
 
-		if(args.length == 1 && args[0].equalsIgnoreCase("initDB")) {
-			LOGGER.info("Initilizing database...");
-			initilizeDb();
-			LOGGER.info("Initilizing database finished");
-			return -1;
+		Optional<Range<Integer>> seasonRange = parseValueOrRangeParameter(args[0]);
+		if(seasonRange.isPresent()) {
+			ret.firstSeason = seasonRange.get().getMinimum();
+			ret.lastSeason = seasonRange.get().getMaximum();
+		} else {
+			return Optional.empty();
 		}
 
-		if(!parseParameters(args) && args.length >= 4 && args.length <= 5) {
-
-			System.out.println("Error parsing parameters.");
-			System.out.println();
-			System.out.println();
-			System.out.println("Syntax: java -jar lmsanalyzer.jar [seasons] [numberOfGames] [LM username] [LM password]");
-			System.out.println("OR: java -jar lmsanalyzer.jar initdb");
-			System.out.println("[seasons] maybe a range (\"10-12\") or a single season (\"1\").");
-			System.out.println("[numberOfGames] is the number of games to retrieve for each season, always starting with game 1.");
-			System.out.println("\"initdb\" initilizes a fresh db for runnign this application.");
-			System.out.println("");
-			return -1;
+		Optional<Range<Integer>> gameRange = parseValueOrRangeParameter(args[1]);
+		if(gameRange.isPresent()) {
+			ret.firstGameNumber = gameRange.get().getMinimum();
+			ret.lastGameNumber = gameRange.get().getMaximum();
+		} else {
+			return Optional.empty();
 		}
 
-		if(!BasicActions.loginAndChooseFirstTeam(args[2], args[3])) {
-			System.out.println("Error during login.");
-			return -1;
-		}
+		ret.user = args[2];
+		ret.password = args[3];
 
-		for(int currentSeason = firstSeason; currentSeason <= lastSeason; currentSeason++) {
-			for(int currentGame = firstGameNumber; currentGame <= lastGameNumber; currentGame++) {
-
-				LmGamePage gamePage = new LmGamePage(currentGame, currentSeason);
-				String msg = "S: \"" + currentSeason + "\", G: \"" + currentGame + "\". ";
-
-				try {
-					gamePage.navigateToPageAndCheck();
-					LmGameHibernateBean gameBean = new LmGameHibernateBean(gamePage);
-					gameBean.save();
-					msg += "Success.";
-					LOGGER.info(msg);
-
-				} catch(LmIllegalGameException ex) {
-					msg += "=== FAILURE ==== Game type \"" + ex.getGameType() + "\". Message: " + ex.getMessage();
-					LOGGER.warn(msg);
-				} catch(LmIllegalPageException ex) {
-					msg += "=== FAILURE ==== " + ex.getMessage();
-					LOGGER.warn(msg);
-				} catch(Exception ex) {
-					msg += "Retrying. Message: " + ex.getMessage();
-					//LOGGER.info(msg);
-					try {
-						Thread.sleep(5000);
-					} catch (InterruptedException e) {
-						LOGGER.debug("Waiting of thread failed.");
-					}
-					retry(currentGame, currentSeason);
-				}
-
-			}
-		}
-		
-		BasicActions.logout();
-
-		return 0;
+		return Optional.of(ret);
 	}
 
-	public static boolean parseParameters(String args[]) {
-		boolean ret = false;
-
-		for (int i = 0; i < args.length; i++) {
-			String arg = args[i];
-			LOGGER.info("Input parameter no. " + i + ": " + arg);
-		}
+	public static Optional<Range<Integer>> parseValueOrRangeParameter(String valueOrRange) {
+		boolean conversionSuccess = false;
+		Integer startOfRange = -1;
+		Integer endOfRange = -1;
 
 		try {
-			if (args[0].contains("-")) {
-				StringTokenizer tokenizer = new StringTokenizer(args[0], "-");
+			if (valueOrRange.contains("-")) {
 
-				ret = true;
+				StringTokenizer tokenizer = new StringTokenizer(valueOrRange, "-");
+
 				if(tokenizer.hasMoreTokens()) {
-					firstSeason = Integer.parseInt(tokenizer.nextToken());
+					startOfRange = Integer.parseInt(tokenizer.nextToken());
+
 					if(tokenizer.hasMoreTokens()) {
-						lastSeason = Integer.parseInt(tokenizer.nextToken());
-					} else {
-						ret = false;
+						endOfRange = Integer.parseInt(tokenizer.nextToken());
+
+						conversionSuccess = true;
+						LOGGER.trace("Parsed range.");
 					}
-				} else {
-					ret = false;
 				}
 
-				ret = ret && true;
-				LOGGER.info("Parsed season range.");
-
 			} else {
-				firstSeason = Integer.parseInt(args[0]);
-				lastSeason = firstSeason;
-				ret = true;
-				LOGGER.info("Parsed season number.");
-			}
 
-			if (args[1].contains("-")) {
-				StringTokenizer tokenizer = new StringTokenizer(args[1], "-");
+				startOfRange = Integer.parseInt(valueOrRange);
+				endOfRange = startOfRange;
 
-				ret = ret && true;
-				if(tokenizer.hasMoreTokens()) {
-					firstGameNumber = Integer.parseInt(tokenizer.nextToken());
-					if(tokenizer.hasMoreTokens()) {
-						lastGameNumber = Integer.parseInt(tokenizer.nextToken());
-					} else {
-						ret = false;
-					}
-				} else {
-					ret = false;
-				}
-
-				ret = ret && true;
-				LOGGER.info("Parsed game range.");
-
-			} else {
-				firstGameNumber = 1;
-				lastGameNumber = Integer.parseInt(args[1]);
-				ret = ret && true;
-				LOGGER.info("Parsed maximum game number.");
+				conversionSuccess = true;
+				LOGGER.trace("Parsed value.");
 			}
 
 		} catch (NumberFormatException ex) {
-			LOGGER.error("Can't Parse input parameters. Message: " + ex.getMessage());
-			ret = false;
+			LOGGER.error("Can't parse input parameter from \"" + valueOrRange + "\". Message: " + ex.getMessage());
+			conversionSuccess = false;
 		} catch (NoSuchElementException ex) {
-			LOGGER.error("Can't Parse season range parameter. Message: " + ex.getMessage());
-			ret = false;
+			LOGGER.error("Can't parse input parameter from \"" + valueOrRange + "\". Message: " + ex.getMessage());
+			conversionSuccess = false;
 		}
 
-		return ret;
-	}
-
-	private static void retry(int currentGame, int currentSeason) {
-
-		LmGamePage gamePage = new LmGamePage(currentGame, currentSeason);
-		String msg = "S: \"" + currentSeason + "\", G: \"" + currentGame + "\" Retry. ";
-
-		try {
-			gamePage.navigateToPageAndCheck();
-			LmGameHibernateBean gameBean = new LmGameHibernateBean(gamePage);
-			gameBean.save();
-			msg += "Success.";
-			LOGGER.info(msg);
-
-		} catch(LmIllegalGameException ex) {
-			msg += "=== FAILURE ==== Game type \"" + ex.getGameType() + "\". Message: " + ex.getMessage();
-			LOGGER.warn(msg);
-		} catch(LmIllegalPageException ex) {
-			msg += "=== FAILURE ==== " + ex.getMessage();
-			LOGGER.warn(msg);
-		} catch(Exception ex) {
-			msg += "=== FAILURE ==== General error. Message: " + ex.getMessage();
-			LOGGER.warn(msg);
+		if(conversionSuccess) {
+			Range<Integer> range = Range.between(startOfRange, endOfRange);
+			return Optional.of(range);
+		} else {
+			return Optional.empty();
 		}
-
 	}
 
-	private static void initilizeDb() {
-
-		Session session = SessionFactoryFactory.getFactory().openSession();
-		Transaction tx = null;
-		GameIds ids = null;
-
-		try {
-			tx = session.beginTransaction();
-
-			session.save(GameFormation.EMPTY);
-			for (GameFormation formation : GameFormation.ALL) {
-				session.save(formation);
-			}
-
-			session.save(Tactic.EMPTY);
-			for (Tactic tactic : Tactic.ALL) {
-				session.save(tactic);
-			}
-
-			tx.commit();
-
-		} catch (HibernateException ex) {
-			if (tx != null) tx.rollback();
-			throw ex;
-
-		} finally {
-			session.close();
-		}
-
-
+	private static void printUsage() {
+		System.out.println();
+		System.out.println();
+		System.out.println("Syntax: java -jar lmsanalyzer.jar [seasons] [numberOfGames] [LM username] [LM password]");
+		System.out.println("OR: java -jar lmsanalyzer.jar initdb");
+		System.out.println("[seasons] maybe a range (\"10-12\") or a single season (\"1\").");
+		System.out.println("[numberOfGames] is the number of games to retrieve for each season, always starting with game 1.");
+		System.out.println("\"initdb\" initilizes a fresh db for running this application.");
+		System.out.println("");
 	}
+
+	private static boolean parametersAreIncomplete(String[] args) {
+		return !(args.length == 4 || args.length == 1);
+	}
+
+	private static boolean isInitDB(String[] args) {
+		return args.length == 1 && args[0].equalsIgnoreCase("initDB");
+	}
+
 }

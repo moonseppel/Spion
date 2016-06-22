@@ -34,7 +34,7 @@ public class LMTeamChoicePageTest {
         subject.navigateToPageAndCheck();
         teamNames = subject.getAllTeams();
 
-        assertEquals(4, teamNames.size());
+        assertEquals(1, teamNames.size());
     }
 
     @Test

@@ -50,7 +50,7 @@ public class LmGameHibernateBeanTest {
             throw new ExceptionInInitializerError(ex);
         }
 
-//        initilizeDb();
+//        initialize();
     }
 
     @Test

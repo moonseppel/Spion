@@ -25,16 +25,12 @@ public class LmTeamChoicePage extends LmBasePage {
 
 	protected void isOnCorrectPageWithException() throws LmIllegalPageException {
 
-		String title = getDriver().getTitle();
-		
-		if(!title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
-			throw new LmIllegalPageException("Error while checking page: " + getDriver().getCurrentUrl());
-		}
+		checkTitle();
 		
 		WebElement teamChoiceDropdown = getDriver().findElement(By.xpath("//select[@name=\"manager\"]"));
 		
 		if(teamChoiceDropdown == null) {
-			throw new LmIllegalPageException("Error while checking page: " + getDriver().getCurrentUrl());
+			throw new LmIllegalPageException("No team choice dropdown found: " + getDriver().getCurrentUrl());
 		}
 		
 		initElements();
