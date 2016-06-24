@@ -5,7 +5,7 @@ package ligamanager.spion.analyzer;
  */
 public abstract class TestData {
 
-    public static String USERNAME = "some guy";
-    public static String PASSWORD = "nothing";
+    public static String USERNAME = "kpeter";
+    public static String PASSWORD = "klausi15";
 
 }

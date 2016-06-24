@@ -7,12 +7,15 @@ import ligamanager.spion.analyzer.util.Tactic;
 import ligamanager.spion.analyzer.webdriver.DriverFactory;
 import ligamanager.spion.analyzer.webdriver.WebDriverType;
 import org.apache.log4j.Logger;
+import org.hamcrest.core.IsNot;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.junit.Test;
 
 import java.io.File;
 
+import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
@@ -65,6 +68,26 @@ public class MainIntegrationTest {
             LOGGER.warn("Non-critical Exception while deleting DB entries: " + ex.getMessage());
             ex.printStackTrace();
             LOGGER.warn("=== If the above test failed you need to empty the database manually. ===");
+        }
+    }
+
+    @Test
+    public void testMainNoGame() {
+        initHibernateForTest();
+        int season = 122;
+        int gameNumber = 25129;
+        String gameRange = gameNumber + "-" + gameNumber;
+        String[] args = {String.valueOf(season), gameRange, TestData.USERNAME, TestData.PASSWORD};
+        int actual = Main.innerMain(args);
+
+        assertThat(actual, is(0));
+
+        LmGameHibernateBean gameBean = LmGameHibernateBean.read(gameNumber, season);
+
+        assertThat(gameBean, is(nullValue()));
+
+        if(gameBean != null) {
+            gameBean.delete();
         }
     }
 

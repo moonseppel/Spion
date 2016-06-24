@@ -58,7 +58,7 @@ public class GameReader {
 
 	private void readAndSaveSingleGame(int currentSeason, int currentGame) {
 
-		String growableLogMessage = "S: \"" + currentSeason + "\", G: \"" + currentGame + "\". ";
+		StringBuilder growableLogMessage = new StringBuilder("S: \"" + currentSeason + "\", G: \"" + currentGame + "\". ");
 
 		if(readRecursive(currentGame, currentSeason, 0, growableLogMessage)) {
 			LOGGER.info(growableLogMessage);
@@ -67,16 +67,17 @@ public class GameReader {
 		}
 	}
 
-	private boolean readRecursive(int currentGame, int currentSeason, int currentRecusionDepth, String growableLogMessage) {
+	private boolean readRecursive(int currentGame, int currentSeason, int currentRecusionDepth, StringBuilder growableLogMessage) {
 		boolean ret = false;
 
 		if(currentRecusionDepth >= maxRecusionDepth) {
-			growableLogMessage += "Aborting recursion at depth " + currentRecusionDepth + ".";
+			growableLogMessage.append("=== FAILURE === at depth " + currentRecusionDepth + ".");
 			ret = false;
 		} else {
 			ret = tryRead(currentGame, currentSeason, growableLogMessage);
 
 			if(!ret) {
+				growableLogMessage.append(currentRecusionDepth + ": ");
 				waitSeconds(10);
 				if(currentRecusionDepth == 2) {
 					relogin();
@@ -89,8 +90,8 @@ public class GameReader {
 		return ret;
 	}
 
-	private static boolean tryRead(int currentGame, int currentSeason, String growableLogMessage) {
-		boolean ret = true;
+	private static boolean tryRead(int currentGame, int currentSeason, StringBuilder growableLogMessage) {
+		boolean cancelRecursion = true;
 
 		LmGamePage gamePage = new LmGamePage(currentGame, currentSeason);
 
@@ -99,20 +100,20 @@ public class GameReader {
 			gamePage.navigateToPageAndCheck();
 			LmGameHibernateBean gameBean = new LmGameHibernateBean(gamePage);
 			gameBean.save();
-			growableLogMessage += "Success.";
+			growableLogMessage.append("Success.");
 
 		} catch (LmIllegalGameException ex) {
-			growableLogMessage += "=== FAILURE ==== Game type \"" + ex.getGameType() + "\". Message: " + ex.getMessage();
-			ret = false;
+			growableLogMessage.append("Message: " + ex.getMessage() + " === FAILURE ===");
+			cancelRecursion = true;
 		} catch (LmIllegalPageException ex) {
-			growableLogMessage += "=== FAILURE ==== " + ex.getMessage();
-			ret = false;
+			growableLogMessage.append("Message: " + ex.getMessage() + " ");
+			cancelRecursion = false;
 		} catch (Exception ex) {
-			growableLogMessage += "=== FAILURE ==== General error. Message: " + ex.getMessage();
-			ret = false;
+			growableLogMessage.append("Message: " + ex.getMessage() + " ");
+			cancelRecursion = false;
 		}
 
-		return ret;
+		return cancelRecursion;
 	}
 
 	private void relogin() {
@@ -138,11 +139,8 @@ public class GameReader {
 		hoursAuswertung.add(21);
 		hoursAuswertung.add(0);
 
-		if(hoursAuswertung.contains(hours)) {
-			while(minutes <= 11) {
-				waitSeconds(60);
-				minutes = cal.get(Calendar.MINUTE);
-			}
+		if(hoursAuswertung.contains(hours) && minutes <= 11) {
+			waitMinutes(11);
 		}
 	}
 
@@ -154,8 +152,11 @@ public class GameReader {
 		return hours == 0 && minutes < 20;
 	}
 
-	private static void waitSeconds(int seconds
-	) {
+	private static void waitMinutes(int minutes) {
+		waitSeconds(minutes * 60);
+	}
+
+	private static void waitSeconds(int seconds) {
 		try {
 			Thread.sleep(seconds * 1000);
 
