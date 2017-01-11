@@ -47,11 +47,13 @@ public class MainIntegrationTest {
     @Test
     public void testMainwithWrongSystemProperty() {
         initHibernateForTest();
+        //this has to be called early before calling Main.innerMain(), otherwise the test fails.
+        //there seems to a timing thing with system properties or so.
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\blabla\\something\\chromedriver_win32\\chromedriver.exe");
         //this works only with google chrome
         DriverFactory.type = WebDriverType.Chrome;
         int season = 122;
         int maxGameNumber = 1;
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\blabla\\something\\chromedriver_win32\\chromedriver.exe");
         String[] args = {String.valueOf(season), String.valueOf(maxGameNumber), TestData.USERNAME, TestData.PASSWORD};
         int actual = Main.innerMain(args);
 

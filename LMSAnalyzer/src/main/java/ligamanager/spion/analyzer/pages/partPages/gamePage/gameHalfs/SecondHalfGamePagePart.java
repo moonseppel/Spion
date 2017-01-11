@@ -11,7 +11,7 @@ import org.openqa.selenium.WebDriver;
  */
 public class SecondHalfGamePagePart extends HalfGamePagePart {
 
-    private static final String xpathToSecondHalfElement = "//*[@id=\"content_chat\"]/div[1]/table[2]/tbody/tr[2]";
+    private static final String xpathToSecondHalfElement = "//*[@id=\"content_popup\"]/div[1]/table[2]/tbody/tr[2]";
 
     public SecondHalfGamePagePart(WebDriver driver) {
         super(driver, xpathToSecondHalfElement);

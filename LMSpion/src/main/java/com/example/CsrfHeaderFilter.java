@@ -11,9 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * Created by jpralle on 22.06.2016.
- */
 public class CsrfHeaderFilter extends OncePerRequestFilter {
 
     @Override

@@ -29,7 +29,7 @@ public abstract class LmBasePage {
 	protected static void checkTitle() throws LmIllegalPageException {
 
 		String title = getDriver().getTitle();
-		if(!title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
+		if(title.length() > 0 && !title.contains("Liga-Manager | Der Fussballmanager im Internet!")) {
 			throw new LmIllegalPageException("No or incorrect title found: " + getDriver().getCurrentUrl());
 		}
 	}

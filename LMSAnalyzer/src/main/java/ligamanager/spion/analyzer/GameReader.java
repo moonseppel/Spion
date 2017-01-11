@@ -5,11 +5,13 @@ import ligamanager.spion.analyzer.pages.LmGamePage;
 import ligamanager.spion.analyzer.useCases.BasicActions;
 import ligamanager.spion.analyzer.util.LmIllegalGameException;
 import ligamanager.spion.analyzer.util.LmIllegalPageException;
+import ligamanager.spion.analyzer.webdriver.DriverFactory;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 /**
  * Created by jpralle on 22.06.2016.
@@ -117,9 +119,15 @@ public class GameReader {
 	}
 
 	private void relogin() {
-		BasicActions.logout();
-		BasicActions.loginAndChooseFirstTeam(params.user, params.password);
-		lastLoginDay = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
+		try {
+			BasicActions.logout();
+			BasicActions.loginAndChooseFirstTeam(params.user, params.password);
+			lastLoginDay = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
+		} catch (NoSuchElementException ex) {
+			LOGGER.warn("Relogin failed. Message: " + ex.getMessage() + " at " + DriverFactory.getInstance().getCurrentUrl());
+		} catch (Exception ex) {
+			LOGGER.warn("Relogin failed. Message: " + ex.getMessage() + ".");
+		}
 	}
 
 	private boolean lastLoginNotToday() {
@@ -141,6 +149,9 @@ public class GameReader {
 
 		if(hoursAuswertung.contains(hours) && minutes <= 11) {
 			waitMinutes(11);
+
+		} else if(hoursAuswertung.contains(hours-1) && minutes >= 58) {
+			waitMinutes(13);
 		}
 	}
 

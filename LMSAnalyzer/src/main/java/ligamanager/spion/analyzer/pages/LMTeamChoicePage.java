@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class LmTeamChoicePage extends LmBasePage {
 
-	private String pageUrl = "http://www.liga-manager.de/index.php?menue=eigene_teams";
+	private String pageUrl = "https://www.liga-manager.de/de/account_teams";
 	private String activeTeamPrefix = "- ";
 	private String chooseTeamText = "Team wählen";
 
@@ -27,7 +27,7 @@ public class LmTeamChoicePage extends LmBasePage {
 
 		checkTitle();
 		
-		WebElement teamChoiceDropdown = getDriver().findElement(By.xpath("//select[@name=\"manager\"]"));
+		WebElement teamChoiceDropdown = getDriver().findElement(By.xpath("//*[@id=\"manager\"]"));
 		
 		if(teamChoiceDropdown == null) {
 			throw new LmIllegalPageException("No team choice dropdown found: " + getDriver().getCurrentUrl());
@@ -79,7 +79,7 @@ public class LmTeamChoicePage extends LmBasePage {
 	
 	
 	private void initElements() {
-		teamChoiceDropdown = new Select(getDriver().findElement(By.xpath("//select[@name=\"manager\"]")));
+		teamChoiceDropdown = new Select(getDriver().findElement(By.xpath("//*[@id=\"manager\"]")));
 	}
 
 }

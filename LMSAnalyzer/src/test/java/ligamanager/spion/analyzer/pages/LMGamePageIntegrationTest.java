@@ -26,7 +26,7 @@ public class LMGamePageIntegrationTest {
     }
 
     /**
-     * Tested game: http://www.liga-manager.de/inc/spiel_info.php?id=1&show_saison=122
+     * Tested game: https://www.liga-manager.de/de/spiel_info/?id=1&show_saison=122
      */
     @Test
     public void testGetGameDataForNormalGame() throws Exception {
@@ -63,7 +63,7 @@ public class LMGamePageIntegrationTest {
     }
 
     /**
-     * Tested game: http://www.liga-manager.de/inc/spiel_info.php?id=280152&show_saison=122
+     * Tested game: https://www.liga-manager.de/de/spiel_info/?id=280152&show_saison=122
      */
     @Test
     public void testGetGameDataForGameWithExtraTime() throws Exception {
@@ -76,6 +76,7 @@ public class LMGamePageIntegrationTest {
         assertTrue(subject.hasExtraTime());
         assertFalse(subject.hasPenyltyShooting());
 
+//        assertEquals("SV TÃ¼ndern 05", subject.getHomeTeamName());
         assertEquals("SV Tündern 05", subject.getHomeTeamName());
         assertEquals("SV Donaumoos", subject.getAwayTeamName());
         assertEquals(122, subject.getSeasonNumber());
@@ -109,7 +110,7 @@ public class LMGamePageIntegrationTest {
     }
 
     /**
-     * Tested game: http://www.liga-manager.de/inc/spiel_info.php?id=280155&show_saison=122
+     * Tested game: https://www.liga-manager.de/de/spiel_info/?id=280155&show_saison=122
      */
     @Test
     public void testGetGameDataForGameWithExtraTimeAndPenaltyShooting() throws Exception {
@@ -122,6 +123,7 @@ public class LMGamePageIntegrationTest {
         assertTrue(subject.hasExtraTime());
         assertTrue(subject.hasPenyltyShooting());
 
+//        assertEquals("âšœ Behar Reutlingen âšœ", subject.getHomeTeamName());
         assertEquals("⚜ Behar Reutlingen ⚜", subject.getHomeTeamName());
         assertEquals("Der Club", subject.getAwayTeamName());
         assertEquals(122, subject.getSeasonNumber());
@@ -147,7 +149,7 @@ public class LMGamePageIntegrationTest {
     }
 
     /**
-     * Tested game: http://www.liga-manager.de/inc/spiel_info.php?id=34193&show_saison=124
+     * Tested game: https://www.liga-manager.de/de/spiel_info/?id=34193&show_saison=124
      */
     @Test
     public void testGetGameDataForGameWithChangingTactic() throws Exception {
@@ -160,6 +162,7 @@ public class LMGamePageIntegrationTest {
         assertFalse(subject.hasExtraTime());
         assertFalse(subject.hasPenyltyShooting());
 
+//        assertEquals("Baile Ã\u0081tha Cliath Clampar", subject.getHomeTeamName());
         assertEquals("Baile Átha Cliath Clampar", subject.getHomeTeamName());
         assertEquals("Dublin City", subject.getAwayTeamName());
         assertEquals(124, subject.getSeasonNumber());
@@ -181,7 +184,7 @@ public class LMGamePageIntegrationTest {
     }
 
     /**
-     * Tested game: http://www.liga-manager.de/inc/spiel_info.php?id=204602&show_saison=124
+     * Tested game: https://www.liga-manager.de/de/spiel_info/?id=204602&show_saison=124
      */
     @Test
     public void testAmateurGame() throws LmIllegalPageException {
@@ -196,12 +199,12 @@ public class LMGamePageIntegrationTest {
 
             assertEquals(204602, ex.getGameId());
             assertEquals(124, ex.getSeasonNumber());
-            assertEquals(IllegalGameType.AmateuerGame, ex.getGameType());
+            assertEquals(IllegalGameType.AmateurGame, ex.getGameType());
         }
     }
 
     /**
-     * Tested game: http://www.liga-manager.de/inc/spiel_info.php?id=1000000&show_saison=124
+     * Tested game: https://www.liga-manager.de/de/spiel_info/?id=1000000&show_saison=124
      */
     @Test
     public void testNotExistingGame() throws LmIllegalPageException {

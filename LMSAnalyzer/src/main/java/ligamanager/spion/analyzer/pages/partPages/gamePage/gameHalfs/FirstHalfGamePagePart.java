@@ -15,7 +15,7 @@ import java.util.StringTokenizer;
  */
 public class FirstHalfGamePagePart extends HalfGamePagePart {
 
-    private static final String xpathToFirstHalfElement = "//*[@id=\"content_chat\"]/div[1]/table[2]/tbody/tr[1]";
+    private static final String xpathToFirstHalfElement = "//*[@id=\"content_popup\"]/div[1]/table[2]/tbody/tr[1]";
 
     public FirstHalfGamePagePart(WebDriver driver) {
         super(driver, xpathToFirstHalfElement);

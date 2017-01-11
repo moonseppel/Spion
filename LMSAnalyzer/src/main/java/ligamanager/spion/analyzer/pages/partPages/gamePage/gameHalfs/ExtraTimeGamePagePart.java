@@ -13,7 +13,7 @@ import org.openqa.selenium.WebElement;
  */
 public class ExtraTimeGamePagePart extends HalfGamePagePart {
 
-    private static final String xpathToExtraTimeElement = "//*[@id=\"content_chat\"]/div[1]/table[2]/tbody/tr[3]";
+    private static final String xpathToExtraTimeElement = "//*[@id=\"content_popup\"]/div[1]/table[2]/tbody/tr[3]";
 
     public ExtraTimeGamePagePart(WebDriver driver) {
         super(driver, xpathToExtraTimeElement);
@@ -21,9 +21,7 @@ public class ExtraTimeGamePagePart extends HalfGamePagePart {
 
     @Override
     public void parseValues() {
-
-        String xpathToAwayStrengths = ".//td[4]/font/strong/div";
-        parseStrengths(xpathToAwayStrengths, true);
+        parseStrengths(true);
     }
 
     @Override

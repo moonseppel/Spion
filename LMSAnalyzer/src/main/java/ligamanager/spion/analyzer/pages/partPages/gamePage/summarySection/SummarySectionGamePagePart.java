@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
  */
 public abstract class SummarySectionGamePagePart {
 
-    private static final String xpathToSummaryBox = "//*[@id=\"content_chat\"]/div[2]/table/tbody";
+    private static final String xpathToSummaryBox = "//*[@id=\"content_popup\"]/div[2]/table/tbody";
 
     protected WebDriver driver = null;
     protected LmGamePage fullPage = null;

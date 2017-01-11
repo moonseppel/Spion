@@ -43,7 +43,7 @@ public class LmGamePage extends LmBasePage {
 	private SummarySectionGamePagePart summaryPart = null;
 	private List<HalfGamePagePart> gameHalfParts = null;
 
-	private String pageUrl = "http://www.liga-manager.de/inc/spiel_info.php?id={0}&show_saison={1}";
+	private String pageUrl = "https://www.liga-manager.de/de/spiel_info/?id={0}&show_saison={1}";
 	private int gameId = -1;
 	private int seasonNumber = -1;
 
@@ -139,7 +139,7 @@ public class LmGamePage extends LmBasePage {
 
 	private void switchHomeBonus() {
 
-		String xpathToHomeBonusSwitchLink = "//*[@id=\"content_chat\"]/div[1]/table[1]/tbody/tr/td[2]/a";
+		String xpathToHomeBonusSwitchLink = "//*[@id=\"content_popup\"]/div[1]/table[1]/tbody/tr/td[2]/a";
 		WebElement switchHomeBonusLink = getDriver().findElement(By.xpath(xpathToHomeBonusSwitchLink));
 		switchHomeBonusLink.click();
 
@@ -240,19 +240,28 @@ public class LmGamePage extends LmBasePage {
 
 		WebElement firstHalfFormationAndTacticsElement;
 		try {
-			firstHalfFormationAndTacticsElement = getDriver().findElement(By.xpath("//*[@id=\"content_chat\"]/div[1]/table[2]/tbody/tr[1]/td[2]/font"));
+			firstHalfFormationAndTacticsElement = getDriver().findElement(By.xpath("//*[@id=\"bericht_staerke_h_1\"]/strong"));
 		} catch (NoSuchElementException ex) {
-			firstHalfFormationAndTacticsElement = getDriver().findElement(By.xpath("//*[@id=\"bericht_staerke_hb_h_1\"]/strong"));
+
+			try {
+				firstHalfFormationAndTacticsElement = getDriver().findElement(By.xpath("//*[@id=\"bericht_staerke_hb_h_1\"]/strong"));
+
+			} catch (NoSuchElementException ex2) {
+
+				//No game has an empty page
+				String msg = "Illegal game found.";
+				LmIllegalGameException illegalGameEx = new LmIllegalGameException(msg, gameId, seasonNumber, IllegalGameType.NoGame);
+				throw illegalGameEx;
+			}
 		}
 
 		if(firstHalfFormationAndTacticsElement != null) {
 			String firstHalfFormationAndTacticsText = firstHalfFormationAndTacticsElement.getText();
 
 			int linesInText = 0;
-			String lastLine = null;
-			StringTokenizer tokenizer = new StringTokenizer(firstHalfFormationAndTacticsText, "\\n\\r\\f");
+			StringTokenizer tokenizer = new StringTokenizer(firstHalfFormationAndTacticsText, "\n\r\f");
 			while(tokenizer.hasMoreTokens()) {
-				lastLine = tokenizer.nextToken();
+				tokenizer.nextToken();
 				linesInText++;
 			}
 
@@ -263,17 +272,16 @@ public class LmGamePage extends LmBasePage {
 				IllegalGameType gameType = IllegalGameType.UnknownGameType;
 
 				if(linesInText == 1) {
-					if (lastLine.trim().length() < 1) {
-						//No game, nor formation and tactic
-						gameType = IllegalGameType.NoGame;
-					} else {
-						//Amateuer games only list the formation
-						gameType = IllegalGameType.AmateuerGame;
-					}
+//					if (lastLine.trim().length() < 1) {
+//						//No game, nor formation and tactic
+//						gameType = IllegalGameType.NoGame;
+//					} else {
+						//Amateur games only list the formation
+						gameType = IllegalGameType.AmateurGame;
+//					}
 				}
 
 				ex = new LmIllegalGameException(msg, gameId, seasonNumber, gameType);
-
 				throw ex;
 			}
 
@@ -290,7 +298,9 @@ public class LmGamePage extends LmBasePage {
 		strengthsEndOfHalfs = new GameValues<GameResult>();
 
 		for (HalfGamePagePart halfGamePart : gameHalfParts) {
+
 			halfGamePart.parseValues();
+
 			halfGamePart.saveHomeFormationTo(homeFormations);
 			halfGamePart.saveAwayFormationTo(awayFormations);
 			halfGamePart.saveHomeTacticTo(homeTactics);
@@ -302,7 +312,7 @@ public class LmGamePage extends LmBasePage {
 	}
 
 	private void checkForExtraTimeAndPenaltyShooting() {
-		WebElement firstRowOfSummarySection = getDriver().findElement(By.xpath("//*[@id=\"content_chat\"]/div[2]/table/tbody/tr[1]"));
+		WebElement firstRowOfSummarySection = getDriver().findElement(By.xpath("//*[@id=\"content_popup\"]/div[2]/table/tbody/tr[1]/td"));
 
 		hasExtraTime       = firstRowOfSummarySection.getText().contains(REGULAR_TIME_IDENTIFICATION_TEXT);
 		hasPenaltyShooting = firstRowOfSummarySection.getText().contains(PENALTY_SHOOTING_IDENTIFICATIONTEXT);

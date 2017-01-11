@@ -60,10 +60,6 @@ public class Main {
 
 	private static Optional<GameReaderParameters> readParameters(String[] args) {
 		GameReaderParameters ret = new GameReaderParameters();
-		int firstSeason = -1;
-		int lastSeason = -1;
-		int firstGame = -1;
-		int lastGame = -1;
 
 		Optional<Range<Integer>> seasonRange = parseValueOrRangeParameter(args[0]);
 		if(seasonRange.isPresent()) {

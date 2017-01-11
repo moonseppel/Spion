@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 
 public class LmStartPage extends LmBasePage {
 
-	private String pageUrl = "http://www.liga-manager.de/index.php";
+	private String pageUrl = "https://www.liga-manager.de/de";
 	
 	private WebElement userField;
 	private WebElement passwordField;
@@ -33,7 +33,7 @@ public class LmStartPage extends LmBasePage {
 		passwordField.sendKeys(password);
 		loginButton.click();
 
-		WebElement teamChoiceDropdown = getDriver().findElement(By.xpath("//select[@name=\"manager\"]"));
+		WebElement teamChoiceDropdown = getDriver().findElement(By.xpath("//*[@id=\"manager\"]"));
 
 		if(teamChoiceDropdown != null) {
 			LmTeamChoicePage teamChoicePage = new LmTeamChoicePage();
@@ -69,7 +69,7 @@ public class LmStartPage extends LmBasePage {
 
 		checkTitle();
 
-		WebElement kostenlosSpielenButton = getDriver().findElement(By.xpath("//*[@id=\"content_land\"]/div[2]/div[2]/a/img"));
+		WebElement kostenlosSpielenButton = getDriver().findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/div[2]/a/img"));
 
 		if(kostenlosSpielenButton == null) {
 			throw new LmIllegalPageException("No \"kostenlos spielen\" button found: " + getDriver().getCurrentUrl());
@@ -89,8 +89,8 @@ public class LmStartPage extends LmBasePage {
 
 	}
 	private void tryInitElementsWhenUserIsLoggedOut() {
-		userField = getDriver().findElement(By.xpath("//input[@id=\"user\"]"));
-		passwordField = getDriver().findElement(By.xpath("//input[@id=\"pass\"]"));
+		userField = getDriver().findElement(By.xpath("//*[@id=\"user\"]"));
+		passwordField = getDriver().findElement(By.xpath("//*[@id=\"pass\"]"));
 		loginButton = getDriver().findElement(By.xpath("//input[@name=\"Go\"]"));
 	}
 

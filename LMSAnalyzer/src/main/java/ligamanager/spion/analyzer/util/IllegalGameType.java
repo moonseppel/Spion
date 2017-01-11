@@ -5,7 +5,7 @@ package ligamanager.spion.analyzer.util;
  */
 public enum IllegalGameType {
 
-    AmateuerGame,
+    AmateurGame,
 
     NoGame,
 

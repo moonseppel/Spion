@@ -47,8 +47,8 @@ public abstract class HalfGamePagePart {
 
     protected void parseFormationAndTactic() {
 
-        String xpathToHomeFormationAndTactic = ".//td[2]/font";
-        String xpathToAwayFormationAndTactic = ".//td[5]/font";
+        String xpathToHomeFormationAndTactic = ".//td[2]";
+        String xpathToAwayFormationAndTactic = ".//td[5]";
 
         WebElement homeFormationElement = halfsWebElement.findElement(By.xpath(xpathToHomeFormationAndTactic));
         String homeFormationAndTactic = homeFormationElement.getText();
@@ -73,12 +73,12 @@ public abstract class HalfGamePagePart {
     }
 
     protected void parseStrengths() {
-        String xpathToAwayStrengths = ".//td[4]/font/div[2]";
-        parseStrengths(xpathToAwayStrengths, false);
+        parseStrengths(false);
     }
 
-    protected void parseStrengths(String xpathToAwayStrengths, boolean isExtraTime) {
-        String xpathToHomeStrengths = ".//td[3]/font/div[2]"; //use strength with home bonus
+    protected void parseStrengths(boolean isExtraTime) {
+        String xpathToAwayStrengths = ".//td[4]";
+        String xpathToHomeStrengths = ".//td[3]";
 
         WebElement homeStrengthsElement = halfsWebElement.findElement(By.xpath(xpathToHomeStrengths));
         String homeStrengthsText = homeStrengthsElement.getText();
