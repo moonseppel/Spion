@@ -76,8 +76,7 @@ public class LMGamePageIntegrationTest {
         assertTrue(subject.hasExtraTime());
         assertFalse(subject.hasPenyltyShooting());
 
-//        assertEquals("SV TÃ¼ndern 05", subject.getHomeTeamName());
-        assertEquals("SV Tündern 05", subject.getHomeTeamName());
+        assertEquals("SV TÃ¼ndern 05", subject.getHomeTeamName());
         assertEquals("SV Donaumoos", subject.getAwayTeamName());
         assertEquals(122, subject.getSeasonNumber());
         assertEquals(new GameResult(0,1), subject.getEndResult());
@@ -123,8 +122,7 @@ public class LMGamePageIntegrationTest {
         assertTrue(subject.hasExtraTime());
         assertTrue(subject.hasPenyltyShooting());
 
-//        assertEquals("âšœ Behar Reutlingen âšœ", subject.getHomeTeamName());
-        assertEquals("⚜ Behar Reutlingen ⚜", subject.getHomeTeamName());
+        assertEquals("âšœ Behar Reutlingen âšœ", subject.getHomeTeamName());
         assertEquals("Der Club", subject.getAwayTeamName());
         assertEquals(122, subject.getSeasonNumber());
         assertEquals(new GameResult(8,7), subject.getEndResult());
@@ -162,8 +160,7 @@ public class LMGamePageIntegrationTest {
         assertFalse(subject.hasExtraTime());
         assertFalse(subject.hasPenyltyShooting());
 
-//        assertEquals("Baile Ã\u0081tha Cliath Clampar", subject.getHomeTeamName());
-        assertEquals("Baile Átha Cliath Clampar", subject.getHomeTeamName());
+        assertEquals("Baile Ã\u0081tha Cliath Clampar", subject.getHomeTeamName());
         assertEquals("Dublin City", subject.getAwayTeamName());
         assertEquals(124, subject.getSeasonNumber());
         assertEquals(new GameResult(1,3), subject.getEndResult());

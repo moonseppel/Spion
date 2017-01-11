@@ -20,6 +20,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 //Check this: https://sonar.netpioneer.de/sonar/coding_rules#rule_key=squid:S2151
 public abstract class DriverFactory {
 	private static final Logger LOGGER = Logger.getLogger(DriverFactory.class);
+	private static final String DEFAULT_CHROME_DRIVER_PATH = "C:\\Users\\jpralle\\MyApps\\chromedriver_win32\\chromedriver.exe";
 
 	private static Optional<WebDriver> instance = Optional.empty();
 	private static boolean setSystemProperty = true;
@@ -94,10 +95,16 @@ public abstract class DriverFactory {
 
 	private static WebDriver getChromeDriver() {
 		WebDriver ret;
-		if(StringUtils.isEmpty(System.getProperty("webdriver.chrome.driver"))) {
-            LOGGER.info("Using Chrome web driver from \"C:\\Users\\jpralle\\MyApps\\chromedriver_win32\\chromedriver.exe\".");
-            System.setProperty("webdriver.chrome.driver", "C:\\Users\\jpralle\\MyApps\\chromedriver_win32\\chromedriver.exe");
+
+		String chromeDriverSystemPropertyValue = System.getProperty("webdriver.chrome.driver");
+		if(StringUtils.isEmpty(chromeDriverSystemPropertyValue)) {
+
+			LOGGER.info("Chrome driver path not setting, falling back to default.");
+            System.setProperty("webdriver.chrome.driver", DEFAULT_CHROME_DRIVER_PATH);
+			chromeDriverSystemPropertyValue = System.getProperty("webdriver.chrome.driver");
         }
+		LOGGER.info("Using Chrome web driver from \"" + chromeDriverSystemPropertyValue + "\".");
+
 		ChromeOptions options = new ChromeOptions();
 		File adblockCrx = new File("AdBlock_2_59.crx");
 		options.addExtensions(adblockCrx);
