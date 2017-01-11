@@ -134,9 +134,9 @@ public abstract class DriverFactory {
 	private static String getPhantomJSBinaryPath() {
 		String phantomJSBinaryPath;
 		if (SystemUtils.IS_OS_WINDOWS) {
-			phantomJSBinaryPath = "phantomjs/windows/phantomjs.exe";
+			phantomJSBinaryPath = "phantomjs/phantomjs-2.1.1-windows/bin/phantomjs.exe";
 		} else {
-			phantomJSBinaryPath = "phantomjs/linux/bin/phantomjs";
+			phantomJSBinaryPath = "phantomjs/phantomjs-2.1.1-linux-x86_64/bin/phantomjs";
 		}
 		return phantomJSBinaryPath;
 	}
