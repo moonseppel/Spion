@@ -240,19 +240,14 @@ public class LmGamePage extends LmBasePage {
 
 		WebElement firstHalfFormationAndTacticsElement;
 		try {
-			firstHalfFormationAndTacticsElement = getDriver().findElement(By.xpath("//*[@id=\"bericht_staerke_h_1\"]/strong"));
+			firstHalfFormationAndTacticsElement = getDriver().findElement(By.xpath("//*[@id=\"content_popup\"]/div[1]/table[2]/tbody/tr[1]/td[2]/span"));
+
 		} catch (NoSuchElementException ex) {
 
-			try {
-				firstHalfFormationAndTacticsElement = getDriver().findElement(By.xpath("//*[@id=\"bericht_staerke_hb_h_1\"]/strong"));
-
-			} catch (NoSuchElementException ex2) {
-
-				//No game has an empty page
-				String msg = "Illegal game found.";
-				LmIllegalGameException illegalGameEx = new LmIllegalGameException(msg, gameId, seasonNumber, IllegalGameType.NoGame);
-				throw illegalGameEx;
-			}
+			//Non-existing game has an empty page
+			String msg = "Illegal game found.";
+			LmIllegalGameException illegalGameEx = new LmIllegalGameException(msg, gameId, seasonNumber, IllegalGameType.NoGame);
+			throw illegalGameEx;
 		}
 
 		if(firstHalfFormationAndTacticsElement != null) {
@@ -272,13 +267,7 @@ public class LmGamePage extends LmBasePage {
 				IllegalGameType gameType = IllegalGameType.UnknownGameType;
 
 				if(linesInText == 1) {
-//					if (lastLine.trim().length() < 1) {
-//						//No game, nor formation and tactic
-//						gameType = IllegalGameType.NoGame;
-//					} else {
-						//Amateur games only list the formation
-						gameType = IllegalGameType.AmateurGame;
-//					}
+					gameType = IllegalGameType.AmateurGame;
 				}
 
 				ex = new LmIllegalGameException(msg, gameId, seasonNumber, gameType);

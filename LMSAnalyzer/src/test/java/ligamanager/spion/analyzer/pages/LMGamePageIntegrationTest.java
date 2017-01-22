@@ -5,6 +5,7 @@ import ligamanager.spion.analyzer.useCases.BasicActions;
 import ligamanager.spion.analyzer.util.*;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -190,14 +191,17 @@ public class LMGamePageIntegrationTest {
         LmGamePage subject = new LmGamePage(expectedGameId, 124);
 
         try {
-        subject.navigateToPageAndCheck();
+
+            subject.navigateToPageAndCheck();
+            fail("An \"LmIllegalGameException\" for an amateur game should have been thrown.");
 
         } catch (LmIllegalGameException ex) {
 
-            assertEquals(204602, ex.getGameId());
+            assertEquals(expectedGameId, ex.getGameId());
             assertEquals(124, ex.getSeasonNumber());
             assertEquals(IllegalGameType.AmateurGame, ex.getGameType());
         }
+
     }
 
     /**
@@ -214,9 +218,30 @@ public class LMGamePageIntegrationTest {
 
         } catch (LmIllegalGameException ex) {
 
-            assertEquals(1000000, ex.getGameId());
+            assertEquals(expectedGameId, ex.getGameId());
             assertEquals(124, ex.getSeasonNumber());
             assertEquals(IllegalGameType.NoGame, ex.getGameType());
+        }
+    }
+
+    /**
+     * Tested game: https://www.liga-manager.de/de/spiel_info/?id=196279&show_saison=128
+     */
+    @Ignore("Activate and modify to check strange games")
+    @Test
+    public void testStrangeGame() throws LmIllegalPageException {
+
+        int expectedGameId = 196279;
+        LmGamePage subject = new LmGamePage(expectedGameId, 128);
+
+        try {
+            subject.navigateToPageAndCheck();
+
+        } catch (LmIllegalGameException ex) {
+
+            assertEquals(expectedGameId, ex.getGameId());
+            assertEquals(128, ex.getSeasonNumber());
+            assertEquals(IllegalGameType.AmateurGame, ex.getGameType());
         }
     }
 

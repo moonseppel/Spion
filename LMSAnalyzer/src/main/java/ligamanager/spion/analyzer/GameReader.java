@@ -105,13 +105,13 @@ public class GameReader {
 			growableLogMessage.append("Success.");
 
 		} catch (LmIllegalGameException ex) {
-			growableLogMessage.append("Message: " + ex.getMessage() + " === FAILURE ===");
+			growableLogMessage.append("Message: " + ex.getMessage() + " (" + ex.getClass() + ") === FAILURE ===");
 			cancelRecursion = true;
 		} catch (LmIllegalPageException ex) {
-			growableLogMessage.append("Message: " + ex.getMessage() + " ");
+			growableLogMessage.append("Message: " + ex.getMessage() + " (" + ex.getClass() + ") ");
 			cancelRecursion = false;
 		} catch (Exception ex) {
-			growableLogMessage.append("Message: " + ex.getMessage() + " ");
+			growableLogMessage.append("Message: " + ex.getMessage() + " (" + ex.getClass() + ") ");
 			cancelRecursion = false;
 		}
 
