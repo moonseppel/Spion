@@ -23,7 +23,9 @@
 
     <modules>
         <module>../LMSpion</module>
-        <module>../LMSAnalyzer</module>
+        <module>../LMSReader</module>
+        <module>../LMSAnalysis</module>
+        <module>../LMSCommon</module>
     </modules>
 
     <properties>
@@ -86,6 +88,12 @@
                 <groupId>xml-apis</groupId>
                 <artifactId>xml-apis</artifactId>
                 <version>1.4.01</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.cloneworks</groupId>
+                <artifactId>ligamanager.spion.common</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
             </dependency>
 
         </dependencies>

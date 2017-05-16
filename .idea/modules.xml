@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LMSAnalyzer/ligamanager.spion.analyzer.iml" filepath="$PROJECT_DIR$/LMSAnalyzer/ligamanager.spion.analyzer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LMSpion/LM Spion Frontend.iml" filepath="$PROJECT_DIR$/LMSpion/LM Spion Frontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LMSAnalysis/LMS Analysis.iml" filepath="$PROJECT_DIR$/LMSAnalysis/LMS Analysis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LMSCommon/LMS Common.iml" filepath="$PROJECT_DIR$/LMSCommon/LMS Common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LMSParent/LMS Parent.iml" filepath="$PROJECT_DIR$/LMSParent/LMS Parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LMSReader/LMS Reader.iml" filepath="$PROJECT_DIR$/LMSReader/LMS Reader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LMSAnalysis/ligamanager.spion.analysis.iml" filepath="$PROJECT_DIR$/LMSAnalysis/ligamanager.spion.analysis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LMSCommon/ligamanager.spion.common.iml" filepath="$PROJECT_DIR$/LMSCommon/ligamanager.spion.common.iml" />
       <module fileurl="file://$PROJECT_DIR$/LMSpion/ligamanager.spion.frontend.iml" filepath="$PROJECT_DIR$/LMSpion/ligamanager.spion.frontend.iml" />
-      <module fileurl="file://$PROJECT_DIR$/LMSParent/ligamanager.spion.parent.iml" filepath="$PROJECT_DIR$/LMSParent/ligamanager.spion.parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LMSReader/ligamanager.spion.reader.iml" filepath="$PROJECT_DIR$/LMSReader/ligamanager.spion.reader.iml" />
     </modules>
   </component>
 </project>
