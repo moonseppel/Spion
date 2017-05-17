@@ -28,7 +28,9 @@ public class LmStartPage extends LmBasePage {
 			return ret;
 		}
 
+		userField.clear();
 		userField.sendKeys(user);
+		passwordField.clear();
 		passwordField.sendKeys(password);
 		loginButton.click();
 
