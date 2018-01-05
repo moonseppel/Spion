@@ -1,7 +1,7 @@
 package ligamanager.spion.reader.pages;
 
 import ligamanager.spion.common.*;
-import ligamanager.spion.reader.hibernate.LmGameHibernateBean;
+import ligamanager.spion.common.hibernate.LmGameHibernateBean;
 import ligamanager.spion.reader.pages.partPages.gamePage.gameHalfs.*;
 import ligamanager.spion.reader.pages.partPages.gamePage.summarySection.SummarySectionGamePagePart;
 import ligamanager.spion.reader.pages.partPages.gamePage.summarySection.SummarySectionPartWithExtraTime;

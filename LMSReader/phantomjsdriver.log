@@ -1,0 +1,1651 @@
+[INFO  - 2016-06-20T08:43:46.603Z] GhostDriver - Main - running on port 25365
+[INFO  - 2016-06-20T08:43:47.613Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.7 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-06-20T08:43:47.613Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.customHeaders:  - {}
+[INFO  - 2016-06-20T08:43:47.616Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.7","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"windows-8-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-06-20T08:43:47.616Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3
+[ERROR - 2016-06-20T08:43:47.779Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: sTimer
+[ERROR - 2016-06-20T08:43:47.779Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/index.php:119)
+[ERROR - 2016-06-20T08:44:17.322Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: SyntaxError: Parse error
+[ERROR - 2016-06-20T08:44:17.322Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+
+[ERROR - 2016-06-20T08:44:17.360Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: SyntaxError: Parse error
+[ERROR - 2016-06-20T08:44:17.360Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+
+[ERROR - 2016-06-20T08:44:25.145Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:44:25.145Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=1&show_saison=122:421)
+[ERROR - 2016-06-20T08:44:26.261Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:44:26.261Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=2&show_saison=122:444)
+[ERROR - 2016-06-20T08:44:26.783Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: TypeError: 'null' is not an object (evaluating 'o.adFrame.contentWindow')
+[ERROR - 2016-06-20T08:44:26.783Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:607)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:572)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:591)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:1494)
+[ERROR - 2016-06-20T08:44:26.846Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: TypeError: 'null' is not an object (evaluating 'o.adFrame.style')
+[ERROR - 2016-06-20T08:44:26.846Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:1051)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:912)
+[ERROR - 2016-06-20T08:44:29.196Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:44:29.196Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=3&show_saison=122:467)
+[ERROR - 2016-06-20T08:44:30.243Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:44:30.243Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=4&show_saison=122:436)
+[ERROR - 2016-06-20T08:44:32.222Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:44:32.222Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=5&show_saison=122:500)
+[ERROR - 2016-06-20T08:44:32.638Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: TypeError: 'null' is not an object (evaluating 'o.adFrame.contentWindow')
+[ERROR - 2016-06-20T08:44:32.638Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:607)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:572)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:591)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:1494)
+[ERROR - 2016-06-20T08:44:32.687Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: TypeError: 'null' is not an object (evaluating 'o.adFrame.style')
+[ERROR - 2016-06-20T08:44:32.687Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:1051)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:912)
+[ERROR - 2016-06-20T08:44:35.126Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:44:35.126Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=6&show_saison=122:451)
+[ERROR - 2016-06-20T08:44:35.611Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: TypeError: 'null' is not an object (evaluating 'o.adFrame.contentWindow')
+[ERROR - 2016-06-20T08:44:35.611Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:607)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:572)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:591)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:1494)
+[ERROR - 2016-06-20T08:44:35.706Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: TypeError: 'null' is not an object (evaluating 'o.adFrame.style')
+[ERROR - 2016-06-20T08:44:35.706Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:1051)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:912)
+[ERROR - 2016-06-20T08:44:36.391Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:44:36.391Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=7&show_saison=122:465)
+[ERROR - 2016-06-20T08:44:36.812Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: TypeError: 'null' is not an object (evaluating 'o.adFrame.contentWindow')
+[ERROR - 2016-06-20T08:44:36.812Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:607)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:572)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:591)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:1494)
+[ERROR - 2016-06-20T08:44:36.927Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: TypeError: 'null' is not an object (evaluating 'o.adFrame.style')
+[ERROR - 2016-06-20T08:44:36.927Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:1051)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:912)
+[ERROR - 2016-06-20T08:44:37.624Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:44:37.624Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=8&show_saison=122:455)
+[ERROR - 2016-06-20T08:44:38.171Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: TypeError: 'null' is not an object (evaluating 'o.adFrame.contentWindow')
+[ERROR - 2016-06-20T08:44:38.171Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:607)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:572)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:591)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:1494)
+[ERROR - 2016-06-20T08:44:38.237Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: TypeError: 'null' is not an object (evaluating 'o.adFrame.style')
+[ERROR - 2016-06-20T08:44:38.237Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:1051)
+  (anonymous function) (http://cdn.flashtalking.com/xre/193/1938554/1449275/js/j-1938554-1449275.js:912)
+[ERROR - 2016-06-20T08:44:39.902Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:44:39.902Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=9&show_saison=122:402)
+[ERROR - 2016-06-20T08:44:41.570Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:44:41.570Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=10&show_saison=122:423)
+[ERROR - 2016-06-20T08:44:42.995Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1466412282898
+[ERROR - 2016-06-20T08:44:43.381Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: SyntaxError: Parse error
+[ERROR - 2016-06-20T08:44:43.381Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+
+[ERROR - 2016-06-20T08:44:43.474Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: sTimer
+[ERROR - 2016-06-20T08:44:43.474Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/index.php?menue=logout:167)
+[ERROR - 2016-06-20T08:44:43.906Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: SyntaxError: Parse error
+[ERROR - 2016-06-20T08:44:43.906Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+
+[ERROR - 2016-06-20T08:44:43.950Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: SyntaxError: Parse error
+[ERROR - 2016-06-20T08:44:43.950Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+
+[ERROR - 2016-06-20T08:44:50.135Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: sTimer
+[ERROR - 2016-06-20T08:44:50.135Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/index.php:119)
+[ERROR - 2016-06-20T08:44:53.625Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: SyntaxError: Parse error
+[ERROR - 2016-06-20T08:44:53.625Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+
+[ERROR - 2016-06-20T08:44:53.661Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: SyntaxError: Parse error
+[ERROR - 2016-06-20T08:44:53.661Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+
+[ERROR - 2016-06-20T08:44:55.363Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:44:55.363Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=1&show_saison=122:421)
+[ERROR - 2016-06-20T08:44:57.190Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:44:57.190Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=1&show_saison=122:421)
+[ERROR - 2016-06-20T08:44:58.852Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:44:58.852Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=2&show_saison=122:444)
+[ERROR - 2016-06-20T08:44:59.857Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:44:59.857Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=2&show_saison=122:444)
+[ERROR - 2016-06-20T08:45:00.735Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:45:00.735Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=3&show_saison=122:467)
+[ERROR - 2016-06-20T08:45:01.632Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:45:01.632Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=3&show_saison=122:467)
+[ERROR - 2016-06-20T08:45:02.884Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:45:02.884Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=4&show_saison=122:436)
+[ERROR - 2016-06-20T08:45:04.614Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:45:04.614Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=4&show_saison=122:436)
+[ERROR - 2016-06-20T08:45:05.489Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:45:05.489Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=5&show_saison=122:500)
+[ERROR - 2016-06-20T08:45:06.375Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:45:06.376Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=5&show_saison=122:500)
+[ERROR - 2016-06-20T08:45:09.280Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:45:09.280Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=6&show_saison=122:451)
+[ERROR - 2016-06-20T08:45:10.314Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:45:10.314Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=6&show_saison=122:451)
+[ERROR - 2016-06-20T08:45:11.887Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:45:11.887Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=7&show_saison=122:465)
+[ERROR - 2016-06-20T08:45:13.036Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:45:13.036Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=7&show_saison=122:465)
+[ERROR - 2016-06-20T08:45:14.009Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:45:14.009Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=8&show_saison=122:455)
+[ERROR - 2016-06-20T08:45:14.957Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:45:14.957Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=8&show_saison=122:455)
+[ERROR - 2016-06-20T08:45:15.901Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: s
+[ERROR - 2016-06-20T08:45:15.901Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-8813347375005258&output=html&h=600&slotname=5657321521&adk=4061787112&w=160&ea=0&flash=0&url=http%3A%2F%2Fwww.liga-manager.de%2Finc%2Fspiel_info.php%3Fid%3D8%26show_saison%3D122&wgl=0&dt=1466412315664&bpp=3&fdt=25&idt=31&shv=r20160617&cbv=r20151006&saldr=sa&correlator=2751055978497&frm=23&ga_vid=511074411.1466412228&ga_sid=1466412228&ga_hid=1951436630&ga_fc=1&pv=2&icsg=2&nhd=2&dssz=2&mdo=0&mso=0&u_tz=120&u_his=60&u_java=0&u_h=1050&u_w=1680&u_ah=1020&u_aw=1680&u_cd=32&u_nplug=0&u_nmime=0&dff=times%20new%20roman&dfs=16&adx=0&ady=848&biw=400&bih=300&isw=300&ish=600&ifk=3385397903&eid=20040015%2C575144605&oid=3&top=http%3A%2F%2Fwww.liga-manager.de%2Finc%2Fspiel_info.php%3Fid%3D8%26show_saison%3D122%23&rx=0&eae=6&fc=216&pc=0&brdim=0%2C0%2C0%2C0%2C1680%2C0%2C0%2C0%2C300%2C600&vis=0&rsz=%7C%7Cl%7C&abl=CS&ppjl=f&pfx=0&fu=1044&bc=1&ifi=1&dtd=51:9)
+[ERROR - 2016-06-20T08:45:16.219Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:45:16.220Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=9&show_saison=122:402)
+[ERROR - 2016-06-20T08:45:17.198Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:45:17.198Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=9&show_saison=122:402)
+[ERROR - 2016-06-20T08:45:18.938Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:45:18.939Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=10&show_saison=122:423)
+[ERROR - 2016-06-20T08:45:21.213Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: xajax_adblocker
+[ERROR - 2016-06-20T08:45:21.213Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/inc/spiel_info.php?id=10&show_saison=122:423)
+[ERROR - 2016-06-20T08:45:22.467Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1466412322415
+[ERROR - 2016-06-20T08:45:22.819Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: SyntaxError: Parse error
+[ERROR - 2016-06-20T08:45:22.819Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+
+[ERROR - 2016-06-20T08:45:22.989Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - msg: ReferenceError: Can't find variable: sTimer
+[ERROR - 2016-06-20T08:45:22.989Z] Session [1ab6f7a0-36c3-11e6-998c-7fdce62b2ab3] - page.onError - stack:
+  (anonymous function) (http://www.liga-manager.de/index.php?menue=logout:167)
+[INFO  - 2016-06-20T08:46:06.281Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2017-01-11T12:52:34.748Z] GhostDriver - Main - running on port 38818
+[INFO  - 2017-01-11T12:52:35.375Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-01-11T12:52:35.375Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.customHeaders:  - {}
+[INFO  - 2017-01-11T12:52:35.375Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-01-11T12:52:35.375Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: d30920a0-d7fc-11e6-9dd1-dda25fbacc37
+[ERROR - 2017-01-11T12:52:43.046Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-01-11T12:52:43.046Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-01-11T12:52:44.712Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-01-11T12:52:44.712Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-01-11T12:52:46.324Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-01-11T12:52:46.324Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-01-11T12:52:48.554Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-01-11T12:52:48.554Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-01-11T12:52:50.164Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1484139170115
+[ERROR - 2017-01-11T12:53:02.112Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-01-11T12:53:02.113Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-01-11T12:53:04.107Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1484139184052
+[ERROR - 2017-01-11T12:53:12.976Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-01-11T12:53:12.976Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-01-11T12:53:14.948Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1484139194909
+[ERROR - 2017-01-11T12:53:25.566Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1484139205564
+[ERROR - 2017-01-11T12:53:25.803Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1484139205802
+[ERROR - 2017-01-11T12:53:26.419Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1484139206392
+[ERROR - 2017-01-11T12:53:35.950Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-01-11T12:53:35.950Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-01-11T12:53:39.637Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1484139219627
+[ERROR - 2017-01-11T12:53:44.004Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-01-11T12:53:44.005Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-01-11T12:53:44.989Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-01-11T12:53:44.989Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-01-11T12:53:46.424Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-01-11T12:53:46.424Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-01-11T12:53:48.504Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1484139228494
+[ERROR - 2017-01-11T12:53:48.786Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1484139228733
+[ERROR - 2017-01-11T12:53:49.007Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-01-11T12:53:49.007Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-01-11T12:53:50.103Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-01-11T12:53:50.104Z] Session [d30920a0-d7fc-11e6-9dd1-dda25fbacc37] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-01-11T12:53:52.610Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1484139232545
+[ERROR - 2017-01-11T12:53:58.396Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1484139238365
+[ERROR - 2017-01-11T12:54:02.907Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1484139242859
+[ERROR - 2017-01-11T12:54:04.262Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1484139244181
+[INFO  - 2017-01-11T12:54:08.350Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2017-02-23T07:47:37.364Z] GhostDriver - Main - running on port 19128
+[INFO  - 2017-02-23T07:47:37.876Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-02-23T07:47:37.876Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.customHeaders:  - {}
+[INFO  - 2017-02-23T07:47:37.876Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-02-23T07:47:37.876Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 58a399f0-f99c-11e6-9c83-c732e912d4c5
+[ERROR - 2017-02-23T07:47:41.377Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:47:41.377Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:47:43.152Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:47:43.152Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:47:43.230Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:47:43.230Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:47:43.579Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:47:43.579Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:47:43.669Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:47:43.669Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:47:45.996Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:47:45.996Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:47:46.084Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:47:46.084Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:47:46.872Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836066845
+[ERROR - 2017-02-23T07:47:55.572Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:47:55.572Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:47:56.272Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:47:56.272Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:47:56.358Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:47:56.358Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:47:57.071Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836077023
+[ERROR - 2017-02-23T07:47:57.421Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:47:57.421Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:47:57.901Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836077873
+[ERROR - 2017-02-23T07:47:58.410Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:47:58.410Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:47:58.412Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:47:58.412Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:48:05.870Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:05.870Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:06.697Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:06.697Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:06.787Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:48:06.787Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:48:07.266Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:48:07.266Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:48:07.369Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:07.369Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:08.741Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:08.742Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:09.191Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836089174
+[ERROR - 2017-02-23T07:48:09.661Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:48:09.661Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:48:09.681Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:48:09.681Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:48:18.036Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:18.036Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:18.751Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:18.751Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:18.836Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:48:18.836Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:48:19.325Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:48:19.325Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:48:19.422Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:19.422Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:20.640Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:20.640Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:20.721Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:48:20.722Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:48:21.235Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836101209
+[ERROR - 2017-02-23T07:48:21.702Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:48:21.702Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:48:21.710Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:48:21.710Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:48:29.517Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:29.518Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:30.402Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:30.402Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:30.489Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:48:30.490Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:48:30.922Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:48:30.922Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:48:31.018Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:31.018Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:32.461Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:48:32.461Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:48:32.614Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:32.614Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:34.020Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:48:34.020Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:48:34.223Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:34.224Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:35.618Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:48:35.618Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:48:35.782Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:35.782Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:37.184Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:37.184Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:37.772Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836117721
+[ERROR - 2017-02-23T07:48:38.136Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:48:38.136Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:48:42.207Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:42.207Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:43.005Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:43.006Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:43.080Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:48:43.080Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:48:43.523Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:48:43.523Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:48:43.636Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:43.636Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:44.760Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:48:44.760Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:48:44.914Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:44.914Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:45.960Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:48:45.960Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:48:46.117Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:46.117Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:47.142Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:48:47.143Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:48:47.305Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:47.305Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:48.166Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836128165
+[ERROR - 2017-02-23T07:48:48.436Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:48:48.436Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:48:48.594Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:48.595Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:49.586Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:49.586Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:49.675Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:48:49.675Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:48:50.211Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836130178
+[ERROR - 2017-02-23T07:48:50.737Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:48:50.737Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:48:50.758Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:48:50.758Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:48:52.328Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:52.329Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:52.891Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:52.891Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:53.596Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:53.596Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:54.197Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:54.197Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:54.673Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836134634
+[ERROR - 2017-02-23T07:48:55.133Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:48:55.133Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:48:55.140Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:48:55.141Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:48:56.878Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:56.878Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:57.664Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:57.664Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:57.749Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:48:57.749Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:48:58.178Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:58.178Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:58.794Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836138770
+[ERROR - 2017-02-23T07:48:59.407Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:48:59.407Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:48:59.494Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:48:59.494Z] Session [58a399f0-f99c-11e6-9c83-c732e912d4c5] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:49:00.058Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836140008
+[INFO  - 2017-02-23T07:49:01.364Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2017-02-23T07:54:25.653Z] GhostDriver - Main - running on port 40198
+[INFO  - 2017-02-23T07:54:26.341Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-02-23T07:54:26.341Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.customHeaders:  - {}
+[INFO  - 2017-02-23T07:54:26.342Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-02-23T07:54:26.342Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 4c1a9110-f99d-11e6-bba2-8b51f0466b0e
+[ERROR - 2017-02-23T07:54:30.634Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:54:30.634Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:54:31.707Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: Error: No supported video source.
+[ERROR - 2017-02-23T07:54:31.707Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  a (https://s1.adform.net/banners/scripts/components/Adform.VideoPlayer.js?bv=1284:1)
+  n (about:srcdoc:1)
+  x (about:srcdoc:1)
+[ERROR - 2017-02-23T07:54:32.597Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:54:32.597Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:54:33.088Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:54:33.090Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:54:33.182Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:54:33.183Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:54:34.836Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:54:34.836Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:54:34.931Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:54:34.932Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:54:36.399Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836476371
+[ERROR - 2017-02-23T07:54:36.942Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:54:36.942Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:54:36.952Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:54:36.952Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:54:46.319Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:54:46.320Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:54:47.187Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:54:47.187Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:54:47.274Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:54:47.274Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:54:47.827Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836487763
+[ERROR - 2017-02-23T07:54:48.176Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:54:48.176Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:54:48.257Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:54:48.257Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:54:48.804Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836488764
+[ERROR - 2017-02-23T07:54:49.286Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:54:49.286Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:54:49.295Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:54:49.295Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:54:56.426Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:54:56.426Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:54:57.160Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:54:57.160Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:54:57.244Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:54:57.244Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:54:57.822Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:54:57.822Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:54:57.972Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:54:57.972Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:54:59.103Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:54:59.103Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:54:59.649Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836499623
+[ERROR - 2017-02-23T07:55:00.049Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:55:00.049Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:55:07.770Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:07.770Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:08.457Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:08.457Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:08.542Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:55:08.542Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:55:08.932Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:55:08.932Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:55:09.043Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:09.043Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:10.993Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:55:10.993Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:55:11.099Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:11.099Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:12.243Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:55:12.243Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:55:12.353Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:12.353Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:13.964Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:55:13.964Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:55:14.097Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:14.098Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:15.418Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:15.418Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:15.496Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:55:15.496Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:55:15.899Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836515877
+[ERROR - 2017-02-23T07:55:16.367Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:55:16.367Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:55:25.997Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:25.998Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:26.836Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:26.836Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:26.926Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:55:26.926Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:55:27.381Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:55:27.381Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:55:27.471Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:27.471Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:29.549Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:29.549Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:30.039Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836530016
+[ERROR - 2017-02-23T07:55:30.509Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:55:30.509Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:55:32.021Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:32.021Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:32.779Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:32.779Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:32.863Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:55:32.863Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T07:55:33.358Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:55:33.358Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:55:33.450Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:33.450Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:34.526Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:55:34.527Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:55:34.678Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:34.678Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:35.338Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:55:35.338Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:55:35.507Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:35.508Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:36.741Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:55:36.741Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:55:36.868Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:36.869Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:37.833Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T07:55:37.834Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T07:55:37.993Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:37.993Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:38.874Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836538819
+[ERROR - 2017-02-23T07:55:39.158Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:39.158Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:39.762Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836539717
+[ERROR - 2017-02-23T07:55:41.733Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:41.733Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:42.305Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:42.305Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:42.954Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:42.954Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:43.565Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:43.565Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:44.221Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836544193
+[ERROR - 2017-02-23T07:55:44.780Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:44.780Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:45.294Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487836545276
+[ERROR - 2017-02-23T07:55:45.705Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T07:55:45.705Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T07:55:47.994Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:47.994Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:48.704Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T07:55:48.704Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T07:55:48.773Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T07:55:48.773Z] Session [4c1a9110-f99d-11e6-bba2-8b51f0466b0e] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[INFO  - 2017-02-23T07:55:49.046Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2017-02-23T08:09:10.902Z] GhostDriver - Main - running on port 47609
+[INFO  - 2017-02-23T08:09:11.094Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-02-23T08:09:11.094Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.customHeaders:  - {}
+[INFO  - 2017-02-23T08:09:11.094Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-02-23T08:09:11.095Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 5b750210-f99f-11e6-8a43-61a723d2a840
+[ERROR - 2017-02-23T08:09:36.590Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:09:36.590Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:09:36.782Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:09:36.783Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:09:37.938Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:09:37.938Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:09:38.082Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T08:09:38.083Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T08:09:39.935Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487837379927
+[ERROR - 2017-02-23T08:09:40.464Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:09:40.465Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:09:40.644Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T08:09:40.644Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T08:09:41.320Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487837381275
+[ERROR - 2017-02-23T08:09:54.560Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:09:54.560Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:09:55.616Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:09:55.616Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:09:55.742Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T08:09:55.742Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T08:09:56.420Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T08:09:56.420Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T08:09:56.593Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:09:56.594Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:09:58.644Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:09:58.644Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:09:58.740Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T08:09:58.740Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T08:09:59.282Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487837399229
+[ERROR - 2017-02-23T08:10:16.237Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:10:16.237Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:10:17.367Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:10:17.367Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:10:17.502Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T08:10:17.502Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T08:10:18.161Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T08:10:18.161Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T08:10:18.366Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:10:18.367Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:10:20.037Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T08:10:20.037Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T08:10:20.309Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:10:20.309Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:10:23.344Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T08:10:23.344Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T08:10:23.735Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:10:23.735Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:10:25.760Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T08:10:25.760Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T08:10:25.964Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:10:25.964Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:10:28.069Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:10:28.069Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:10:28.242Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T08:10:28.243Z] Session [5b750210-f99f-11e6-8a43-61a723d2a840] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T08:10:28.806Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487837428775
+[INFO  - 2017-02-23T08:12:26.761Z] GhostDriver - Main - running on port 39140
+[INFO  - 2017-02-23T08:12:27.454Z] Session [d07f2a90-f99f-11e6-be02-bf1ce28d63f3] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-02-23T08:12:27.454Z] Session [d07f2a90-f99f-11e6-be02-bf1ce28d63f3] - page.customHeaders:  - {}
+[INFO  - 2017-02-23T08:12:27.454Z] Session [d07f2a90-f99f-11e6-be02-bf1ce28d63f3] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-02-23T08:12:27.454Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: d07f2a90-f99f-11e6-be02-bf1ce28d63f3
+[ERROR - 2017-02-23T08:12:33.779Z] Session [d07f2a90-f99f-11e6-be02-bf1ce28d63f3] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:12:33.779Z] Session [d07f2a90-f99f-11e6-be02-bf1ce28d63f3] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:12:33.921Z] Session [d07f2a90-f99f-11e6-be02-bf1ce28d63f3] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:12:33.921Z] Session [d07f2a90-f99f-11e6-be02-bf1ce28d63f3] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[INFO  - 2017-02-23T08:14:47.182Z] GhostDriver - Main - running on port 25423
+[INFO  - 2017-02-23T08:14:47.875Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-02-23T08:14:47.875Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.customHeaders:  - {}
+[INFO  - 2017-02-23T08:14:47.876Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-02-23T08:14:47.876Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 2431dcf0-f9a0-11e6-bba9-7f900ca217fb
+[ERROR - 2017-02-23T08:14:53.543Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:14:53.543Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:14:53.696Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:14:53.696Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:14:53.795Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:14:53.795Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:14:55.023Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - msg: Error: No supported video source.
+[ERROR - 2017-02-23T08:14:55.023Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - stack:
+  a (https://s1.adform.net/banners/scripts/components/Adform.VideoPlayer.js?bv=1284:1)
+  n (about:srcdoc:1)
+  x (about:srcdoc:1)
+[ERROR - 2017-02-23T08:14:55.965Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:14:55.965Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:14:56.147Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T08:14:56.147Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T08:14:57.135Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T08:14:57.135Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T08:14:57.351Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:14:57.352Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:14:59.060Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T08:14:59.060Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T08:14:59.332Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:14:59.332Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:15:02.672Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T08:15:02.672Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T08:15:03.033Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:15:03.033Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:15:06.058Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T08:15:06.059Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T08:15:06.404Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:15:06.404Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:15:08.713Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:15:08.714Z] Session [2431dcf0-f9a0-11e6-bba9-7f900ca217fb] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:15:09.296Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487837709261
+[INFO  - 2017-02-23T08:19:47.181Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T08:24:47.180Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T08:29:47.180Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T08:34:47.182Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T08:39:47.181Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T08:44:47.181Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T08:49:47.181Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T08:54:47.182Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T08:59:47.193Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T09:04:47.193Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T09:09:47.193Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T09:14:47.206Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T09:19:47.206Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T09:24:47.212Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T09:29:47.212Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T09:34:47.212Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T09:39:47.212Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T09:44:47.212Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T09:49:47.212Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T09:54:47.213Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T09:59:47.213Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T10:04:47.213Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T10:09:47.220Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T10:14:47.220Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T10:19:47.221Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T10:24:47.221Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T10:29:47.220Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T10:34:47.222Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T10:39:47.223Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T10:44:47.223Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T10:49:47.223Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T10:54:47.223Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T10:59:47.223Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T11:04:47.224Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T11:09:47.235Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T11:14:47.238Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T11:19:47.243Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T11:24:47.255Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T11:29:47.270Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T11:34:47.270Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T11:39:47.271Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T11:44:47.271Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T11:49:47.271Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T11:54:47.271Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T11:59:47.271Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T12:04:47.271Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T12:09:47.272Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T12:14:47.272Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T12:19:47.272Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T12:24:47.272Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T12:29:47.284Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T12:34:47.283Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T12:39:47.284Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T12:44:47.283Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T12:49:47.284Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T12:54:47.287Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T12:59:47.292Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T13:04:47.292Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T13:09:47.292Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T13:14:47.294Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T13:19:47.295Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T13:24:47.295Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T13:29:47.295Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T13:34:47.302Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T13:39:47.302Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T13:44:47.302Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T13:49:47.302Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T13:54:47.316Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T13:59:47.319Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T14:04:47.319Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T14:09:47.319Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T14:14:47.319Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T14:19:47.319Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T14:24:47.319Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T14:29:47.319Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T14:34:47.319Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T14:39:47.319Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T14:44:47.322Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T14:49:47.322Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T14:54:47.330Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T14:59:47.332Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T15:04:47.332Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T15:09:47.345Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-23T15:14:47.348Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+9.501Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:16:33.116Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:16:33.116Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:16:33.286Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T08:16:33.287Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T08:16:33.818Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487837793793
+[ERROR - 2017-02-23T08:16:34.330Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T08:16:34.331Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T08:16:34.373Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T08:16:34.374Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T08:16:36.159Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:16:36.160Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:16:37.146Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:16:37.146Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:16:37.260Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T08:16:37.260Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T08:16:38.005Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487837797951
+[ERROR - 2017-02-23T08:16:38.311Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T08:16:38.312Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T08:16:38.453Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:16:38.453Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:16:39.541Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T08:16:39.541Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T08:16:39.761Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:16:39.761Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:16:40.824Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T08:16:40.824Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T08:16:41.007Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:16:41.007Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:16:41.660Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T08:16:41.660Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T08:16:41.858Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:16:41.858Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:16:42.864Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-23T08:16:42.864Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-23T08:16:43.113Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:16:43.113Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:16:44.391Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:16:44.392Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:16:44.562Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T08:16:44.562Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T08:16:45.388Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T08:16:45.388Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T08:16:45.426Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T08:16:45.426Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T08:16:45.512Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487837805489
+[ERROR - 2017-02-23T08:16:48.383Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:16:48.383Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:16:49.240Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:16:49.240Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:16:50.087Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:16:50.088Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:16:50.999Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:16:50.999Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:16:51.782Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T08:16:51.782Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T08:16:51.788Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T08:16:51.788Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T08:16:51.847Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487837811839
+[ERROR - 2017-02-23T08:16:54.538Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:16:54.538Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:16:55.407Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T08:16:55.407Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T08:16:55.413Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T08:16:55.413Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T08:16:55.936Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:16:55.936Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:16:56.084Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T08:16:56.084Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T08:16:56.941Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:16:56.941Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:16:57.058Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T08:16:57.058Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T08:16:57.636Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487837817583
+[ERROR - 2017-02-23T08:16:58.388Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-23T08:16:58.388Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-23T08:16:58.575Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-23T08:16:58.575Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-23T08:16:59.169Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T08:16:59.169Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T08:16:59.200Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-23T08:16:59.201Z] Session [41f556e0-f9a0-11e6-9b9e-e5c7adb953a9] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-23T08:16:59.281Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487837819255
+[ERROR - 2017-02-23T08:17:01.059Z] RouterReqHand - _handle.error - {"errorStatusCode":23,"name":"NoSuchWindow","message":"{\"errorMessage\":\"Unable to close window (closed already?)\",\"request\":{\"headers\":{\"Accept\":\"application/json, image/png\",\"Connection\":\"Keep-Alive\",\"Host\":\"localhost:39034\"},\"httpVersion\":\"1.1\",\"method\":\"DELETE\",\"url\":\"/window\",\"urlParsed\":{\"anchor\":\"\",\"query\":\"\",\"file\":\"window\",\"directory\":\"/\",\"path\":\"/window\",\"relative\":\"/window\",\"port\":\"\",\"host\":\"\",\"password\":\"\",\"user\":\"\",\"userInfo\":\"\",\"authority\":\"\",\"protocol\":\"\",\"source\":\"/window\",\"queryKey\":{},\"chunks\":[\"window\"]},\"urlOriginal\":\"/session/41f556e0-f9a0-11e6-9b9e-e5c7adb953a9/window\"}}","errorSessionId":"41f556e0-f9a0-11e6-9b9e-e5c7adb953a9","errorClassName":"org.openqa.selenium.NoSuchWindowException","errorScreenshot":"","line":833,"sourceURL":"phantomjs://code/session_request_handler.js","stack":"_deleteWindowCommand@phantomjs://code/session_request_handler.js:833:26\n_handle@phantomjs://code/session_request_handler.js:99:37\n_reroute@phantomjs://code/request_handler.js:61:20\n_handle@phantomjs://code/router_request_handler.js:78:46"}
+[INFO  - 2017-02-23T08:17:01.087Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2017-02-24T10:03:26.294Z] GhostDriver - Main - running on port 20904
+[INFO  - 2017-02-24T10:03:26.925Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-02-24T10:03:26.925Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.customHeaders:  - {}
+[INFO  - 2017-02-24T10:03:26.925Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-02-24T10:03:26.925Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 7c438c80-fa78-11e6-a130-37afa425efe6
+[ERROR - 2017-02-24T10:03:30.240Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:03:30.241Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:03:31.507Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:03:31.507Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:03:31.585Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-24T10:03:31.585Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-24T10:03:32.219Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-24T10:03:32.219Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-24T10:03:32.355Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:03:32.355Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:03:34.190Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:03:34.190Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:03:34.313Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-24T10:03:34.313Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-24T10:03:34.791Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487930614775
+[ERROR - 2017-02-24T10:03:35.311Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-24T10:03:35.311Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-24T10:03:35.318Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-24T10:03:35.319Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-24T10:03:44.936Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:03:44.936Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:03:45.814Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:03:45.815Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:03:45.889Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-24T10:03:45.890Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-24T10:03:46.496Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487930626428
+[ERROR - 2017-02-24T10:03:46.812Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:03:46.812Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:03:46.905Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-24T10:03:46.905Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-24T10:03:47.383Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487930627306
+[ERROR - 2017-02-24T10:03:47.829Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-24T10:03:47.829Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-24T10:03:47.850Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-24T10:03:47.850Z] Session [7c438c80-fa78-11e6-a130-37afa425efe6] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[INFO  - 2017-02-24T10:04:01.880Z] GhostDriver - Main - running on port 29403
+[INFO  - 2017-02-24T10:04:02.436Z] Session [916e18f0-fa78-11e6-b5ea-33e9a631d6d4] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-02-24T10:04:02.436Z] Session [916e18f0-fa78-11e6-b5ea-33e9a631d6d4] - page.customHeaders:  - {}
+[INFO  - 2017-02-24T10:04:02.436Z] Session [916e18f0-fa78-11e6-b5ea-33e9a631d6d4] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-02-24T10:04:02.436Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 916e18f0-fa78-11e6-b5ea-33e9a631d6d4
+[ERROR - 2017-02-24T10:04:05.702Z] Session [916e18f0-fa78-11e6-b5ea-33e9a631d6d4] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:04:05.702Z] Session [916e18f0-fa78-11e6-b5ea-33e9a631d6d4] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:04:06.632Z] Session [916e18f0-fa78-11e6-b5ea-33e9a631d6d4] - page.onError - msg: Error: No supported video source.
+[ERROR - 2017-02-24T10:04:06.632Z] Session [916e18f0-fa78-11e6-b5ea-33e9a631d6d4] - page.onError - stack:
+  a (https://s1.adform.net/banners/scripts/components/Adform.VideoPlayer.js?bv=1284:1)
+  n (about:srcdoc:1)
+  x (about:srcdoc:1)
+[INFO  - 2017-02-24T10:04:43.371Z] GhostDriver - Main - running on port 31148
+[INFO  - 2017-02-24T10:04:44.064Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-02-24T10:04:44.064Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.customHeaders:  - {}
+[INFO  - 2017-02-24T10:04:44.064Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-02-24T10:04:44.064Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: aa3e06b0-fa78-11e6-900d-eb1c462723af
+[ERROR - 2017-02-24T10:04:48.054Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:04:48.054Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:04:48.171Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:04:48.171Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:04:49.600Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:04:49.600Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:04:49.703Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-24T10:04:49.703Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-24T10:04:50.252Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-24T10:04:50.255Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-24T10:04:50.376Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:04:50.376Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:04:51.683Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:04:51.683Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:04:52.204Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487930692156
+[ERROR - 2017-02-24T10:05:02.298Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:05:02.298Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:05:03.080Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:05:03.081Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:05:03.160Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-24T10:05:03.160Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-24T10:05:03.715Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487930703662
+[ERROR - 2017-02-24T10:05:04.100Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:05:04.100Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:05:04.189Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-24T10:05:04.189Z] Session [aa3e06b0-fa78-11e6-900d-eb1c462723af] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-24T10:05:04.679Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487930704651
+[INFO  - 2017-02-24T10:09:43.369Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T10:14:43.370Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T10:19:43.381Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T10:24:43.382Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T10:29:43.382Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T10:34:43.382Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T10:39:43.382Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T10:44:43.382Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T10:49:43.382Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T10:54:43.386Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T10:59:43.386Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T11:04:43.385Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T11:09:43.385Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T11:14:43.385Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T11:19:43.385Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T11:24:43.385Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T11:29:43.385Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T11:34:43.385Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T11:39:43.386Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T11:44:43.385Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T11:49:43.386Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T11:54:43.385Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T11:59:43.385Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T12:04:43.394Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T12:09:43.394Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T12:14:43.398Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T12:19:43.408Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T12:24:43.407Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T12:29:43.407Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T12:34:43.407Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T12:39:43.407Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T12:44:43.407Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T12:49:43.407Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T12:54:43.410Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T12:59:43.410Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T13:04:43.410Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T13:09:43.410Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T13:14:43.410Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T13:19:43.410Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T13:24:43.410Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T13:29:43.410Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T13:34:43.410Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T13:39:43.410Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-02-24T13:44:43.410Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+nction) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-24T10:05:40.318Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487930740252
+[ERROR - 2017-02-24T10:05:40.863Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-24T10:05:40.863Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-24T10:05:40.869Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-24T10:05:40.869Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-24T10:05:50.910Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:05:50.911Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:05:51.812Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:05:51.812Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:05:51.895Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-24T10:05:51.895Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-24T10:05:52.330Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-24T10:05:52.330Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-24T10:05:52.460Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:05:52.460Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:05:54.658Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:05:54.658Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:05:55.270Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487930755246
+[ERROR - 2017-02-24T10:05:57.263Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:05:57.264Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:05:57.925Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-24T10:05:57.925Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-24T10:05:57.931Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-24T10:05:57.932Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-24T10:05:58.297Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:05:58.297Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:05:58.432Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-24T10:05:58.432Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-24T10:05:58.967Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-24T10:05:58.968Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-24T10:05:59.107Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:05:59.107Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:06:00.325Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-24T10:06:00.325Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-24T10:06:00.500Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:06:00.500Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:06:01.274Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487930761223
+[ERROR - 2017-02-24T10:06:01.543Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-24T10:06:01.543Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-24T10:06:01.716Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:06:01.716Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:06:02.775Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-24T10:06:02.776Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-24T10:06:02.931Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:06:02.932Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:06:04.252Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: ReferenceError: Can't find variable: JetztServer
+[ERROR - 2017-02-24T10:06:04.252Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://www.liga-manager.de/js/lm.js?revision=:59)
+[ERROR - 2017-02-24T10:06:04.424Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:06:04.424Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:06:05.675Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:06:05.675Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:06:05.776Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-24T10:06:05.776Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-24T10:06:06.243Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487930766203
+[ERROR - 2017-02-24T10:06:07.905Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:06:07.905Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:06:08.438Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:06:08.438Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:06:09.200Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:06:09.201Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:06:09.822Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:06:09.822Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:06:10.517Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487930770471
+[ERROR - 2017-02-24T10:06:10.971Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-24T10:06:10.972Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-24T10:06:12.553Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:06:12.553Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:06:13.355Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:06:13.355Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:06:13.448Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-24T10:06:13.448Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  done (https://www.liga-manager.de/de/buero:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-24T10:06:13.982Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:06:13.983Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:06:14.087Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-24T10:06:14.087Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-24T10:06:14.610Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487930774574
+[ERROR - 2017-02-24T10:06:15.268Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'googletag.pubads()')
+[ERROR - 2017-02-24T10:06:15.268Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  global code (https://storage.googleapis.com/qmftp/Targeting.js:3)
+[ERROR - 2017-02-24T10:06:15.379Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: ReferenceError: Can't find variable: core
+[ERROR - 2017-02-24T10:06:15.379Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  done (https://www.liga-manager.de/de:54)
+  (anonymous function) (https://www.liga-manager.de/js/sunrise/ajax.jquery.js:23)
+  j (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  fireWith (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:2)
+  x (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+  (anonymous function) (https://www.liga-manager.de/js/jquery/jquery-2.1.4.js:4)
+[ERROR - 2017-02-24T10:06:15.898Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1487930775850
+[ERROR - 2017-02-24T10:06:16.358Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-24T10:06:16.358Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-24T10:06:16.368Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - msg: TypeError: null is not an object (evaluating 't.split')
+[ERROR - 2017-02-24T10:06:16.368Z] Session [c377d9d0-fa78-11e6-b8e6-c5906eff5e6f] - page.onError - stack:
+  init_trigger_last_stop (about:srcdoc:1)
+  init (about:srcdoc:1)
+  iframe_com (about:srcdoc:1)
+[ERROR - 2017-02-24T10:06:17.118Z] RouterReqHand - _handle.error - {"errorStatusCode":23,"name":"NoSuchWindow","message":"{\"errorMessage\":\"Unable to close window (closed already?)\",\"request\":{\"headers\":{\"Accept\":\"application/json, image/png\",\"Connection\":\"Keep-Alive\",\"Host\":\"localhost:26433\"},\"httpVersion\":\"1.1\",\"method\":\"DELETE\",\"url\":\"/window\",\"urlParsed\":{\"anchor\":\"\",\"query\":\"\",\"file\":\"window\",\"directory\":\"/\",\"path\":\"/window\",\"relative\":\"/window\",\"port\":\"\",\"host\":\"\",\"password\":\"\",\"user\":\"\",\"userInfo\":\"\",\"authority\":\"\",\"protocol\":\"\",\"source\":\"/window\",\"queryKey\":{},\"chunks\":[\"window\"]},\"urlOriginal\":\"/session/c377d9d0-fa78-11e6-b8e6-c5906eff5e6f/window\"}}","errorSessionId":"c377d9d0-fa78-11e6-b8e6-c5906eff5e6f","errorClassName":"org.openqa.selenium.NoSuchWindowException","errorScreenshot":"","line":833,"sourceURL":"phantomjs://code/session_request_handler.js","stack":"_deleteWindowCommand@phantomjs://code/session_request_handler.js:833:26\n_handle@phantomjs://code/session_request_handler.js:99:37\n_reroute@phantomjs://code/request_handler.js:61:20\n_handle@phantomjs://code/router_request_handler.js:78:46"}
+[INFO  - 2017-02-24T10:06:17.164Z] ShutdownReqHand - _handle - About to shutdown

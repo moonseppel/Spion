@@ -3,7 +3,7 @@ package ligamanager.spion.reader;
 import java.util.Optional;
 import java.util.StringTokenizer;
 
-import ligamanager.spion.reader.hibernate.DbInitializer;
+import ligamanager.spion.common.hibernate.DbInitializer;
 import org.apache.commons.lang3.Range;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.NoSuchElementException;

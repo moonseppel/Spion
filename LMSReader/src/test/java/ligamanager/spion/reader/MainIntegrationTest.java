@@ -1,13 +1,12 @@
 package ligamanager.spion.reader;
 
-import ligamanager.spion.reader.hibernate.LmGameHibernateBean;
-import ligamanager.spion.reader.hibernate.SessionFactoryFactory;
+import ligamanager.spion.common.hibernate.LmGameHibernateBean;
+import ligamanager.spion.common.hibernate.SessionFactoryFactory;
 import ligamanager.spion.common.GameFormation;
 import ligamanager.spion.common.Tactic;
 import ligamanager.spion.reader.webdriver.DriverFactory;
 import ligamanager.spion.reader.webdriver.WebDriverType;
 import org.apache.log4j.Logger;
-import org.hamcrest.core.IsNot;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.junit.Test;
@@ -106,8 +105,8 @@ public class MainIntegrationTest {
         initHibernateForTest();
 
         GameReaderParameters params = new GameReaderParameters();
-        params.firstSeason = 123;
-        params.lastSeason = 124;
+        params.firstSeason = 132;
+        params.lastSeason = 133;
         params.firstGameNumber = 1;
         params.lastGameNumber = 2;
         fillFromTestData(params);

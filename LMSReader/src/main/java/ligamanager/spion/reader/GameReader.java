@@ -1,6 +1,6 @@
 package ligamanager.spion.reader;
 
-import ligamanager.spion.reader.hibernate.LmGameHibernateBean;
+import ligamanager.spion.common.hibernate.LmGameHibernateBean;
 import ligamanager.spion.reader.pages.LmGamePage;
 import ligamanager.spion.reader.useCases.BasicActions;
 import ligamanager.spion.reader.util.LmIllegalGameException;

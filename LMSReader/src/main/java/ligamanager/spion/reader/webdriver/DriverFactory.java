@@ -20,7 +20,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 //Check this: https://sonar.netpioneer.de/sonar/coding_rules#rule_key=squid:S2151
 public abstract class DriverFactory {
 	private static final Logger LOGGER = Logger.getLogger(DriverFactory.class);
-	private static final String DEFAULT_CHROME_DRIVER_PATH = "C:\\Users\\jpralle\\MyApps\\chromedriver_win32\\chromedriver.exe";
+	private static final String DEFAULT_CHROME_DRIVER_PATH = "chromedriver/chromedriver_win32/chromedriver.exe";
 
 	private static Optional<WebDriver> instance = Optional.empty();
 	private static boolean setSystemProperty = true;
@@ -35,6 +35,11 @@ public abstract class DriverFactory {
 	}
 
 	public static void destroyInstance() {
+
+		if(instance.isPresent()) {
+			instance.get().close();
+			instance.get().quit();
+		}
 		instance = Optional.empty();
 	}
 
