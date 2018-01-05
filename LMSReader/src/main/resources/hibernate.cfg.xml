@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!--For driver v6.0.2-->
+        <!--<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>-->
+        <!--For earlier drivers-->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <property name="hibernate.connection.url">jdbc:mysql://www.cloneworks.de/d0223db5?useSSL=false&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=EST</property>
+        <property name="hibernate.connection.username">d0223db5</property>
+        <property name="hibernate.connection.password">T24fwUbJHABCKRLH</property>
+
+        <!--Be careful using this, alter tables. After inital setup, this should be removed in production settings.-->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- c3p0 config http://www.hibernate.org/214.html -->
+        <!--<property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>-->
+        <!--<property name="hibernate.c3p0.acquire_increment">1</property>-->
+        <!--<property name="hibernate.c3p0.idle_test_period">60</property>-->
+        <!--<property name="hibernate.c3p0.min_size">1</property>-->
+        <!--<property name="hibernate.c3p0.max_size">2</property>-->
+        <!--<property name="hibernate.c3p0.max_statements">50</property>-->
+        <!--<property name="hibernate.c3p0.timeout">0</property>-->
+        <!--<property name="hibernate.c3p0.acquireRetryAttempts">1</property>-->
+        <!--<property name="hibernate.c3p0.acquireRetryDelay">250</property>-->
+
+
+    </session-factory>
+</hibernate-configuration>
