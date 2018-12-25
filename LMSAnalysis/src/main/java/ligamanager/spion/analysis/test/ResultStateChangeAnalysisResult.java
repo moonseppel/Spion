@@ -15,8 +15,8 @@ public class ResultStateChangeAnalysisResult {
 
         counters = new ArrayList<>();
 
-        for(int i = 0; i < 50; i = i+5) {
-            ResultStateChangeCounter counter = new ResultStateChangeCounter(i, i+4);
+        for (int i = 0; i < 50; i = i + 5) {
+            ResultStateChangeCounter counter = new ResultStateChangeCounter(i, i + 4);
             this.counters.add(counter);
         }
     }
@@ -25,7 +25,7 @@ public class ResultStateChangeAnalysisResult {
         int strengthDiffAbsolute = Math.abs(strengthDiff);
 
         ResultStateChangeCounter counter = getGameCounterFor(strengthDiffAbsolute);
-        if(counter != null) {
+        if (counter != null) {
 
             switch (startState) {
                 case WIN:
@@ -89,8 +89,8 @@ public class ResultStateChangeAnalysisResult {
     }
 
     private ResultStateChangeCounter getGameCounterFor(int strengthDiff) {
-        for(ResultStateChangeCounter counter : this.counters) {
-            if(counter.matchesStrength(strengthDiff)) {
+        for (ResultStateChangeCounter counter : this.counters) {
+            if (counter.matchesStrength(strengthDiff)) {
                 return counter;
             }
         }

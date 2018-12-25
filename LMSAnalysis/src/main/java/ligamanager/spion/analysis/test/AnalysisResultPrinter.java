@@ -15,10 +15,10 @@ public class AnalysisResultPrinter {
         writer.write("\n");
         writer.write("Short name of analysis: " + analysisResult.getShortName() + "\n");
         writer.write("StrDiff | Win%  | Total Games | Wins    \n" +
-                     "--------|-------|-------------|---------\n");
+                "--------|-------|-------------|---------\n");
 
 
-        for(WinsAndLossesCounter counter : analysisResult.getCounters()) {
+        for (WinsAndLossesCounter counter : analysisResult.getCounters()) {
 
             writer.write(String.format("%1$3s", counter.getMinStrength()));
             writer.write("-");
@@ -26,7 +26,7 @@ public class AnalysisResultPrinter {
 
             writer.write(" | ");
 
-            String winPercentage= String.format("%3.1f", counter.getWinPercentage());
+            String winPercentage = String.format("%3.1f", counter.getWinPercentage());
             writer.write(String.format("%1$5s", winPercentage));
 
             writer.write(" | ");
@@ -46,10 +46,10 @@ public class AnalysisResultPrinter {
         writer.write("\n");
         writer.write("Short name of analysis: " + analysisResult.getShortName() + "\n");
         writer.write("StrDiff | Win%  | Draw% | Lost% | Total Games\n" +
-                     "--------|-------|-------|-------|------------\n");
+                "--------|-------|-------|-------|------------\n");
 
 
-        for(WinsAndLossesCounter counter : analysisResult.getCounters()) {
+        for (WinsAndLossesCounter counter : analysisResult.getCounters()) {
 
             writer.write(String.format("%1$3s", counter.getMinStrength()));
             writer.write("-");
@@ -57,17 +57,17 @@ public class AnalysisResultPrinter {
 
             writer.write(" | ");
 
-            String winPercentage= String.format("%3.1f", counter.getWinPercentage());
+            String winPercentage = String.format("%3.1f", counter.getWinPercentage());
             writer.write(String.format("%1$5s", winPercentage));
 
             writer.write(" | ");
 
-            String drawPercentage= String.format("%3.1f", counter.getDrawPercentage());
+            String drawPercentage = String.format("%3.1f", counter.getDrawPercentage());
             writer.write(String.format("%1$5s", drawPercentage));
 
             writer.write(" | ");
 
-            String lossPercentage= String.format("%3.1f", counter.getLossPercentage());
+            String lossPercentage = String.format("%3.1f", counter.getLossPercentage());
             writer.write(String.format("%1$5s", lossPercentage));
 
             writer.write(" | ");
@@ -83,13 +83,13 @@ public class AnalysisResultPrinter {
     public void print(List<FormationAndTacticsAnalysisResult> results) {
         writer.write("\n");
 
-        if(results == null ||results.size() < 1) {
+        if (results == null || results.size() < 1) {
             writer.write("*** ERROR: No results provided ***\n");
         }
 
         writer.write("StrDiff");
 
-        for(FormationAndTacticsAnalysisResult result : results) {
+        for (FormationAndTacticsAnalysisResult result : results) {
             writer.write(" | ");
             writer.write(String.format("%1$20s", result.getShortName()));
         }
@@ -98,7 +98,7 @@ public class AnalysisResultPrinter {
 
         List<WinsAndLossesCounter> referenceCounters = results.get(0).getCounters();
 
-        for(int i = 0; i < referenceCounters.size(); i++) {
+        for (int i = 0; i < referenceCounters.size(); i++) {
 
             WinsAndLossesCounter referenceCounter = referenceCounters.get(i);
 
@@ -106,14 +106,14 @@ public class AnalysisResultPrinter {
             writer.write("-");
             writer.write(String.format("%1$3s", referenceCounter.getMaxStrength()));
 
-            for(FormationAndTacticsAnalysisResult result : results) {
+            for (FormationAndTacticsAnalysisResult result : results) {
 
                 writer.write(" | ");
 
                 WinsAndLossesCounter counter = result.getCounters().get(i);
 
-                if((counter.getMinStrength() != referenceCounter.getMinStrength())
-                    || counter.getMaxStrength() != referenceCounter.getMaxStrength()) {
+                if ((counter.getMinStrength() != referenceCounter.getMinStrength())
+                        || counter.getMaxStrength() != referenceCounter.getMaxStrength()) {
 
                     writer.write(String.format("%1$20s", "ERROR: wrong StrDiff"));
 
@@ -121,10 +121,10 @@ public class AnalysisResultPrinter {
 
                     writer.write("    ");
 
-                    String winPercentage= String.format("%3.1f", counter.getWinPercentage());
+                    String winPercentage = String.format("%3.1f", counter.getWinPercentage());
                     writer.write(String.format("%1$5s", winPercentage));
 
-                    if(counter.getTotalGames() < 2000) {
+                    if (counter.getTotalGames() < 2000) {
                         writer.write(" (" + String.format("%1$4s", counter.getTotalGames()) + ")");
                     } else {
                         writer.write("       ");
@@ -147,10 +147,10 @@ public class AnalysisResultPrinter {
         writer.write("\n");
         writer.write("Short name of analysis: " + result.getShortName() + "\n");
         writer.write("StrDiff |  WinToWin  | WinToDraw  | WinToLoss  | DrawToWin  | DrawToDraw | DrawToLoss | LossToWin  | LossToDraw | LossToLoss | Total Games\n" +
-                     "--------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------\n");
+                "--------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------\n");
 
 
-        for(ResultStateChangeCounter counter : result.getCounters()) {
+        for (ResultStateChangeCounter counter : result.getCounters()) {
 
             writer.write(String.format("%1$3s", counter.getMinStrength()));
             writer.write("-");
@@ -158,47 +158,47 @@ public class AnalysisResultPrinter {
 
             writer.write(" | ");
 
-            String percentage= String.format("%3.1f", counter.getPersistentWinPercentage());
+            String percentage = String.format("%3.1f", counter.getPersistentWinPercentage());
             writer.write(String.format("%1$10s", percentage));
 
             writer.write(" | ");
 
-            percentage= String.format("%3.1f", counter.getWinToDrawPercentage());
+            percentage = String.format("%3.1f", counter.getWinToDrawPercentage());
             writer.write(String.format("%1$10s", percentage));
 
             writer.write(" | ");
 
-            percentage= String.format("%3.1f", counter.getWinToLossPercentage());
+            percentage = String.format("%3.1f", counter.getWinToLossPercentage());
             writer.write(String.format("%1$10s", percentage));
 
             writer.write(" | ");
 
-            percentage= String.format("%3.1f", counter.getDrawToWinPercentage());
+            percentage = String.format("%3.1f", counter.getDrawToWinPercentage());
             writer.write(String.format("%1$10s", percentage));
 
             writer.write(" | ");
 
-            percentage= String.format("%3.1f", counter.getPersistentDrawPercentage());
+            percentage = String.format("%3.1f", counter.getPersistentDrawPercentage());
             writer.write(String.format("%1$10s", percentage));
 
             writer.write(" | ");
 
-            percentage= String.format("%3.1f", counter.getDrawToLossPercentage());
+            percentage = String.format("%3.1f", counter.getDrawToLossPercentage());
             writer.write(String.format("%1$10s", percentage));
 
             writer.write(" | ");
 
-            percentage= String.format("%3.1f", counter.getLossToWinPercentage());
+            percentage = String.format("%3.1f", counter.getLossToWinPercentage());
             writer.write(String.format("%1$10s", percentage));
 
             writer.write(" | ");
 
-            percentage= String.format("%3.1f", counter.getLossToDrawPercentage());
+            percentage = String.format("%3.1f", counter.getLossToDrawPercentage());
             writer.write(String.format("%1$10s", percentage));
 
             writer.write(" | ");
 
-            percentage= String.format("%3.1f", counter.getPersistentLossPercentage());
+            percentage = String.format("%3.1f", counter.getPersistentLossPercentage());
             writer.write(String.format("%1$10s", percentage));
 
             writer.write(" | ");

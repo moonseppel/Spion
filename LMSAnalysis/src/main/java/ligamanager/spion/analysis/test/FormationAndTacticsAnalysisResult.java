@@ -17,8 +17,8 @@ public class FormationAndTacticsAnalysisResult {
 
         counters = new ArrayList<>();
 
-        for(int i = 0; i < 50; i = i+STRENGTH_STEP_SIZE) {
-            WinsAndLossesCounter counter = new WinsAndLossesCounter(i, i+STRENGTH_STEP_SIZE-1);
+        for (int i = 0; i < 50; i = i + STRENGTH_STEP_SIZE) {
+            WinsAndLossesCounter counter = new WinsAndLossesCounter(i, i + STRENGTH_STEP_SIZE - 1);
             this.counters.add(counter);
         }
     }
@@ -27,9 +27,9 @@ public class FormationAndTacticsAnalysisResult {
         int strengthDiffAbsolute = Math.abs(strengthDiff);
 
         WinsAndLossesCounter counter = getGameCounterFor(strengthDiffAbsolute);
-        if(counter != null){
+        if (counter != null) {
 
-            switch(state) {
+            switch (state) {
                 case WIN:
                     counter.countWin();
                     break;
@@ -54,8 +54,8 @@ public class FormationAndTacticsAnalysisResult {
     }
 
     private WinsAndLossesCounter getGameCounterFor(int strengthDiff) {
-        for(WinsAndLossesCounter counter : this.counters) {
-            if(counter.matchesStrength(strengthDiff)) {
+        for (WinsAndLossesCounter counter : this.counters) {
+            if (counter.matchesStrength(strengthDiff)) {
                 return counter;
             }
         }

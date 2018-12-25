@@ -10,6 +10,7 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.apache.log4j.Logger;
 
 import static org.hamcrest.core.Is.is;
@@ -26,27 +27,27 @@ public class AnalysisResultPrinterTest {
 
         String expected =
                 "StrDiff | Win%  | Total Games | Wins    \n" +
-                "--------|-------|-------------|---------\n" +
-                "  0-  4 | 100,0 |           5 |       5 \n" +
-                "  5-  9 | 100,0 |           5 |       5 \n" +
-                " 10- 14 | 100,0 |           5 |       5 \n" +
-                " 15- 19 | 100,0 |           5 |       5 \n" +
-                " 20- 24 | 100,0 |           5 |       5 \n" +
-                " 25- 29 | 100,0 |           5 |       5 \n" +
-                " 30- 34 | 100,0 |           5 |       5 \n" +
-                " 35- 39 | 100,0 |           5 |       5 \n" +
-                " 40- 44 | 100,0 |           5 |       5 \n" +
-                " 45- 49 | 100,0 |           5 |       5 \n";
+                        "--------|-------|-------------|---------\n" +
+                        "  0-  4 | 100,0 |           5 |       5 \n" +
+                        "  5-  9 | 100,0 |           5 |       5 \n" +
+                        " 10- 14 | 100,0 |           5 |       5 \n" +
+                        " 15- 19 | 100,0 |           5 |       5 \n" +
+                        " 20- 24 | 100,0 |           5 |       5 \n" +
+                        " 25- 29 | 100,0 |           5 |       5 \n" +
+                        " 30- 34 | 100,0 |           5 |       5 \n" +
+                        " 35- 39 | 100,0 |           5 |       5 \n" +
+                        " 40- 44 | 100,0 |           5 |       5 \n" +
+                        " 45- 49 | 100,0 |           5 |       5 \n";
 
         List<LmGame> gamesForAnalysis = new ArrayList<>();
 
-        for(int strengthDiff = 0; strengthDiff < 50; strengthDiff++) {
+        for (int strengthDiff = 0; strengthDiff < 50; strengthDiff++) {
             gamesForAnalysis.add(createSimpleSortableGameObjects(strengthDiff));
         }
 
         FormationAndTacticsAnalysisResult result = FormationAndTacticsAnalysis.analyzeFirstHalf("printSomeResultsTest", gamesForAnalysis);
 
-        for(WinsAndLossesCounter counter : result.getCounters()) {
+        for (WinsAndLossesCounter counter : result.getCounters()) {
             assertThat(counter.getWins(), is(5));
             assertThat(counter.getTotalGames(), is(5));
             assertThat(counter.getWinPercentage(), is(100.0));
@@ -70,8 +71,8 @@ public class AnalysisResultPrinterTest {
         GameResult secondHalfHalfResult = new GameResult(2, 0);
         ret.interimResults = new GameValuesInclPenalties<>(firstHalfResult, secondHalfHalfResult, GameResult.EMPTY, GameResult.EMPTY);
 
-        GameResult firstHalfAverageStrength = new GameResult(BASE_TEAM_STRENGTH, BASE_TEAM_STRENGTH-strengthDiff);
-        GameResult secondHalfAverageStrength = new GameResult(BASE_TEAM_STRENGTH, BASE_TEAM_STRENGTH-strengthDiff);
+        GameResult firstHalfAverageStrength = new GameResult(BASE_TEAM_STRENGTH, BASE_TEAM_STRENGTH - strengthDiff);
+        GameResult secondHalfAverageStrength = new GameResult(BASE_TEAM_STRENGTH, BASE_TEAM_STRENGTH - strengthDiff);
         ret.strengthAverage = new GameValues<>(firstHalfAverageStrength, secondHalfAverageStrength, GameResult.EMPTY);
 
         return ret;

@@ -10,14 +10,14 @@ public class FormationAndTacticsAnalysis {
     public static FormationAndTacticsAnalysisResult analyzeFirstHalf(String shortName, List<LmGame> games) {
         FormationAndTacticsAnalysisResult ret = new FormationAndTacticsAnalysisResult(shortName);
 
-        for(LmGame game : games) {
+        for (LmGame game : games) {
 
             GameResult firstHalfAverageStrength = game.strengthAverage.firstHalf;
             GameResult firstHalfResult = game.interimResults.firstHalf;
 
             GameResultState halfTimeResultState = analyzeGame(firstHalfAverageStrength, firstHalfResult);
 
-            int strengthDifference = Math.abs(firstHalfAverageStrength.getHome()-firstHalfAverageStrength.getAway());
+            int strengthDifference = Math.abs(firstHalfAverageStrength.getHome() - firstHalfAverageStrength.getAway());
             ret.addGame(strengthDifference, halfTimeResultState);
         }
 
@@ -27,14 +27,14 @@ public class FormationAndTacticsAnalysis {
     public static FormationAndTacticsAnalysisResult analyzeFullGameByFirstHalfStrength(String shortName, List<LmGame> games) {
         FormationAndTacticsAnalysisResult ret = new FormationAndTacticsAnalysisResult(shortName);
 
-        for(LmGame game : games) {
+        for (LmGame game : games) {
 
             GameResult firstHalfAverageStrength = game.strengthAverage.firstHalf;
             GameResult endResult = game.endResult;
 
             GameResultState endResultState = analyzeGame(firstHalfAverageStrength, endResult);
 
-            int strengthDifference = Math.abs(firstHalfAverageStrength.getHome()-firstHalfAverageStrength.getAway());
+            int strengthDifference = Math.abs(firstHalfAverageStrength.getHome() - firstHalfAverageStrength.getAway());
             ret.addGame(strengthDifference, endResultState);
         }
 
@@ -44,7 +44,7 @@ public class FormationAndTacticsAnalysis {
     public static ResultStateChangeAnalysisResult analyzeWinnerChangesFromHalftimeToFullTime(String shortName, List<LmGame> games) {
         ResultStateChangeAnalysisResult ret = new ResultStateChangeAnalysisResult(shortName);
 
-        for(LmGame game : games) {
+        for (LmGame game : games) {
 
             GameResult firstHalfAverageStrength = game.strengthAverage.firstHalf;
             GameResult halfTimeResult = game.interimResults.firstHalf;
@@ -53,7 +53,7 @@ public class FormationAndTacticsAnalysis {
             GameResultState halfTimeResultState = analyzeGame(firstHalfAverageStrength, halfTimeResult);
             GameResultState endResultState = analyzeGame(firstHalfAverageStrength, endResult);
 
-            int strengthDifference = Math.abs(firstHalfAverageStrength.getHome()-firstHalfAverageStrength.getAway());
+            int strengthDifference = Math.abs(firstHalfAverageStrength.getHome() - firstHalfAverageStrength.getAway());
             ret.addGame(strengthDifference, halfTimeResultState, endResultState);
         }
 
@@ -66,13 +66,13 @@ public class FormationAndTacticsAnalysis {
         int strongerStrenght;
         int weakerStrength;
 
-        if(strengths.getHome() >= strengths.getAway()) {
+        if (strengths.getHome() >= strengths.getAway()) {
             strongerStrenght = strengths.getHome();
             weakerStrength = strengths.getAway();
 
-            if(gameResult.getHome() > gameResult.getAway()) {
+            if (gameResult.getHome() > gameResult.getAway()) {
                 gameResultState = GameResultState.WIN;
-            } else if(gameResult.getHome() < gameResult.getAway()) {
+            } else if (gameResult.getHome() < gameResult.getAway()) {
                 gameResultState = GameResultState.LOSS;
             }
 
@@ -80,9 +80,9 @@ public class FormationAndTacticsAnalysis {
             weakerStrength = strengths.getHome();
             strongerStrenght = strengths.getAway();
 
-            if(gameResult.getAway() > gameResult.getHome()) {
+            if (gameResult.getAway() > gameResult.getHome()) {
                 gameResultState = GameResultState.WIN;
-            } else if(gameResult.getAway() < gameResult.getHome()) {
+            } else if (gameResult.getAway() < gameResult.getHome()) {
                 gameResultState = GameResultState.LOSS;
             }
         }

@@ -91,11 +91,11 @@ public class FindGamesForFormationAndTacticFirstHalf {
 
         String queryCreateString = "FROM LmGameHibernateBean G " +
                 "WHERE (G.formationFirstHalfHome = '4-4-2 (3)' " +
-                    "AND G.tacticFirstHalfHome = 1" +
-                    "AND G.strengthAverageOfFirstHalfHome > G.strengthAverageOfFirstHalfAway) " +
+                "AND G.tacticFirstHalfHome = 1" +
+                "AND G.strengthAverageOfFirstHalfHome > G.strengthAverageOfFirstHalfAway) " +
                 "OR (G.formationFirstHalfAway = '4-4-2 (3)' " +
-                    "AND G.tacticFirstHalfAway = 1" +
-                    "AND G.strengthAverageOfFirstHalfAway > G.strengthAverageOfFirstHalfHome) " +
+                "AND G.tacticFirstHalfAway = 1" +
+                "AND G.strengthAverageOfFirstHalfAway > G.strengthAverageOfFirstHalfHome) " +
                 "AND ABS(G.strengthAverageOfFirstHalfHome - G.strengthAverageOfFirstHalfAway) < 80";
 
         ret = getGamesForSQL(queryCreateString);
@@ -144,11 +144,11 @@ public class FindGamesForFormationAndTacticFirstHalf {
 
         String queryCreateString = "FROM LmGameHibernateBean G " +
                 "WHERE (G.strengthAverageOfFirstHalfHome > G.strengthAverageOfFirstHalfAway " +
-                    "AND G.formationFirstHalfHome = '3-5-2 (6)' " +
-                    "AND G.formationFirstHalfAway = '4-4-2 (1)') " +
+                "AND G.formationFirstHalfHome = '3-5-2 (6)' " +
+                "AND G.formationFirstHalfAway = '4-4-2 (1)') " +
                 "OR (G.strengthAverageOfFirstHalfAway > G.strengthAverageOfFirstHalfHome " +
-                    "AND G.formationFirstHalfAway = '3-5-2 (6)' " +
-                    "AND G.formationFirstHalfHome = '4-4-2 (1)') " +
+                "AND G.formationFirstHalfAway = '3-5-2 (6)' " +
+                "AND G.formationFirstHalfHome = '4-4-2 (1)') " +
                 "AND ABS(G.strengthAverageOfFirstHalfHome - G.strengthAverageOfFirstHalfAway) < 80";
 
         ret = getGamesForSQL(queryCreateString);

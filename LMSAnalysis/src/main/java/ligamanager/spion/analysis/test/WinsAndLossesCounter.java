@@ -73,13 +73,13 @@ public class WinsAndLossesCounter {
 
 
     private double calculatePercentageFor(int gameCount) {
-        if(totalGames <= 0) {
+        if (totalGames <= 0) {
             return 0.0;
         }
 
-        double winsDouble = (double)gameCount;
-        double totalGamesDouble = (double)totalGames;
-        double ret = winsDouble/totalGamesDouble;
+        double winsDouble = (double) gameCount;
+        double totalGamesDouble = (double) totalGames;
+        double ret = winsDouble / totalGamesDouble;
         ret = ret * 100;
         return ret;
     }

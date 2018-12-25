@@ -9,7 +9,7 @@
         </property>
         <!--For driver v6.0.2-->
         <!--<property name="hibernate.connection.driver_class">-->
-            <!--com.mysql.cj.jdbc.Driver-->
+        <!--com.mysql.cj.jdbc.Driver-->
         <!--</property>-->
         <!--For earlier drivers-->
         <property name="hibernate.connection.driver_class">
@@ -28,7 +28,7 @@
 
         <!--Be careful using this, alter tables. After inital setup, this should be removed in production settings.-->
         <!--<property name="hibernate.hbm2ddl.auto">-->
-            <!--update-->
+        <!--update-->
         <!--</property>-->
 
         <!-- List of XML mapping files -->

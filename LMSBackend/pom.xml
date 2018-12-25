@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>de.cloneworks</groupId>
+	<artifactId>ligamanger.spion.backend</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>ligamanger.spion.backend</name>
+	<description>Demo project for Spring Boot</description>
+
+	<parent>
+		<artifactId>ligamanager.spion.parent</artifactId>
+		<groupId>de.cloneworks</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../LMSParent/pom.xml</relativePath>
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<spring.version>2.1.1.RELEASE</spring.version>
+	</properties>
+
+	<dependencyManagement>
+
+		<dependencies>
+
+<!--
+			&lt;!&ndash; Example for overriding Spring Data release train provided by Spring Boot
+			from https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-build-systems.html#using-boot-maven-without-a-parent &ndash;&gt;
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-releasetrain</artifactId>
+				<version>Fowler-SR2</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+-->
+
+			<dependency>
+				<!-- Import dependency management from Spring Boot -->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+		</dependencies>
+
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-api</artifactId>
+			<version>RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-chrome-driver</artifactId>
+			<version>RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-firefox-driver</artifactId>
+			<version>RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-htmlunit-driver</artifactId>
+			<version>RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.github.detro.ghostdriver</groupId>
+			<artifactId>phantomjsdriver</artifactId>
+			<version>RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-test -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>de.cloneworks</groupId>
+			<artifactId>ligamanager.spion.common</artifactId>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>

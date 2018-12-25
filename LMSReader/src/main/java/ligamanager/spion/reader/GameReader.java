@@ -1,11 +1,11 @@
 package ligamanager.spion.reader;
 
 import ligamanager.spion.common.hibernate.LmGameHibernateBean;
-import ligamanager.spion.reader.pages.LmGamePage;
-import ligamanager.spion.reader.useCases.BasicActions;
-import ligamanager.spion.reader.util.LmIllegalGameException;
-import ligamanager.spion.reader.util.LmIllegalPageException;
-import ligamanager.spion.reader.webdriver.DriverFactory;
+import ligamanager.spion.common.pages.LmGamePage;
+import ligamanager.spion.common.useCases.BasicActions;
+import ligamanager.spion.common.util.LmIllegalGameException;
+import ligamanager.spion.common.util.LmIllegalPageException;
+import ligamanager.spion.common.webdriver.DriverFactory;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;

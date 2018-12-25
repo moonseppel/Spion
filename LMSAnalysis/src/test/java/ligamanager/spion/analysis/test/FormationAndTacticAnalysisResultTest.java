@@ -21,13 +21,13 @@ public class FormationAndTacticAnalysisResultTest {
     public void sortSomeResultsTest() {
         List<LmGame> gamesForAnalysis = new ArrayList<>();
 
-        for(int strengthDiff = 0; strengthDiff < 50; strengthDiff++) {
+        for (int strengthDiff = 0; strengthDiff < 50; strengthDiff++) {
             gamesForAnalysis.add(createSimpleSortableGameObjects(strengthDiff));
         }
 
         FormationAndTacticsAnalysisResult result = FormationAndTacticsAnalysis.analyzeFirstHalf("sortSomeResultsTest", gamesForAnalysis);
 
-        for(WinsAndLossesCounter counter : result.getCounters()) {
+        for (WinsAndLossesCounter counter : result.getCounters()) {
             assertThat(counter.getWins(), is(5));
             assertThat(counter.getTotalGames(), is(5));
             assertThat(counter.getWinPercentage(), is(100.0));
@@ -46,15 +46,15 @@ public class FormationAndTacticAnalysisResultTest {
         GameResult secondHalfHalfResult = new GameResult(2, 0);
         game.interimResults = new GameValuesInclPenalties<>(firstHalfResult, secondHalfHalfResult, GameResult.EMPTY, GameResult.EMPTY);
 
-        GameResult firstHalfAverageStrength = new GameResult(BASE_TEAM_STRENGTH, BASE_TEAM_STRENGTH-100);
-        GameResult secondHalfAverageStrength = new GameResult(BASE_TEAM_STRENGTH, BASE_TEAM_STRENGTH-100);
+        GameResult firstHalfAverageStrength = new GameResult(BASE_TEAM_STRENGTH, BASE_TEAM_STRENGTH - 100);
+        GameResult secondHalfAverageStrength = new GameResult(BASE_TEAM_STRENGTH, BASE_TEAM_STRENGTH - 100);
         game.strengthAverage = new GameValues<>(firstHalfAverageStrength, secondHalfAverageStrength, GameResult.EMPTY);
 
         gamesForAnalysis.add(game);
 
         FormationAndTacticsAnalysisResult result = FormationAndTacticsAnalysis.analyzeFirstHalf("gameWithTooHighStrengthDifferenceTest", gamesForAnalysis);
 
-        for(WinsAndLossesCounter counter : result.getCounters()) {
+        for (WinsAndLossesCounter counter : result.getCounters()) {
             assertThat(counter.getWins(), is(0));
             assertThat(counter.getTotalGames(), is(0));
             assertThat(counter.getWinPercentage(), is(0.0));
@@ -71,8 +71,8 @@ public class FormationAndTacticAnalysisResultTest {
         GameResult secondHalfHalfResult = new GameResult(2, 0);
         ret.interimResults = new GameValuesInclPenalties<>(firstHalfResult, secondHalfHalfResult, GameResult.EMPTY, GameResult.EMPTY);
 
-        GameResult firstHalfAverageStrength = new GameResult(BASE_TEAM_STRENGTH, BASE_TEAM_STRENGTH-strengthDiff);
-        GameResult secondHalfAverageStrength = new GameResult(BASE_TEAM_STRENGTH, BASE_TEAM_STRENGTH-strengthDiff);
+        GameResult firstHalfAverageStrength = new GameResult(BASE_TEAM_STRENGTH, BASE_TEAM_STRENGTH - strengthDiff);
+        GameResult secondHalfAverageStrength = new GameResult(BASE_TEAM_STRENGTH, BASE_TEAM_STRENGTH - strengthDiff);
         ret.strengthAverage = new GameValues<>(firstHalfAverageStrength, secondHalfAverageStrength, GameResult.EMPTY);
 
         return ret;
